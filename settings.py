@@ -1,14 +1,10 @@
 # settings for LLM
-# api_key = "sk-OlSvN7YeLLJi6OUjD1255aBf50F14e6286D1B1911fCc6f97"
-# base_url = "https://www.gptapi.us/v1/chat/completions"
-# api_key = "sk-9Eyah6sAVyfVvHBXxNth4tMIKVBIlDSd2uPV3NBIbMLhcOzC"
-# base_url = "https://api.chatanywhere.tech"
-api_key = "sk-MN1dkNfJ09JCbsO6YyLbDmcT3GKLDLxdgjI2LuZKS8SLdJwX"
-base_url = "https://us.ifopen.ai/v1"
+api_key = ""
+base_url = ""
 model = "gpt-4o"
 temperature = 0.5
-# api_key = "sk-a989ba76e91b4d4ab632685cc5d7a476"
-# base_url = "https://api.deepseek.com"
+# api_key = ""
+# base_url = ""
 # model = "deepseek-chat"
 # temperature = 0.0
 
