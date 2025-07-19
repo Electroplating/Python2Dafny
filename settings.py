@@ -20,7 +20,7 @@ dafny_code_path = (
 )
 test_set_json_path = "mbpp_test.json"  # Testcases for evaluating Dafny translations
 translation_path = "mbpp_code_gen"  # Path for generated translations
-test_set_generation_json_path = "test2.json"  # LLM Genarated testcases
+test_set_generation_json_path = "generated_test.json"  # LLM Genarated testcases
 
 # settings for testcases generation
 max_re_generate_iterations = 10  # max iterations of generating testcases
