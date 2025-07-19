@@ -1,0 +1,14 @@
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\test.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\test.AssemblyInfoInputs.cache
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\test.AssemblyInfo.cs
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\test.csproj.CoreCompileInputs.cache
+D:\Desktop\dafny\test\Python2Dafny\test.exe
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\test.dll
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\refint\test.dll
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\test.pdb
+D:\Desktop\dafny\test\Python2Dafny\test.deps.json
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\test.genruntimeconfig.cache
+D:\Desktop\dafny\test\Python2Dafny\test.runtimeconfig.json
+D:\Desktop\dafny\test\Python2Dafny\test.dll
+D:\Desktop\dafny\test\Python2Dafny\obj\Debug\net6.0\ref\test.dll
+D:\Desktop\dafny\test\Python2Dafny\test.pdb

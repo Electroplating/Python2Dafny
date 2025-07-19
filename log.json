@@ -1,0 +1,2504 @@
+{
+    "HumanEval/0": {
+        "status": "passed"
+    },
+    "HumanEval/1": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "            current_string := [];",
+                "line": 30,
+                "position": 47,
+                "error_type": "Error: type seq<char> does not have a member toString"
+            },
+            {
+                "content": "    }",
+                "line": 37,
+                "position": 43,
+                "error_type": "Error: type seq<char> does not have a member toString"
+            }
+        ]
+    },
+    "HumanEval/2": {
+        "status": "passed"
+    },
+    "HumanEval/3": {
+        "status": "passed"
+    },
+    "HumanEval/4": {
+        "status": "semantic_error",
+        "error_messages": [
+            {
+                "content": "expect abs(;",
+                "line": 39,
+                "position": 0
+            }
+        ]
+    },
+    "HumanEval/5": {
+        "status": "passed"
+    },
+    "HumanEval/6": {
+        "status": "passed"
+    },
+    "HumanEval/7": {
+        "status": "passed"
+    },
+    "HumanEval/8": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "{",
+                "line": 23,
+                "position": 16,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "}",
+                "line": 25,
+                "position": 11,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "}",
+                "line": 25,
+                "position": 18,
+                "error_type": "Error: verticalbar expected"
+            },
+            {
+                "content": "}",
+                "line": 25,
+                "position": 33,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "}",
+                "line": 25,
+                "position": 49,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "}",
+                "line": 25,
+                "position": 51,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/9": {
+        "status": "semantic_error",
+        "error_messages": []
+    },
+    "HumanEval/10": {
+        "status": "passed"
+    },
+    "HumanEval/11": {
+        "status": "passed"
+    },
+    "HumanEval/12": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  var longest := \"\"; // Initialize longest as an empty string",
+                "line": 13,
+                "position": 31,
+                "error_type": "Error: incorrect argument type at index 0 for function parameter 'f' (expected ? ~> int, found seq<string>)"
+            },
+            {
+                "content": "  var longest := \"\"; // Initialize longest as an empty string",
+                "line": 13,
+                "position": 31,
+                "error_type": "Error: incorrect argument type at index 1 for function parameter 'xs' (expected seq<?>, found ? -> int)"
+            },
+            {
+                "content": "expect call1==\"x\";",
+                "line": 30,
+                "position": 14,
+                "error_type": "Error: type of 'null' is a reference type, but it is used as seq<char>"
+            }
+        ]
+    },
+    "HumanEval/13": {
+        "status": "passed"
+    },
+    "HumanEval/14": {
+        "status": "passed"
+    },
+    "HumanEval/15": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  }",
+                "line": 10,
+                "position": 20,
+                "error_type": "Error: type conversions are not supported to this type (got string)"
+            },
+            {
+                "content": "}",
+                "line": 12,
+                "position": 13,
+                "error_type": "Error: type seq<seq<char>> does not have a member Join"
+            }
+        ]
+    },
+    "HumanEval/16": {
+        "status": "passed"
+    },
+    "HumanEval/17": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "}",
+                "line": 20,
+                "position": 2,
+                "error_type": "Error: invalid AssignStatement"
+            }
+        ]
+    },
+    "HumanEval/18": {
+        "status": "passed"
+    },
+    "HumanEval/19": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    \"five\" := 5,",
+                "line": 15,
+                "position": 11,
+                "error_type": "Error: gets expected"
+            }
+        ]
+    },
+    "HumanEval/20": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  closest_pair := (0.0, 0.0);",
+                "line": 9,
+                "position": 21,
+                "error_type": "Error: RHS (of type int) not assignable to LHS (of type real)"
+            }
+        ]
+    },
+    "HumanEval/21": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    {",
+                "line": 14,
+                "position": 15,
+                "error_type": "Error: gets expected"
+            },
+            {
+                "content": "        if number < min_number {",
+                "line": 15,
+                "position": 4,
+                "error_type": "Error: ident expected"
+            },
+            {
+                "content": "    {",
+                "line": 14,
+                "position": 18,
+                "error_type": "The for-loop format in Dafny is ```for i:= a to b```"
+            },
+            {
+                "content": "            min_number := number;",
+                "line": 16,
+                "position": 31,
+                "error_type": "Error: then expected"
+            },
+            {
+                "content": "        }",
+                "line": 17,
+                "position": 23,
+                "error_type": "Error: rbrace expected"
+            }
+        ]
+    },
+    "HumanEval/22": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "      res := res + [(values[i] as int)]; // Safe type casting after subsumption",
+                "line": 10,
+                "position": 17,
+                "error_type": "Error: type test for type \\'int\\' must be from an expression assignable to it (got \\'object\\')"
+            },
+            {
+                "content": "    }",
+                "line": 11,
+                "position": 31,
+                "error_type": "Error: type conversion to an int-based type is allowed only from numeric and bitvector types, char, and ORDINAL (got object)"
+            },
+            {
+                "content": "var call2:= filter_integers([3,\"c\",3,3,\"a\",\"b\"]) ;",
+                "line": 20,
+                "position": 37,
+                "error_type": "Error: All elements of display must have some common supertype (got seq<?>, but needed type or type of previous elements is map<?, ?>)"
+            },
+            {
+                "content": "var call2:= filter_integers([3,\"c\",3,3,\"a\",\"b\"]) ;",
+                "line": 20,
+                "position": 56,
+                "error_type": "Error: All elements of display must have some common supertype (got string, but needed type or type of previous elements is map<?, ?>)"
+            },
+            {
+                "content": "expect call0==[];",
+                "line": 21,
+                "position": 29,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is seq<char>)"
+            },
+            {
+                "content": "expect call0==[];",
+                "line": 21,
+                "position": 12,
+                "error_type": "Error: incorrect argument type for method in-parameter \\'values\\' (expected seq<object>, found seq<seq<char>>) (covariance for type parameter expects object <: seq<char>)"
+            },
+            {
+                "content": "var call2:= filter_integers([3,\"c\",3,3,\"a\",\"b\"]) ;",
+                "line": 20,
+                "position": 12,
+                "error_type": "Error: incorrect argument type for method in-parameter \\'values\\' (expected seq<object>, found seq<map<?, ?>>) (covariance for type parameter expects object <: map<?, ?>)"
+            },
+            {
+                "content": "var call2:= filter_integers([3,\"c\",3,3,\"a\",\"b\"]) ;",
+                "line": 20,
+                "position": 29,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is map<?, ?>)"
+            },
+            {
+                "content": "var call2:= filter_integers([3,\"c\",3,3,\"a\",\"b\"]) ;",
+                "line": 20,
+                "position": 40,
+                "error_type": "Error: All elements of display must have some common supertype (got real, but needed type or type of previous elements is map<?, ?>)"
+            },
+            {
+                "content": "var call2:= filter_integers([3,\"c\",3,3,\"a\",\"b\"]) ;",
+                "line": 20,
+                "position": 54,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is map<?, ?>)"
+            },
+            {
+                "content": "expect call0==[];",
+                "line": 21,
+                "position": 35,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is seq<char>)"
+            },
+            {
+                "content": "expect call0==[];",
+                "line": 21,
+                "position": 37,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is seq<char>)"
+            }
+        ]
+    },
+    "HumanEval/23": {
+        "status": "passed"
+    },
+    "HumanEval/24": {
+        "status": "passed"
+    },
+    "HumanEval/25": {
+        "status": "passed"
+    },
+    "HumanEval/26": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 8,
+                "position": 14,
+                "error_type": "Error: invalid Ident"
+            }
+        ]
+    },
+    "HumanEval/27": {
+        "status": "passed"
+    },
+    "HumanEval/28": {
+        "status": "passed"
+    },
+    "HumanEval/29": {
+        "status": "passed"
+    },
+    "HumanEval/30": {
+        "status": "passed"
+    },
+    "HumanEval/31": {
+        "status": "passed"
+    },
+    "HumanEval/33": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  var sorted_third_indices := MergeSortBy((a, b) => a <= b, third_indices);",
+                "line": 30,
+                "position": 33,
+                "error_type": "Error: invalid Suffix"
+            }
+        ]
+    },
+    "HumanEval/34": {
+        "status": "passed"
+    },
+    "HumanEval/35": {
+        "status": "passed"
+    },
+    "HumanEval/36": {
+        "status": "passed"
+    },
+    "HumanEval/37": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": " var odds := [x | x in l if x % 2 != 0];",
+                "line": 7,
+                "position": 29,
+                "error_type": "Error: rbracket expected"
+            },
+            {
+                "content": "",
+                "line": 8,
+                "position": 25,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/39": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        f := f + [next_fib];                              // Append the next Fibonacci number to the sequence",
+                "line": 26,
+                "position": 28,
+                "error_type": "Error: type seq<?> does not have a member Length"
+            },
+            {
+                "content": "        f := f + [next_fib];                              // Append the next Fibonacci number to the sequence",
+                "line": 26,
+                "position": 46,
+                "error_type": "Error: type seq<?> does not have a member Length"
+            }
+        ]
+    },
+    "HumanEval/40": {
+        "status": "passed"
+    },
+    "HumanEval/41": {
+        "status": "passed"
+    },
+    "HumanEval/42": {
+        "status": "passed"
+    },
+    "HumanEval/43": {
+        "status": "passed"
+    },
+    "HumanEval/45": {
+        "status": "passed"
+    },
+    "HumanEval/46": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 8,
+                "position": 0,
+                "error_type": "Error: the phrase 'function method' is not allowed when using --function-syntax:4; to declare a compiled function, use just 'function'"
+            },
+            {
+                "content": "",
+                "line": 21,
+                "position": 0,
+                "error_type": "Error: the phrase 'function method' is not allowed when using --function-syntax:4; to declare a compiled function, use just 'function'"
+            }
+        ]
+    },
+    "HumanEval/47": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "{",
+                "line": 7,
+                "position": 12,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "    sortedSeq := seq",
+                "line": 9,
+                "position": 9,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "    sortedSeq := seq",
+                "line": 9,
+                "position": 16,
+                "error_type": "Error: verticalbar expected"
+            }
+        ]
+    },
+    "HumanEval/48": {
+        "status": "passed"
+    },
+    "HumanEval/49": {
+        "status": "passed"
+    },
+    "HumanEval/51": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  res := \"\"; // Initialization of result variable",
+                "line": 8,
+                "position": 20,
+                "error_type": "Error: invalid Ident"
+            },
+            {
+                "content": " if !(text[i] in vowels) {",
+                "line": 13,
+                "position": 13,
+                "error_type": "Error: ident expected"
+            },
+            {
+                "content": " if !(text[i] in vowels) {",
+                "line": 13,
+                "position": 11,
+                "error_type": "The for-loop format in Dafny is ```for i:= a to b```"
+            }
+        ]
+    },
+    "HumanEval/52": {
+        "status": "passed"
+    },
+    "HumanEval/54": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "}",
+                "line": 9,
+                "position": 24,
+                "error_type": "Error: chaining not allowed from the previous operator"
+            }
+        ]
+    },
+    "HumanEval/55": {
+        "status": "passed"
+    },
+    "HumanEval/56": {
+        "status": "passed"
+    },
+    "HumanEval/57": {
+        "status": "passed"
+    },
+    "HumanEval/58": {
+        "status": "passed"
+    },
+    "HumanEval/59": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    }",
+                "line": 25,
+                "position": 6,
+                "error_type": "Error: LHS of assignment must denote a mutable variable"
+            },
+            {
+                "content": "var call1:= largest_prime_factor(27) ;",
+                "line": 51,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: largest_prime_factor"
+            },
+            {
+                "content": "var call2:= largest_prime_factor(63) ;",
+                "line": 52,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: largest_prime_factor"
+            },
+            {
+                "content": "var call3:= largest_prime_factor(330) ;",
+                "line": 53,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: largest_prime_factor"
+            },
+            {
+                "content": "var call4:= largest_prime_factor(13195) ;",
+                "line": 54,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: largest_prime_factor"
+            },
+            {
+                "content": "expect call0==5;",
+                "line": 55,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: largest_prime_factor"
+            }
+        ]
+    },
+    "HumanEval/60": {
+        "status": "passed"
+    },
+    "HumanEval/61": {
+        "status": "passed"
+    },
+    "HumanEval/62": {
+        "status": "passed"
+    },
+    "HumanEval/63": {
+        "status": "passed"
+    },
+    "HumanEval/64": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        return;",
+                "line": 15,
+                "position": 9,
+                "error_type": "Error: type seq<char> does not have a member Length"
+            },
+            {
+                "content": "        if IsVowel(s[i]) {",
+                "line": 21,
+                "position": 16,
+                "error_type": "Error: type seq<char> does not have a member Length"
+            },
+            {
+                "content": "        n_vowels := n_vowels + 1;",
+                "line": 29,
+                "position": 11,
+                "error_type": "Error: type seq<char> does not have a member Length"
+            },
+            {
+                "content": "        n_vowels := n_vowels + 1;",
+                "line": 29,
+                "position": 37,
+                "error_type": "Error: type seq<char> does not have a member Length"
+            }
+        ]
+    },
+    "HumanEval/65": {
+        "status": "passed"
+    },
+    "HumanEval/66": {
+        "status": "passed"
+    },
+    "HumanEval/67": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        var digit := s[i] - '0';",
+                "line": 47,
+                "position": 19,
+                "error_type": "The for-loop format in Dafny is ```for i:= a to b```"
+            },
+            {
+                "content": "        var digit := s[i] - '0';",
+                "line": 47,
+                "position": 29,
+                "error_type": "Error: invalid Suffix"
+            },
+            {
+                "content": "        var digit := s[i] - '0';",
+                "line": 47,
+                "position": 27,
+                "error_type": "Error: missing semicolon at end of statement"
+            }
+        ]
+    },
+    "HumanEval/68": {
+        "status": "passed"
+    },
+    "HumanEval/69": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 27,
+                "position": 14,
+                "error_type": "Error: size operator expects a collection argument (instead got array<int>)"
+            }
+        ]
+    },
+    "HumanEval/70": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 19,
+                "position": 48,
+                "error_type": "Error: type seq<?> does not have a member IndexOf"
+            },
+            {
+                "content": "",
+                "line": 19,
+                "position": 93,
+                "error_type": "Error: type seq<?> does not have a member IndexOf"
+            }
+        ]
+    },
+    "HumanEval/71": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        } else {",
+                "line": 15,
+                "position": 25,
+                "error_type": "Error: unresolved identifier: Sqrt"
+            }
+        ]
+    },
+    "HumanEval/72": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    if |seq| == 0 then ",
+                "line": 7,
+                "position": 13,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "        0 ",
+                "line": 8,
+                "position": 11,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "        0 ",
+                "line": 8,
+                "position": 18,
+                "error_type": "Error: verticalbar expected"
+            },
+            {
+                "content": "}",
+                "line": 11,
+                "position": 11,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "}",
+                "line": 11,
+                "position": 24,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "}",
+                "line": 11,
+                "position": 26,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/73": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    if arr[i] != arr[n - i - 1] {",
+                "line": 10,
+                "position": 6,
+                "error_type": "Error: invalid Ident"
+            },
+            {
+                "content": "    if arr[i] != arr[n - i - 1] {",
+                "line": 10,
+                "position": 17,
+                "error_type": "Error: semicolon expected"
+            },
+            {
+                "content": "    if arr[i] != arr[n - i - 1] {",
+                "line": 10,
+                "position": 20,
+                "error_type": "The for-loop format in Dafny is ```for i:= a to b```"
+            },
+            {
+                "content": "    if arr[i] != arr[n - i - 1] {",
+                "line": 10,
+                "position": 22,
+                "error_type": "Error: invalid ForLoopStmt"
+            }
+        ]
+    },
+    "HumanEval/74": {
+        "status": "passed"
+    },
+    "HumanEval/75": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "var call1:= is_multiply_prime(30) ;",
+                "line": 37,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "var call2:= is_multiply_prime(8) ;",
+                "line": 38,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "var call3:= is_multiply_prime(10) ;",
+                "line": 39,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "var call4:= is_multiply_prime(125) ;",
+                "line": 40,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "var call5:= is_multiply_prime(15*7) ;",
+                "line": 41,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "var call6:= is_multiply_prime(18*7) ;",
+                "line": 42,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "var call7:= is_multiply_prime(81*9) ;",
+                "line": 43,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "var call8:= is_multiply_prime(99*9) ;",
+                "line": 44,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "var call9:= is_multiply_prime(143*7) ;",
+                "line": 45,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            },
+            {
+                "content": "expect call0==false;",
+                "line": 46,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: is_multiply_prime"
+            }
+        ]
+    },
+    "HumanEval/76": {
+        "status": "passed"
+    },
+    "HumanEval/77": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  var rounded_cube_root := cube_root.floor as int; // Use 'floor' to get the integer approximation",
+                "line": 15,
+                "position": 36,
+                "error_type": "The body of a Dafny function must be an expression, loops are not allowed; use recursions or methods instead"
+            }
+        ]
+    },
+    "HumanEval/78": {
+        "status": "passed"
+    },
+    "HumanEval/79": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "var call1:= decimal_to_binary(32) ;",
+                "line": 35,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: decimal_to_binary"
+            },
+            {
+                "content": "var call2:= decimal_to_binary(103) ;",
+                "line": 36,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: decimal_to_binary"
+            },
+            {
+                "content": "var call3:= decimal_to_binary(15) ;",
+                "line": 37,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: decimal_to_binary"
+            },
+            {
+                "content": "expect call0==\"db0db\";",
+                "line": 38,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: decimal_to_binary"
+            }
+        ]
+    },
+    "HumanEval/80": {
+        "status": "passed"
+    },
+    "HumanEval/81": {
+        "status": "passed"
+    },
+    "HumanEval/82": {
+        "status": "passed"
+    },
+    "HumanEval/83": {
+        "status": "passed"
+    },
+    "HumanEval/84": {
+        "status": "passed"
+    },
+    "HumanEval/85": {
+        "status": "passed"
+    },
+    "HumanEval/86": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    if |seq| == 0 then \"\" // Base case for recursion",
+                "line": 24,
+                "position": 23,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "    else seq[0].ToString() + StringFromSeq(seq[1..|seq|]) // Ensure elements are converted to string before concatenation with valid slicing",
+                "line": 25,
+                "position": 11,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "    else seq[0].ToString() + StringFromSeq(seq[1..|seq|]) // Ensure elements are converted to string before concatenation with valid slicing",
+                "line": 25,
+                "position": 18,
+                "error_type": "Error: verticalbar expected"
+            },
+            {
+                "content": "}",
+                "line": 26,
+                "position": 12,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "}",
+                "line": 26,
+                "position": 46,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "}",
+                "line": 26,
+                "position": 48,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/87": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "{",
+                "line": 25,
+                "position": 47,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "{",
+                "line": 25,
+                "position": 0,
+                "error_type": "Error: the phrase 'function method' is not allowed when using --function-syntax:4; to declare a compiled function, use just 'function'"
+            },
+            {
+                "content": "{",
+                "line": 37,
+                "position": 70,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "{",
+                "line": 37,
+                "position": 0,
+                "error_type": "Error: the phrase 'function method' is not allowed when using --function-syntax:4; to declare a compiled function, use just 'function'"
+            }
+        ]
+    },
+    "HumanEval/88": {
+        "status": "passed"
+    },
+    "HumanEval/89": {
+        "status": "semantic_error",
+        "error_messages": [
+            {
+                "content": "expect  encrypt(\"asdfghjkl\") ==\"ewhjklnop\";",
+                "line": 38,
+                "position": 0
+            }
+        ]
+    },
+    "HumanEval/90": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 12,
+                "position": 29,
+                "error_type": "Error: type seq<int> does not have a member UniqueElements"
+            },
+            {
+                "content": "    }",
+                "line": 17,
+                "position": 34,
+                "error_type": "Error: incorrect type for selection into ? (got int)"
+            },
+            {
+                "content": "    }",
+                "line": 17,
+                "position": 33,
+                "error_type": "Error: sequence has type ? which is incompatible with expected type int"
+            },
+            {
+                "content": "expect call1==2;",
+                "line": 31,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got Option<int> and int)"
+            },
+            {
+                "content": "expect call2==None;",
+                "line": 32,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got Option<int> and int)"
+            },
+            {
+                "content": "expect call5==None;",
+                "line": 35,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got Option<int> and int)"
+            },
+            {
+                "content": "expect true;",
+                "line": 37,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got Option<int> and int)"
+            }
+        ]
+    },
+    "HumanEval/91": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        {",
+                "line": 37,
+                "position": 22,
+                "error_type": "Error: type seq<char> does not have a member Contains"
+            },
+            {
+                "content": "        {",
+                "line": 37,
+                "position": 43,
+                "error_type": "Error: type char does not have a member ToString"
+            },
+            {
+                "content": "        }",
+                "line": 47,
+                "position": 53,
+                "error_type": "Error: type char does not have a member Stringify"
+            }
+        ]
+    },
+    "HumanEval/92": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "var call2:= any_int(1.5000000000,5,3.5000000000) ;",
+                "line": 21,
+                "position": 12,
+                "error_type": "Error: incorrect argument type at index 0 for method in-parameter 'x' (expected int, found real)"
+            },
+            {
+                "content": "var call3:= any_int(2,6,2) ;",
+                "line": 22,
+                "position": 12,
+                "error_type": "Error: incorrect argument type at index 0 for method in-parameter 'x' (expected int, found real)"
+            },
+            {
+                "content": "var call3:= any_int(2,6,2) ;",
+                "line": 22,
+                "position": 12,
+                "error_type": "Error: incorrect argument type at index 2 for method in-parameter 'z' (expected int, found real)"
+            },
+            {
+                "content": "var call6:= any_int(-4,6,2) ;",
+                "line": 25,
+                "position": 12,
+                "error_type": "Error: incorrect argument type at index 0 for method in-parameter 'x' (expected int, found real)"
+            },
+            {
+                "content": "var call6:= any_int(-4,6,2) ;",
+                "line": 25,
+                "position": 12,
+                "error_type": "Error: incorrect argument type at index 1 for method in-parameter 'y' (expected int, found real)"
+            },
+            {
+                "content": "var call6:= any_int(-4,6,2) ;",
+                "line": 25,
+                "position": 12,
+                "error_type": "Error: incorrect argument type at index 2 for method in-parameter 'z' (expected int, found real)"
+            },
+            {
+                "content": "expect call0==true;",
+                "line": 29,
+                "position": 12,
+                "error_type": "Error: incorrect argument type at index 0 for method in-parameter 'x' (expected int, found real)"
+            }
+        ]
+    },
+    "HumanEval/93": {
+        "status": "passed"
+    },
+    "HumanEval/94": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst2) == sumOfDigits(5107);",
+                "line": 45,
+                "position": 9,
+                "error_type": "Error: expression is not allowed to invoke a method (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst2) == sumOfDigits(5107);",
+                "line": 45,
+                "position": 33,
+                "error_type": "Error: method call is not allowed to be used in an expression context (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst2) == sumOfDigits(5107);",
+                "line": 45,
+                "position": 43,
+                "error_type": "Error: unresolved identifier: sumDigits"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst3) == sumOfDigits(71);",
+                "line": 46,
+                "position": 9,
+                "error_type": "Error: expression is not allowed to invoke a method (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst3) == sumOfDigits(71);",
+                "line": 46,
+                "position": 33,
+                "error_type": "Error: method call is not allowed to be used in an expression context (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst4) == 0; // No prime numbers in the list",
+                "line": 47,
+                "position": 9,
+                "error_type": "Error: expression is not allowed to invoke a method (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst4) == 0; // No prime numbers in the list",
+                "line": 47,
+                "position": 33,
+                "error_type": "Error: method call is not allowed to be used in an expression context (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst5) == sumOfDigits(7);",
+                "line": 48,
+                "position": 9,
+                "error_type": "Error: expression is not allowed to invoke a method (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst5) == sumOfDigits(7);",
+                "line": 48,
+                "position": 33,
+                "error_type": "Error: method call is not allowed to be used in an expression context (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst6) == sumOfDigits(8191);",
+                "line": 49,
+                "position": 9,
+                "error_type": "Error: expression is not allowed to invoke a method (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst6) == sumOfDigits(8191);",
+                "line": 49,
+                "position": 33,
+                "error_type": "Error: method call is not allowed to be used in an expression context (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst7) == sumOfDigits(8191);",
+                "line": 50,
+                "position": 9,
+                "error_type": "Error: expression is not allowed to invoke a method (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst7) == sumOfDigits(8191);",
+                "line": 50,
+                "position": 33,
+                "error_type": "Error: method call is not allowed to be used in an expression context (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst8) == sumOfDigits(127);",
+                "line": 51,
+                "position": 9,
+                "error_type": "Error: expression is not allowed to invoke a method (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "  assert findLargestPrimeDigitSum(lst8) == sumOfDigits(127);",
+                "line": 51,
+                "position": 33,
+                "error_type": "Error: method call is not allowed to be used in an expression context (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "}",
+                "line": 52,
+                "position": 9,
+                "error_type": "Error: expression is not allowed to invoke a method (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "}",
+                "line": 52,
+                "position": 33,
+                "error_type": "Error: method call is not allowed to be used in an expression context (findLargestPrimeDigitSum)"
+            },
+            {
+                "content": "var call1:= skjkasdkd([1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1]) ;",
+                "line": 58,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            },
+            {
+                "content": "var call2:= skjkasdkd([1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3]) ;",
+                "line": 59,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            },
+            {
+                "content": "var call3:= skjkasdkd([0,724,32,71,99,32,6,0,5,91,83,0,5,6]) ;",
+                "line": 60,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            },
+            {
+                "content": "var call4:= skjkasdkd([0,81,12,3,1,21]) ;",
+                "line": 61,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            },
+            {
+                "content": "var call5:= skjkasdkd([0,8,1,2,1,7]) ;",
+                "line": 62,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            },
+            {
+                "content": "var call6:= skjkasdkd([8191]) ;",
+                "line": 63,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            },
+            {
+                "content": "var call7:= skjkasdkd([8191,123456,127,7]) ;",
+                "line": 64,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            },
+            {
+                "content": "var call8:= skjkasdkd([127,97,8192]) ;",
+                "line": 65,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            },
+            {
+                "content": "expect call0==10;",
+                "line": 66,
+                "position": 12,
+                "error_type": "Error: unresolved identifier: skjkasdkd"
+            }
+        ]
+    },
+    "HumanEval/95": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    if |dict| == 0 {",
+                "line": 13,
+                "position": 73,
+                "error_type": "Error: this symbol not expected in MethodSpec"
+            },
+            {
+                "content": "        var keys := dict.Keys; // Correct syntax for accessing keys of a map",
+                "line": 16,
+                "position": 6,
+                "error_type": "Error: this symbol not expected in Dafny"
+            }
+        ]
+    },
+    "HumanEval/96": {
+        "status": "passed"
+    },
+    "HumanEval/97": {
+        "status": "passed"
+    },
+    "HumanEval/98": {
+        "status": "semantic_error",
+        "error_messages": [
+            {
+                "content": "expect  count_upper(\"B\") ==0;",
+                "line": 33,
+                "position": 0
+            }
+        ]
+    },
+    "HumanEval/99": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        // Step 3: Handle cases where the input ends with \".5\".",
+                "line": 17,
+                "position": 7,
+                "error_type": "Error: invalid IfStmt"
+            }
+        ]
+    },
+    "HumanEval/100": {
+        "status": "passed"
+    },
+    "HumanEval/101": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    }",
+                "line": 22,
+                "position": 33,
+                "error_type": "Error: type of right argument to + (char) must agree with the result type (seq<char>)"
+            }
+        ]
+    },
+    "HumanEval/102": {
+        "status": "passed"
+    },
+    "HumanEval/103": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "{",
+                "line": 32,
+                "position": 0,
+                "error_type": "Error: the phrase 'function method' is not allowed when using --function-syntax:4; to declare a compiled function, use just 'function'"
+            }
+        ]
+    },
+    "HumanEval/104": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  if |s| <= 1 then",
+                "line": 28,
+                "position": 40,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "  if |a| == 0 then",
+                "line": 40,
+                "position": 56,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "    var digits: seq<int> := []; // Corrected initialization of sequence",
+                "line": 58,
+                "position": 15,
+                "error_type": "Error: else expected"
+            }
+        ]
+    },
+    "HumanEval/105": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    8 := \"Eight\",",
+                "line": 15,
+                "position": 23,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/106": {
+        "status": "passed"
+    },
+    "HumanEval/107": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    {",
+                "line": 14,
+                "position": 4,
+                "error_type": "Error: rbrace expected"
+            },
+            {
+                "content": "    }",
+                "line": 17,
+                "position": 32,
+                "error_type": "Error: rbrace expected"
+            }
+        ]
+    },
+    "HumanEval/108": {
+        "status": "semantic_error",
+        "error_messages": [
+            {
+                "content": "expect  count_nums([1,6,9,-6,0,1,5]) ==5;",
+                "line": 72,
+                "position": 0
+            }
+        ]
+    },
+    "HumanEval/109": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "}",
+                "line": 41,
+                "position": 80,
+                "error_type": "Error: closeparen expected"
+            }
+        ]
+    },
+    "HumanEval/110": {
+        "status": "passed"
+    },
+    "HumanEval/111": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 8,
+                "position": 14,
+                "error_type": "Error: invalid FunctionDecl"
+            },
+            {
+                "content": "  // Initialize result as an empty map",
+                "line": 18,
+                "position": 16,
+                "error_type": "Error: invalid MethodDecl"
+            }
+        ]
+    },
+    "HumanEval/112": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "var call2, isPal2 := reverse_delete(['a', 'b', 'c', 'd', 'e', 'd', 'c', 'b', 'a'], ['a', 'b']);",
+                "line": 28,
+                "position": 0,
+                "error_type": "Error: fields are not allowed to be declared at the module level; instead, wrap the field in a 'class' declaration"
+            },
+            {
+                "content": "var call2, isPal2 := reverse_delete(['a', 'b', 'c', 'd', 'e', 'd', 'c', 'b', 'a'], ['a', 'b']);",
+                "line": 28,
+                "position": 4,
+                "error_type": "Error: a mutable field must be declared with a type"
+            },
+            {
+                "content": "var call2, isPal2 := reverse_delete(['a', 'b', 'c', 'd', 'e', 'd', 'c', 'b', 'a'], ['a', 'b']);",
+                "line": 28,
+                "position": 11,
+                "error_type": "Error: a mutable field must be declared with a type"
+            },
+            {
+                "content": "var call6, isPal6 := reverse_delete(['a', 'b', 'c', 'd', 'e', 'd', 'c', 'b', 'a'], ['v']);",
+                "line": 31,
+                "position": 50,
+                "error_type": "Error: rbracket expected"
+            },
+            {
+                "content": "var call2, isPal2 := reverse_delete(['a', 'b', 'c', 'd', 'e', 'd', 'c', 'b', 'a'], ['a', 'b']);",
+                "line": 28,
+                "position": 18,
+                "error_type": "Error: a mutable field may not have an initializer"
+            },
+            {
+                "content": "var call6, isPal6 := reverse_delete(['a', 'b', 'c', 'd', 'e', 'd', 'c', 'b', 'a'], ['v']);",
+                "line": 31,
+                "position": 57,
+                "error_type": "Error: a mutable field must be declared with a type"
+            },
+            {
+                "content": "var call6, isPal6 := reverse_delete(['a', 'b', 'c', 'd', 'e', 'd', 'c', 'b', 'a'], ['v']);",
+                "line": 31,
+                "position": 64,
+                "error_type": "Error: a mutable field may not have an initializer"
+            },
+            {
+                "content": "expect call4 == [], isPal4 == true;",
+                "line": 39,
+                "position": 35,
+                "error_type": "Error: invalid FIdentType"
+            }
+        ]
+    },
+    "HumanEval/113": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    \"the number of odd elements 1 in the sequence [3].\",",
+                "line": 29,
+                "position": 6,
+                "error_type": "Error: invalid Ident"
+            },
+            {
+                "content": "  assert call2 == expect[2..];",
+                "line": 35,
+                "position": 25,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/114": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    }",
+                "line": 33,
+                "position": 22,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "    }",
+                "line": 33,
+                "position": 36,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/115": {
+        "status": "passed"
+    },
+    "HumanEval/116": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  {",
+                "line": 10,
+                "position": 2,
+                "error_type": "Error: rbrace expected"
+            },
+            {
+                "content": "",
+                "line": 17,
+                "position": 2,
+                "error_type": "Error: fields are not allowed to be declared at the module level; instead, wrap the field in a 'class' declaration"
+            },
+            {
+                "content": "",
+                "line": 17,
+                "position": 6,
+                "error_type": "Error: a mutable field must be declared with a type"
+            },
+            {
+                "content": "",
+                "line": 17,
+                "position": 26,
+                "error_type": "Error: a mutable field may not have an initializer"
+            },
+            {
+                "content": "    (a: int, b: int) =>",
+                "line": 20,
+                "position": 13,
+                "error_type": "Error: this symbol not expected in Dafny"
+            }
+        ]
+    },
+    "HumanEval/117": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "{",
+                "line": 7,
+                "position": 0,
+                "error_type": "Error: this symbol not expected in Dafny"
+            }
+        ]
+    },
+    "HumanEval/118": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    var wordArray := new char[word.Length];",
+                "line": 14,
+                "position": 68,
+                "error_type": "Error: this symbol not expected in VarDeclStatement"
+            },
+            {
+                "content": "        if wordArray[i] in vowels {",
+                "line": 19,
+                "position": 8,
+                "error_type": "Error: invalid Ident"
+            },
+            {
+                "content": "        if wordArray[i] in vowels {",
+                "line": 19,
+                "position": 33,
+                "error_type": "Error: semicolon expected"
+            },
+            {
+                "content": "        if wordArray[i] in vowels {",
+                "line": 19,
+                "position": 43,
+                "error_type": "Error: invalid AssignStatement"
+            }
+        ]
+    },
+    "HumanEval/119": {
+        "status": "semantic_error",
+        "error_messages": [
+            {
+                "content": "expect  match_parens([\")\",\")\"]) ==\"No\";",
+                "line": 66,
+                "position": 0
+            }
+        ]
+    },
+    "HumanEval/120": {
+        "status": "passed"
+    },
+    "HumanEval/121": {
+        "status": "passed"
+    },
+    "HumanEval/122": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  else ToString(x / 10) + [char('0' + (x % 10))].ToString()",
+                "line": 12,
+                "position": 23,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/123": {
+        "status": "passed"
+    },
+    "HumanEval/124": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        month := ToInt(date_parts[0]); ",
+                "line": 23,
+                "position": 4,
+                "error_type": "Error: missing semicolon at end of statement"
+            },
+            {
+                "content": "        return;",
+                "line": 27,
+                "position": 6,
+                "error_type": "Error: missing semicolon at end of statement"
+            }
+        ]
+    },
+    "HumanEval/125": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    if char == delimiter {",
+                "line": 33,
+                "position": 8,
+                "error_type": "Error: invalid Ident"
+            },
+            {
+                "content": "      if |current_word| > 0 {",
+                "line": 34,
+                "position": 7,
+                "error_type": "Error: invalid IfStmt"
+            }
+        ]
+    },
+    "HumanEval/126": {
+        "status": "passed"
+    },
+    "HumanEval/127": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 38,
+                "position": 34,
+                "error_type": "Error: this symbol not expected in VarDeclStatement"
+            }
+        ]
+    },
+    "HumanEval/128": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    // If the array contains zero, the result is zero.",
+                "line": 28,
+                "position": 23,
+                "error_type": "Error: rbrace expected"
+            }
+        ]
+    },
+    "HumanEval/129": {
+        "status": "passed"
+    },
+    "HumanEval/130": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "expect call1==[1,3,2,8,3];",
+                "line": 41,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call1==[1,3,2,8,3];",
+                "line": 41,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call1==[1,3,2,8,3];",
+                "line": 41,
+                "position": 19,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call1==[1,3,2,8,3];",
+                "line": 41,
+                "position": 21,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call2==[1,3,2,8,3,15];",
+                "line": 42,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call2==[1,3,2,8,3,15];",
+                "line": 42,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call2==[1,3,2,8,3,15];",
+                "line": 42,
+                "position": 19,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call2==[1,3,2,8,3,15];",
+                "line": 42,
+                "position": 21,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call2==[1,3,2,8,3,15];",
+                "line": 42,
+                "position": 23,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call3==[1,3,2,8,3,15,4];",
+                "line": 43,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call3==[1,3,2,8,3,15,4];",
+                "line": 43,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call3==[1,3,2,8,3,15,4];",
+                "line": 43,
+                "position": 19,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call3==[1,3,2,8,3,15,4];",
+                "line": 43,
+                "position": 21,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call3==[1,3,2,8,3,15,4];",
+                "line": 43,
+                "position": 23,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call3==[1,3,2,8,3,15,4];",
+                "line": 43,
+                "position": 25,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call4==[1,3,2,8,3,15,4,24];",
+                "line": 44,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call4==[1,3,2,8,3,15,4,24];",
+                "line": 44,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call4==[1,3,2,8,3,15,4,24];",
+                "line": 44,
+                "position": 19,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call4==[1,3,2,8,3,15,4,24];",
+                "line": 44,
+                "position": 21,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call4==[1,3,2,8,3,15,4,24];",
+                "line": 44,
+                "position": 23,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call4==[1,3,2,8,3,15,4,24];",
+                "line": 44,
+                "position": 25,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call4==[1,3,2,8,3,15,4,24];",
+                "line": 44,
+                "position": 28,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call5==[1,3,2,8,3,15,4,24,5];",
+                "line": 45,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call5==[1,3,2,8,3,15,4,24,5];",
+                "line": 45,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call5==[1,3,2,8,3,15,4,24,5];",
+                "line": 45,
+                "position": 19,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call5==[1,3,2,8,3,15,4,24,5];",
+                "line": 45,
+                "position": 21,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call5==[1,3,2,8,3,15,4,24,5];",
+                "line": 45,
+                "position": 23,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call5==[1,3,2,8,3,15,4,24,5];",
+                "line": 45,
+                "position": 25,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call5==[1,3,2,8,3,15,4,24,5];",
+                "line": 45,
+                "position": 28,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call5==[1,3,2,8,3,15,4,24,5];",
+                "line": 45,
+                "position": 30,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 19,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 21,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 23,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 25,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 28,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 30,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call6==[1,3,2,8,3,15,4,24,5,35];",
+                "line": 46,
+                "position": 33,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 19,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 21,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 23,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 25,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 28,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 30,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 33,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];",
+                "line": 47,
+                "position": 35,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 19,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 21,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 23,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 25,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 28,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 30,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 33,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 35,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 38,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 40,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 43,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 45,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 48,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 50,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 53,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 55,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 58,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 61,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call8==[1];",
+                "line": 48,
+                "position": 65,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "expect call9==[1,3];",
+                "line": 49,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "}",
+                "line": 50,
+                "position": 15,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            },
+            {
+                "content": "}",
+                "line": 50,
+                "position": 17,
+                "error_type": "Error: All elements of display must have some common supertype (got int, but needed type or type of previous elements is real)"
+            }
+        ]
+    },
+    "HumanEval/131": {
+        "status": "passed"
+    },
+    "HumanEval/132": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        // Fixed syntax for the condition and added semicolon",
+                "line": 24,
+                "position": 4,
+                "error_type": "Error: missing semicolon at end of statement"
+            },
+            {
+                "content": "        // Fixed syntax for the condition and added semicolon",
+                "line": 24,
+                "position": 16,
+                "error_type": "Error: invalid AssignStatement"
+            }
+        ]
+    },
+    "HumanEval/133": {
+        "status": "semantic_error",
+        "error_messages": [
+            {
+                "content": "expect  sum_squares([1.0000000000,2.0,3.0]) ==14;",
+                "line": 31,
+                "position": 0
+            }
+        ]
+    },
+    "HumanEval/134": {
+        "status": "semantic_error",
+        "error_messages": [
+            {
+                "content": "expect  check_if_last_char_is_a_letter(\"apple pi e\") ==true;",
+                "line": 48,
+                "position": 0
+            }
+        ]
+    },
+    "HumanEval/135": {
+        "status": "passed"
+    },
+    "HumanEval/136": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 24,
+                "position": 55,
+                "error_type": "Error: lbracket expected"
+            },
+            {
+                "content": "",
+                "line": 24,
+                "position": 69,
+                "error_type": "Error: rbracket expected"
+            },
+            {
+                "content": "}",
+                "line": 27,
+                "position": 56,
+                "error_type": "Error: lbracket expected"
+            },
+            {
+                "content": "}",
+                "line": 27,
+                "position": 70,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/137": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "      result := a;",
+                "line": 13,
+                "position": 7,
+                "error_type": "Error: invalid IfStmt"
+            }
+        ]
+    },
+    "HumanEval/138": {
+        "status": "passed"
+    },
+    "HumanEval/139": {
+        "status": "passed"
+    },
+    "HumanEval/140": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    {",
+                "line": 53,
+                "position": 4,
+                "error_type": "The body of a Dafny function must be an expression, loops are not allowed; use recursions or methods instead"
+            }
+        ]
+    },
+    "HumanEval/141": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "",
+                "line": 10,
+                "position": 18,
+                "error_type": "Error: invalid Ident"
+            }
+        ]
+    },
+    "HumanEval/142": {
+        "status": "semantic_error",
+        "error_messages": [
+            {
+                "content": "expect  sum_squares([1,4,9]) ==14;",
+                "line": 45,
+                "position": 0
+            }
+        ]
+    },
+    "HumanEval/143": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    var new_lst := [];  // Properly initialize as an empty sequence of sequences of characters",
+                "line": 14,
+                "position": 26,
+                "error_type": "Error: type seq<char> does not have a member Split"
+            },
+            {
+                "content": "        if isPrime(|word|) { // Use |word| for the length of the sequence",
+                "line": 19,
+                "position": 26,
+                "error_type": "Error: incorrect type for selection into ? (got int)"
+            },
+            {
+                "content": "        if isPrime(|word|) { // Use |word| for the length of the sequence",
+                "line": 19,
+                "position": 25,
+                "error_type": "Error: sequence has type ? which is incompatible with expected type seq<char>"
+            },
+            {
+                "content": "expect call1==\"go for\";",
+                "line": 38,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got seq<seq<char>> and string)"
+            },
+            {
+                "content": "expect call2==\"there is no place\";",
+                "line": 39,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got seq<seq<char>> and string)"
+            },
+            {
+                "content": "expect call3==\"Hi am Hussein\";",
+                "line": 40,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got seq<seq<char>> and string)"
+            },
+            {
+                "content": "expect call4==\"go for it\";",
+                "line": 41,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got seq<seq<char>> and string)"
+            },
+            {
+                "content": "expect call5==\"\";",
+                "line": 42,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got seq<seq<char>> and string)"
+            },
+            {
+                "content": "expect call6==\"is\";",
+                "line": 43,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got seq<seq<char>> and string)"
+            },
+            {
+                "content": "}",
+                "line": 44,
+                "position": 12,
+                "error_type": "Error: arguments must have comparable types (got seq<seq<char>> and string)"
+            }
+        ]
+    },
+    "HumanEval/144": {
+        "status": "passed"
+    },
+    "HumanEval/145": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    digits[0 := -digits[0]];",
+                "line": 10,
+                "position": 22,
+                "error_type": "Error: semicolon expected"
+            },
+            {
+                "content": "    digits",
+                "line": 11,
+                "position": 27,
+                "error_type": "Error: else expected"
+            }
+        ]
+    },
+    "HumanEval/146": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    var length := nums.Length; // Get length of sequence",
+                "line": 10,
+                "position": 26,
+                "error_type": "Error: invalid Ident"
+            },
+            {
+                "content": "        var i := 0;",
+                "line": 39,
+                "position": 45,
+                "error_type": "Error: then expected"
+            },
+            {
+                "content": "",
+                "line": 41,
+                "position": 8,
+                "error_type": "The body of a Dafny function must be an expression, loops are not allowed; use recursions or methods instead"
+            },
+            {
+                "content": "",
+                "line": 35,
+                "position": 0,
+                "error_type": "Error: the phrase 'function method' is not allowed when using --function-syntax:4; to declare a compiled function, use just 'function'"
+            }
+        ]
+    },
+    "HumanEval/147": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    count := 0;",
+                "line": 10,
+                "position": 42,
+                "error_type": "Error: comma expected"
+            }
+        ]
+    },
+    "HumanEval/148": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    if |seq| == 0 then",
+                "line": 31,
+                "position": 17,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "        -1",
+                "line": 32,
+                "position": 11,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "        -1",
+                "line": 32,
+                "position": 18,
+                "error_type": "Error: verticalbar expected"
+            },
+            {
+                "content": "        0",
+                "line": 34,
+                "position": 15,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "        0",
+                "line": 34,
+                "position": 24,
+                "error_type": "Error: comma expected"
+            },
+            {
+                "content": "        if next_index == -1 then",
+                "line": 37,
+                "position": 37,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "        if next_index == -1 then",
+                "line": 37,
+                "position": 39,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/149": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    if |sortedLst[i]| % 2 == 0 {",
+                "line": 13,
+                "position": 13,
+                "error_type": "The for-loop format in Dafny is ```for i:= a to b```"
+            },
+            {
+                "content": "    if |sortedLst[i]| % 2 == 0 {",
+                "line": 13,
+                "position": 30,
+                "error_type": "Error: verticalbar expected"
+            }
+        ]
+    },
+    "HumanEval/150": {
+        "status": "passed"
+    },
+    "HumanEval/151": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "            // Use '?' to ensure it is a valid integer (safe downcast)",
+                "line": 14,
+                "position": 40,
+                "error_type": "Error: this symbol not expected in VarDeclStatement"
+            }
+        ]
+    },
+    "HumanEval/152": {
+        "status": "passed"
+    },
+    "HumanEval/153": {
+        "status": "passed"
+    },
+    "HumanEval/154": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "  if l == 0 || |a| < l { // Use |seq| for length operations on sequences",
+                "line": 7,
+                "position": 13,
+                "error_type": "Error: type seq<char> does not have a member Length"
+            }
+        ]
+    },
+    "HumanEval/155": {
+        "status": "passed"
+    },
+    "HumanEval/156": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "    else ",
+                "line": 35,
+                "position": 9,
+                "error_type": "Error: rbracket expected"
+            }
+        ]
+    },
+    "HumanEval/157": {
+        "status": "passed"
+    },
+    "HumanEval/158": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "{",
+                "line": 38,
+                "position": 50,
+                "error_type": "Error: closeparen expected"
+            },
+            {
+                "content": "  else",
+                "line": 40,
+                "position": 9,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "  else",
+                "line": 40,
+                "position": 16,
+                "error_type": "Error: verticalbar expected"
+            },
+            {
+                "content": "    MergeBy(comparator, MergeSortBy(comparator, seq[..|seq| / 2]), MergeSortBy(comparator, seq[|seq| / 2..]))",
+                "line": 41,
+                "position": 2,
+                "error_type": "Error: openparen expected"
+            },
+            {
+                "content": "}",
+                "line": 42,
+                "position": 51,
+                "error_type": "Error: openparen expected"
+            }
+        ]
+    },
+    "HumanEval/159": {
+        "status": "passed"
+    },
+    "HumanEval/160": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "        var valid := TryParseInt(expression, evalRes);",
+                "line": 10,
+                "position": 25,
+                "error_type": "Error: invalid LetExprWithLHS"
+            }
+        ]
+    },
+    "HumanEval/161": {
+        "status": "passed"
+    },
+    "HumanEval/162": {
+        "status": "syntax_error",
+        "error_messages": [
+            {
+                "content": "expect call2==\"0ef78513b0cb8cef12743f5aeb35f888\";",
+                "line": 32,
+                "position": 14,
+                "error_type": "Error: unresolved identifier: None"
+            }
+        ]
+    },
+    "HumanEval/163": {
+        "status": "passed"
+    }
+}

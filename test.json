@@ -1,0 +1,479 @@
+{
+    "HumanEval/0": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= has_close_elements([1.0000000000,2.0000000000,3.9000000000,4.0000000000,5.0000000000,2.2000000000],0.3000000000) ;\nvar call1:= has_close_elements([1.0000000000,2.0000000000,3.9000000000,4.0000000000,5.0000000000,2.2000000000],0.0500000000) ;\nvar call2:= has_close_elements([1.0000000000,2.0000000000,5.9000000000,4.0000000000,5.0000000000],0.9500000000) ;\nvar call3:= has_close_elements([1.0000000000,2.0000000000,5.9000000000,4.0000000000,5.0000000000],0.8000000000) ;\nvar call4:= has_close_elements([1.0000000000,2.0000000000,3.0000000000,4.0000000000,5.0000000000,2.0000000000],0.1000000000) ;\nvar call5:= has_close_elements([1.1000000000,2.2000000000,3.1000000000,4.1000000000,5.1000000000],1.0000000000) ;\nvar call6:= has_close_elements([1.1000000000,2.2000000000,3.1000000000,4.1000000000,5.1000000000],0.5000000000) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\nexpect call3==false;\nexpect call4==true;\nexpect call5==true;\nexpect call6==false;\n}\n"
+    },
+    "HumanEval/1": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= separate_paren_groups(\"(()()) ((())) () ((())()())\") ;\nvar call1:= separate_paren_groups(\"() (()) ((())) (((())))\") ;\nvar call2:= separate_paren_groups(\"(()(())((())))\") ;\nvar call3:= separate_paren_groups(\"( ) (( )) (( )( ))\") ;\nexpect call0==[\"(()())\",\"((()))\",\"()\",\"((())()())\"];\nexpect call1==[\"()\",\"(())\",\"((()))\",\"(((())))\"];\nexpect call2==[\"(()(())((())))\"];\nexpect call3==[\"()\",\"(())\",\"(()())\"];\n}\n"
+    },
+    "HumanEval/2": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= truncate_number(3.5000000000) ;\nvar call1:= truncate_number(1.3300000000) ;\nvar call2:= truncate_number(123.4560000000) ;\nexpect call0==0.5000000000;\nexpect call1==0.3300000000;\nexpect call2==0.4560000000;\n}\n"
+    },
+    "HumanEval/3": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= below_zero([]) ;\nvar call1:= below_zero([1,2,-3,1,2,-3]) ;\nvar call2:= below_zero([1,2,-4,5,6]) ;\nvar call3:= below_zero([1,-1,2,-2,5,-5,4,-4]) ;\nvar call4:= below_zero([1,-1,2,-2,5,-5,4,-5]) ;\nvar call5:= below_zero([1,-2,2,-2,5,-5,4,-4]) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\nexpect call3==false;\nexpect call4==true;\nexpect call5==true;\n}\n"
+    },
+    "HumanEval/4": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= mean_absolute_deviation([1.0000000000,2.0000000000,3.0000000000]) ;\nvar call1:= mean_absolute_deviation([1.0000000000,2.0000000000,3.0000000000,4.0000000000]) ;\nvar call2:= mean_absolute_deviation([1.0000000000,2.0000000000,3.0000000000,4.0000000000,5.0000000000]) ;\nexpect abs(call0-0.6666666667)<0.0000010000;\nexpect abs(call1-1.0000000000)<0.0000010000;\nexpect abs(call2-1.2000000000)<0.0000010000;\n}\n"
+    },
+    "HumanEval/5": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= intersperse([],7) ;\nvar call1:= intersperse([5,6,3,2],8) ;\nvar call2:= intersperse([2,2,2],2) ;\nexpect call0==[];\nexpect call1==[5,8,6,8,3,8,2];\nexpect call2==[2,2,2,2,2];\n}\n"
+    },
+    "HumanEval/6": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= parse_nested_parens(\"(()()) ((())) () ((())()())\") ;\nvar call1:= parse_nested_parens(\"() (()) ((())) (((())))\") ;\nvar call2:= parse_nested_parens(\"(()(())((())))\") ;\nexpect call0==[2,3,1,3];\nexpect call1==[1,2,3,4];\nexpect call2==[4];\n}\n"
+    },
+    "HumanEval/7": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= filter_by_substring([],\"john\") ;\nvar call1:= filter_by_substring([\"xxx\",\"asd\",\"xxy\",\"john doe\",\"xxxAAA\",\"xxx\"],\"xxx\") ;\nvar call2:= filter_by_substring([\"xxx\",\"asd\",\"aaaxxy\",\"john doe\",\"xxxAAA\",\"xxx\"],\"xx\") ;\nvar call3:= filter_by_substring([\"grunt\",\"trumpet\",\"prune\",\"gruesome\"],\"run\") ;\nexpect call0==[];\nexpect call1==[\"xxx\",\"xxxAAA\",\"xxx\"];\nexpect call2==[\"xxx\",\"aaaxxy\",\"xxxAAA\",\"xxx\"];\nexpect call3==[\"grunt\",\"prune\"];\n}\n"
+    },
+    "HumanEval/8": {
+        "TestCase": "method{:test} valid_test(){\nvar call0_0,call0_1:= sum_product([]) ;\nvar call1_0,call1_1:= sum_product([1,1,1]) ;\nvar call2_0,call2_1:= sum_product([100,0]) ;\nvar call3_0,call3_1:= sum_product([3,5,7]) ;\nvar call4_0,call4_1:= sum_product([10]) ;\nexpect (call0_0,call0_1)==(0,1);\nexpect (call1_0,call1_1)==(3,1);\nexpect (call2_0,call2_1)==(100,0);\nexpect (call3_0,call3_1)==(8+7,15*7);\nexpect (call4_0,call4_1)==(10,10);\n}\n"
+    },
+    "HumanEval/9": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= rolling_max([]) ;\nvar call1:= rolling_max([1,2,3,4]) ;\nvar call2:= rolling_max([4,3,2,1]) ;\nvar call3:= rolling_max([3,2,3,100,3]) ;\nexpect call0==[];\nexpect call1==[1,2,3,4];\nexpect call2==[4,4,4,4];\nexpect call3==[3,3,3,100,100];\n}\n"
+    },
+    "HumanEval/10": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= make_palindrome(\"\") ;\nvar call1:= make_palindrome(\"x\") ;\nvar call2:= make_palindrome(\"xyz\") ;\nvar call3:= make_palindrome(\"xyx\") ;\nvar call4:= make_palindrome(\"jerry\") ;\nexpect call0==\"\";\nexpect call1==\"x\";\nexpect call2==\"xyzyx\";\nexpect call3==\"xyx\";\nexpect call4==\"jerryrrej\";\n}\n"
+    },
+    "HumanEval/11": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= string_xor(\"111000\",\"101010\") ;\nvar call1:= string_xor(\"1\",\"1\") ;\nvar call2:= string_xor(\"0101\",\"0000\") ;\nexpect call0==\"010010\";\nexpect call1==\"0\";\nexpect call2==\"0101\";\n}\n"
+    },
+    "HumanEval/12": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= longest([]) ;\nvar call1:= longest([\"x\",\"y\",\"z\"]) ;\nvar call2:= longest([\"x\",\"yyy\",\"zzzz\",\"www\",\"kkkk\",\"abc\"]) ;\nexpect call0==null;\nexpect call1==\"x\";\nexpect call2==\"zzzz\";\n}\n"
+    },
+    "HumanEval/13": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= greatest_common_divisor(3,7) ;\nvar call1:= greatest_common_divisor(10,15) ;\nvar call2:= greatest_common_divisor(49,14) ;\nvar call3:= greatest_common_divisor(144,60) ;\nexpect call0==1;\nexpect call1==5;\nexpect call2==7;\nexpect call3==12;\n}\n"
+    },
+    "HumanEval/14": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= all_prefixes(\"\") ;\nvar call1:= all_prefixes(\"asdfgh\") ;\nvar call2:= all_prefixes(\"WWW\") ;\nexpect call0==[];\nexpect call1==[\"a\",\"as\",\"asd\",\"asdf\",\"asdfg\",\"asdfgh\"];\nexpect call2==[\"W\",\"WW\",\"WWW\"];\n}\n"
+    },
+    "HumanEval/15": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= string_sequence(0) ;\nvar call1:= string_sequence(3) ;\nvar call2:= string_sequence(10) ;\nexpect call0==\"0\";\nexpect call1==\"0 1 2 3\";\nexpect call2==\"0 1 2 3 4 5 6 7 8 9 10\";\n}\n"
+    },
+    "HumanEval/16": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= count_distinct_characters(\"\") ;\nvar call1:= count_distinct_characters(\"abcde\") ;\nvar call2:= count_distinct_characters(\"abcdecade\"+\"CADE\") ;\nvar call3:= count_distinct_characters(\"aaaaAAAAaaaa\") ;\nvar call4:= count_distinct_characters(\"Jerry jERRY JeRRRY\") ;\nexpect call0==0;\nexpect call1==5;\nexpect call2==5;\nexpect call3==1;\nexpect call4==5;\n}\n"
+    },
+    "HumanEval/17": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= parse_music(\"\") ;\nvar call1:= parse_music(\"o o o o\") ;\nvar call2:= parse_music(\".| .| .| .|\") ;\nvar call3:= parse_music(\"o| o| .| .| o o o o\") ;\nvar call4:= parse_music(\"o| .| o| .| o o| o o|\") ;\nexpect call0==[];\nexpect call1==[4,4,4,4];\nexpect call2==[1,1,1,1];\nexpect call3==[2,2,1,1,4,4,4,4];\nexpect call4==[2,1,2,1,4,2,4,2];\n}\n"
+    },
+    "HumanEval/18": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= how_many_times(\"\",\"x\") ;\nvar call1:= how_many_times(\"xyxyxyx\",\"x\") ;\nvar call2:= how_many_times(\"cacacacac\",\"cac\") ;\nvar call3:= how_many_times(\"john doe\",\"john\") ;\nexpect call0==0;\nexpect call1==4;\nexpect call2==4;\nexpect call3==1;\n}\n"
+    },
+    "HumanEval/19": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sort_numbers(\"\") ;\nvar call1:= sort_numbers(\"three\") ;\nvar call2:= sort_numbers(\"three five nine\") ;\nvar call3:= sort_numbers(\"five zero four seven nine eight\") ;\nvar call4:= sort_numbers(\"six five four three two one zero\") ;\nexpect call0==\"\";\nexpect call1==\"three\";\nexpect call2==\"three five nine\";\nexpect call3==\"zero four five seven eight nine\";\nexpect call4==\"zero one two three four five six\";\n}\n"
+    },
+    "HumanEval/20": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= find_closest_elements([1.0000000000,2.0000000000,3.9000000000,4.0000000000,5.0000000000,2.2000000000]) ;\nvar call1:= find_closest_elements([1.0000000000,2.0000000000,5.9000000000,4.0000000000,5.0000000000]) ;\nvar call2:= find_closest_elements([1.0000000000,2.0000000000,3.0000000000,4.0000000000,5.0000000000,2.2000000000]) ;\nvar call3:= find_closest_elements([1.0000000000,2.0000000000,3.0000000000,4.0000000000,5.0000000000,2.0000000000]) ;\nvar call4:= find_closest_elements([1.1000000000,2.2000000000,3.1000000000,4.1000000000,5.1000000000]) ;\nexpect call0==(3.9000000000,4.0000000000);\nexpect call1==(5.0000000000,5.9000000000);\nexpect call2==(2.0000000000,2.2000000000);\nexpect call3==(2.0000000000,2.0000000000);\nexpect call4==(2.2000000000,3.1000000000);\n}\n"
+    },
+    "HumanEval/21": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= rescale_to_unit([2.0000000000,49.9000000000]) ;\nvar call1:= rescale_to_unit([100.0000000000,49.9000000000]) ;\nvar call2:= rescale_to_unit([1.0000000000,2.0000000000,3.0000000000,4.0000000000,5.0000000000]) ;\nvar call3:= rescale_to_unit([2.0000000000,1.0000000000,5.0000000000,3.0000000000,4.0000000000]) ;\nvar call4:= rescale_to_unit([12.0000000000,11.0000000000,15.0000000000,13.0000000000,14.0000000000]) ;\nexpect call0==[0.0000000000,1.0000000000];\nexpect call1==[1.0000000000,0.0000000000];\nexpect call2==[0.0000000000,0.2500000000,0.5000000000,0.7500000000,1.0000000000];\nexpect call3==[0.2500000000,0.0000000000,1.0000000000,0.5000000000,0.7500000000];\nexpect call4==[0.2500000000,0.0000000000,1.0000000000,0.5000000000,0.7500000000];\n}\n"
+    },
+    "HumanEval/22": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= filter_integers([]) ;\nvar call1:= filter_integers([4,map[],[],23.2000000000,9,\"adasd\"]) ;\nvar call2:= filter_integers([3,\"c\",3,3,\"a\",\"b\"]) ;\nexpect call0==[];\nexpect call1==[4,9];\nexpect call2==[3,3,3];\n}\n"
+    },
+    "HumanEval/23": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= strlen(\"\") ;\nvar call1:= strlen(\"x\") ;\nvar call2:= strlen(\"asdasnakj\") ;\nexpect call0==0;\nexpect call1==1;\nexpect call2==9;\n}\n"
+    },
+    "HumanEval/24": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= largest_divisor(3) ;\nvar call1:= largest_divisor(7) ;\nvar call2:= largest_divisor(10) ;\nvar call3:= largest_divisor(100) ;\nvar call4:= largest_divisor(49) ;\nexpect call0==1;\nexpect call1==1;\nexpect call2==5;\nexpect call3==50;\nexpect call4==7;\n}\n"
+    },
+    "HumanEval/25": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= factorize(2) ;\nvar call1:= factorize(4) ;\nvar call2:= factorize(8) ;\nvar call3:= factorize(57) ;\nvar call4:= factorize(57*3*19) ;\nvar call5:= factorize(57*3*19*3*19) ;\nvar call6:= factorize(57*19*19) ;\nvar call7:= factorize(6*3) ;\nexpect call0==[2];\nexpect call1==[2,2];\nexpect call2==[2,2,2];\nexpect call3==[3,19];\nexpect call4==[3,3,19,19];\nexpect call5==[3,3,3,19,19,19];\nexpect call6==[3,19,19,19];\nexpect call7==[2,3,3];\n}\n"
+    },
+    "HumanEval/26": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= remove_duplicates([]) ;\nvar call1:= remove_duplicates([1,2,3,4]) ;\nvar call2:= remove_duplicates([1,2,3,2,4,3,5]) ;\nexpect call0==[];\nexpect call1==[1,2,3,4];\nexpect call2==[1,4,5];\n}\n"
+    },
+    "HumanEval/27": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= flip_case(\"\") ;\nvar call1:= flip_case(\"Hello!\") ;\nvar call2:= flip_case(\"These violent delights have violent ends\") ;\nexpect call0==\"\";\nexpect call1==\"hELLO!\";\nexpect call2==\"tHESE VIOLENT DELIGHTS HAVE VIOLENT ENDS\";\n}\n"
+    },
+    "HumanEval/28": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= concatenate([]) ;\nvar call1:= concatenate([\"x\",\"y\",\"z\"]) ;\nvar call2:= concatenate([\"x\",\"y\",\"z\",\"w\",\"k\"]) ;\nexpect call0==\"\";\nexpect call1==\"xyz\";\nexpect call2==\"xyzwk\";\n}\n"
+    },
+    "HumanEval/29": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= filter_by_prefix([],\"john\") ;\nvar call1:= filter_by_prefix([\"xxx\",\"asd\",\"xxy\",\"john doe\",\"xxxAAA\",\"xxx\"],\"xxx\") ;\nexpect call0==[];\nexpect call1==[\"xxx\",\"xxxAAA\",\"xxx\"];\n}\n"
+    },
+    "HumanEval/30": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= get_positive([-1,-2,4,5,6]) ;\nvar call1:= get_positive([5,3,-5,2,3,3,9,0,123,1,-10]) ;\nvar call2:= get_positive([-1,-2]) ;\nvar call3:= get_positive([]) ;\nexpect call0==[4,5,6];\nexpect call1==[5,3,2,3,3,9,123,1];\nexpect call2==[];\nexpect call3==[];\n}\n"
+    },
+    "HumanEval/31": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_prime(6) ;\nvar call1:= is_prime(101) ;\nvar call2:= is_prime(11) ;\nvar call3:= is_prime(13441) ;\nvar call4:= is_prime(61) ;\nvar call5:= is_prime(4) ;\nvar call6:= is_prime(1) ;\nvar call7:= is_prime(5) ;\nvar call8:= is_prime(11) ;\nvar call9:= is_prime(17) ;\nvar call10:= is_prime(85) ;\nvar call11:= is_prime(77) ;\nvar call12:= is_prime(255379) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\nexpect call3==true;\nexpect call4==true;\nexpect call5==false;\nexpect call6==false;\nexpect call7==true;\nexpect call8==true;\nexpect call9==true;\nexpect call10==false;\nexpect call11==false;\nexpect call12==false;\n}\n"
+    },
+    "HumanEval/33": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sort_third([1,2,3]) ;\nvar call1:= sort_third([5,3,-5,2,-3,3,9,0,123,1,-10]) ;\nvar call2:= sort_third([5,8,-12,4,23,2,3,11,12,-10]) ;\nvar call3:= sort_third([5,6,3,4,8,9,2]) ;\nvar call4:= sort_third([5,8,3,4,6,9,2]) ;\nvar call5:= sort_third([5,6,9,4,8,3,2]) ;\nvar call6:= sort_third([5,6,3,4,8,9,2,1]) ;\nexpect call0==[1, 2, 3];\nexpect call1==[1, 3, -5, 2, -3, 3, 5, 0, 123, 9, -10];\nexpect call2==[-10, 8, -12, 3, 23, 2, 4, 11, 12, 5];\nexpect call3==[2,6,3,4,8,9,5];\nexpect call4==[2,8,3,4,6,9,5];\nexpect call5==[2,6,9,4,8,3,5];\nexpect call6==[2,6,3,4,8,9,5,1];\n}\n"
+    },
+    "HumanEval/34": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= unique([5,3,5,2,3,3,9,0,123]) ;\nexpect call0==[0,2,3,5,9,123];\n}\n"
+    },
+    "HumanEval/35": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= max_element([1,2,3]) ;\nvar call1:= max_element([5,3,-5,2,-3,3,9,0,124,1,-10]) ;\nexpect call0==3;\nexpect call1==124;\n}\n"
+    },
+    "HumanEval/36": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= fizz_buzz(50) ;\nvar call1:= fizz_buzz(78) ;\nvar call2:= fizz_buzz(79) ;\nvar call3:= fizz_buzz(100) ;\nvar call4:= fizz_buzz(200) ;\nvar call5:= fizz_buzz(4000) ;\nvar call6:= fizz_buzz(10000) ;\nvar call7:= fizz_buzz(100000) ;\nexpect call0==0;\nexpect call1==2;\nexpect call2==3;\nexpect call3==3;\nexpect call4==6;\nexpect call5==192;\nexpect call6==639;\nexpect call7==8026;\n}\n"
+    },
+    "HumanEval/37": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sort_even([1,2,3]) ;\nvar call1:= sort_even([5,3,-5,2,-3,3,9,0,123,1,-10]) ;\nvar call2:= sort_even([5,8,-12,4,23,2,3,11,12,-10]) ;\nexpect (call0)==([1,2,3]);\nexpect (call1)==([-10,3,-5,2,-3,3,5,0,9,1,123]);\nexpect (call2)==([-12,8,3,4,5,2,12,11,23,-10]);\n}\n"
+    },
+    "HumanEval/39": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= prime_fib(1) ;\nvar call1:= prime_fib(2) ;\nvar call2:= prime_fib(3) ;\nvar call3:= prime_fib(4) ;\nvar call4:= prime_fib(5) ;\nvar call5:= prime_fib(6) ;\nvar call6:= prime_fib(7) ;\nvar call7:= prime_fib(8) ;\nvar call8:= prime_fib(9) ;\nvar call9:= prime_fib(10) ;\nexpect call0==2;\nexpect call1==3;\nexpect call2==5;\nexpect call3==13;\nexpect call4==89;\nexpect call5==233;\nexpect call6==1597;\nexpect call7==28657;\nexpect call8==514229;\nexpect call9==433494437;\n}\n"
+    },
+    "HumanEval/40": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= triples_sum_to_zero([1,3,5,0]) ;\nvar call1:= triples_sum_to_zero([1,3,5,-1]) ;\nvar call2:= triples_sum_to_zero([1,3,-2,1]) ;\nvar call3:= triples_sum_to_zero([1,2,3,7]) ;\nvar call4:= triples_sum_to_zero([1,2,5,7]) ;\nvar call5:= triples_sum_to_zero([2,4,-5,3,9,7]) ;\nvar call6:= triples_sum_to_zero([1]) ;\nvar call7:= triples_sum_to_zero([1,3,5,-100]) ;\nvar call8:= triples_sum_to_zero([100,3,5,-100]) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\nexpect call3==false;\nexpect call4==false;\nexpect call5==true;\nexpect call6==false;\nexpect call7==false;\nexpect call8==false;\n}\n"
+    },
+    "HumanEval/41": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= car_race_collision(2) ;\nvar call1:= car_race_collision(3) ;\nvar call2:= car_race_collision(4) ;\nvar call3:= car_race_collision(8) ;\nvar call4:= car_race_collision(10) ;\nexpect call0==4;\nexpect call1==9;\nexpect call2==16;\nexpect call3==64;\nexpect call4==100;\n}\n"
+    },
+    "HumanEval/42": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= incr_list([]) ;\nvar call1:= incr_list([3,2,1]) ;\nvar call2:= incr_list([5,2,5,2,3,3,9,0,123]) ;\nexpect call0==[];\nexpect call1==[4,3,2];\nexpect call2==[6,3,6,3,4,4,10,1,124];\n}\n"
+    },
+    "HumanEval/43": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= pairs_sum_to_zero([1,3,5,0]) ;\nvar call1:= pairs_sum_to_zero([1,3,-2,1]) ;\nvar call2:= pairs_sum_to_zero([1,2,3,7]) ;\nvar call3:= pairs_sum_to_zero([2,4,-5,3,5,7]) ;\nvar call4:= pairs_sum_to_zero([1]) ;\nvar call5:= pairs_sum_to_zero([-3,9,-1,3,2,30]) ;\nvar call6:= pairs_sum_to_zero([-3,9,-1,3,2,31]) ;\nvar call7:= pairs_sum_to_zero([-3,9,-1,4,2,30]) ;\nvar call8:= pairs_sum_to_zero([-3,9,-1,4,2,31]) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==false;\nexpect call3==true;\nexpect call4==false;\nexpect call5==true;\nexpect call6==true;\nexpect call7==false;\nexpect call8==false;\n}\n"
+    },
+    "HumanEval/45": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= triangle_area(5.0,3.0) ;\nvar call1:= triangle_area(2.0,2.0) ;\nvar call2:= triangle_area(10.0,8.0) ;\nexpect call0==7.5000000000;\nexpect call1==2.0000000000;\nexpect call2==40.0000000000;\n}\n"
+    },
+    "HumanEval/46": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= fib4(5) ;\nvar call1:= fib4(8) ;\nvar call2:= fib4(10) ;\nvar call3:= fib4(12) ;\nexpect call0==4;\nexpect call1==28;\nexpect call2==104;\nexpect call3==386;\n}\n"
+    },
+    "HumanEval/47": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= median([3,1,2,4,5]) ;\nvar call1:= median([-10,4,6,1000,10,20]) ;\nvar call2:= median([5]) ;\nvar call3:= median([6,5]) ;\nvar call4:= median([8,1,3,9,9,2,7]) ;\nexpect call0==3.0;\nexpect call1==8.0000000000;\nexpect call2==5.0;\nexpect call3==5.5000000000;\nexpect call4==7.0;\n}\n"
+    },
+    "HumanEval/48": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_palindrome(\"\") ;\nvar call1:= is_palindrome(\"aba\") ;\nvar call2:= is_palindrome(\"aaaaa\") ;\nvar call3:= is_palindrome(\"zbcd\") ;\nvar call4:= is_palindrome(\"xywyx\") ;\nvar call5:= is_palindrome(\"xywyz\") ;\nvar call6:= is_palindrome(\"xywzx\") ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==true;\nexpect call3==false;\nexpect call4==true;\nexpect call5==false;\nexpect call6==false;\n}\n"
+    },
+    "HumanEval/49": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= modp(3,5) ;\nvar call1:= modp(1101,101) ;\nvar call2:= modp(0,101) ;\nvar call3:= modp(3,11) ;\nvar call4:= modp(100,101) ;\nvar call5:= modp(30,5) ;\nvar call6:= modp(31,5) ;\nexpect call0==3;\nexpect call1==2;\nexpect call2==1;\nexpect call3==8;\nexpect call4==1;\nexpect call5==4;\nexpect call6==3;\n}\n"
+    },
+    "HumanEval/51": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= remove_vowels(\"\") ;\nvar call1:= remove_vowels(\"abcdef\\nghijklm\") ;\nvar call2:= remove_vowels(\"fedcba\") ;\nvar call3:= remove_vowels(\"eeeee\") ;\nvar call4:= remove_vowels(\"acBAA\") ;\nvar call5:= remove_vowels(\"EcBOO\") ;\nvar call6:= remove_vowels(\"ybcd\") ;\nexpect call0==\"\";\nexpect call1==\"bcdf\\nghjklm\";\nexpect call2==\"fdcb\";\nexpect call3==\"\";\nexpect call4==\"cB\";\nexpect call5==\"cB\";\nexpect call6==\"ybcd\";\n}\n"
+    },
+    "HumanEval/52": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= below_threshold([1,2,4,10],100) ;\nvar call1:= below_threshold([1,20,4,10],5) ;\nvar call2:= below_threshold([1,20,4,10],21) ;\nvar call3:= below_threshold([1,20,4,10],22) ;\nvar call4:= below_threshold([1,8,4,10],11) ;\nvar call5:= below_threshold([1,8,4,10],10) ;\nexpect call0;\nexpect !call1;\nexpect call2;\nexpect call3;\nexpect call4;\nexpect !call5;\n}\n"
+    },
+    "HumanEval/54": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= same_chars(\"eabcdzzzz\",\"dddzzzzzzzddeddabc\") ;\nvar call1:= same_chars(\"abcd\",\"dddddddabc\") ;\nvar call2:= same_chars(\"dddddddabc\",\"abcd\") ;\nvar call3:= same_chars(\"eabcd\",\"dddddddabc\") ;\nvar call4:= same_chars(\"abcd\",\"dddddddabcf\") ;\nvar call5:= same_chars(\"eabcdzzzz\",\"dddzzzzzzzddddabc\") ;\nvar call6:= same_chars(\"aabb\",\"aaccc\") ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==true;\nexpect call3==false;\nexpect call4==false;\nexpect call5==false;\nexpect call6==false;\n}\n"
+    },
+    "HumanEval/55": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= fib(10) ;\nvar call1:= fib(1) ;\nvar call2:= fib(8) ;\nvar call3:= fib(11) ;\nvar call4:= fib(12) ;\nexpect call0==55;\nexpect call1==1;\nexpect call2==21;\nexpect call3==89;\nexpect call4==144;\n}\n"
+    },
+    "HumanEval/56": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= correct_bracketing(\"<>\") ;\nvar call1:= correct_bracketing(\"<<><>>\") ;\nvar call2:= correct_bracketing(\"<><><<><>><>\") ;\nvar call3:= correct_bracketing(\"<><><<<><><>><>><<><><<>>>\") ;\nvar call4:= correct_bracketing(\"<<<><>>>>\") ;\nvar call5:= correct_bracketing(\"><<>\") ;\nvar call6:= correct_bracketing(\"<\") ;\nvar call7:= correct_bracketing(\"<<<<\") ;\nvar call8:= correct_bracketing(\">\") ;\nvar call9:= correct_bracketing(\"<<>\") ;\nvar call10:= correct_bracketing(\"<><><<><>><>><<>\") ;\nvar call11:= correct_bracketing(\"<><><<><>><>>><>\") ;\nexpect call0;\nexpect call1;\nexpect call2;\nexpect call3;\nexpect !call4;\nexpect !call5;\nexpect !call6;\nexpect !call7;\nexpect !call8;\nexpect !call9;\nexpect !call10;\nexpect !call11;\n}\n"
+    },
+    "HumanEval/57": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= monotonic([1,2,4,10]) ;\nvar call1:= monotonic([1,2,4,20]) ;\nvar call2:= monotonic([1,20,4,10]) ;\nvar call3:= monotonic([4,1,0,-10]) ;\nvar call4:= monotonic([4,1,1,0]) ;\nvar call5:= monotonic([1,2,3,2,5,60]) ;\nvar call6:= monotonic([1,2,3,4,5,60]) ;\nvar call7:= monotonic([9,9,9,9]) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\nexpect call3==true;\nexpect call4==true;\nexpect call5==false;\nexpect call6==true;\nexpect call7==true;\n}\n"
+    },
+    "HumanEval/58": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= common([1,4,3,34,653,2,5],[5,7,1,5,9,653,121]) ;\nvar call1:= common([5,3,2,8],[3,2]) ;\nvar call2:= common([4,3,2,8],[3,2,4]) ;\nvar call3:= common([4,3,2,8],[]) ;\nexpect call0==[1,5,653];\nexpect call1==[2,3];\nexpect call2==[2,3,4];\nexpect call3==[];\n}\n"
+    },
+    "HumanEval/59": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= largest_prime_factor(15) ;\nvar call1:= largest_prime_factor(27) ;\nvar call2:= largest_prime_factor(63) ;\nvar call3:= largest_prime_factor(330) ;\nvar call4:= largest_prime_factor(13195) ;\nexpect call0==5;\nexpect call1==3;\nexpect call2==7;\nexpect call3==11;\nexpect call4==29;\n}\n"
+    },
+    "HumanEval/60": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sum_to_n(1) ;\nvar call1:= sum_to_n(6) ;\nvar call2:= sum_to_n(11) ;\nvar call3:= sum_to_n(30) ;\nvar call4:= sum_to_n(100) ;\nexpect call0==1;\nexpect call1==21;\nexpect call2==66;\nexpect call3==465;\nexpect call4==5050;\n}\n"
+    },
+    "HumanEval/61": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= correct_bracketing(\"()\") ;\nvar call1:= correct_bracketing(\"(()())\") ;\nvar call2:= correct_bracketing(\"()()(()())()\") ;\nvar call3:= correct_bracketing(\"()()((()()())())(()()(()))\") ;\nvar call4:= correct_bracketing(\"((()())))\") ;\nvar call5:= correct_bracketing(\")(()\") ;\nvar call6:= correct_bracketing(\"(\") ;\nvar call7:= correct_bracketing(\"((((\") ;\nvar call8:= correct_bracketing(\")\") ;\nvar call9:= correct_bracketing(\"(()\") ;\nvar call10:= correct_bracketing(\"()()(()())())(()\") ;\nvar call11:= correct_bracketing(\"()()(()())()))()\") ;\nexpect call0;\nexpect call1;\nexpect call2;\nexpect call3;\nexpect !call4;\nexpect !call5;\nexpect !call6;\nexpect !call7;\nexpect !call8;\nexpect !call9;\nexpect !call10;\nexpect !call11;\n}\n"
+    },
+    "HumanEval/62": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= derivative([3,1,2,4,5]) ;\nvar call1:= derivative([1,2,3]) ;\nvar call2:= derivative([3,2,1]) ;\nvar call3:= derivative([3,2,1,0,4]) ;\nvar call4:= derivative([1]) ;\nexpect call0==[1,4,12,20];\nexpect call1==[2,6];\nexpect call2==[2,2];\nexpect call3==[2,2,0,16];\nexpect call4==[];\n}\n"
+    },
+    "HumanEval/63": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= fibfib(2) ;\nvar call1:= fibfib(1) ;\nvar call2:= fibfib(5) ;\nvar call3:= fibfib(8) ;\nvar call4:= fibfib(10) ;\nvar call5:= fibfib(12) ;\nvar call6:= fibfib(14) ;\nexpect call0==1;\nexpect call1==0;\nexpect call2==4;\nexpect call3==24;\nexpect call4==81;\nexpect call5==274;\nexpect call6==927;\n}\n"
+    },
+    "HumanEval/64": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= vowels_count(\"abcde\") ;\nvar call1:= vowels_count(\"Alone\") ;\nvar call2:= vowels_count(\"key\") ;\nvar call3:= vowels_count(\"bye\") ;\nvar call4:= vowels_count(\"keY\") ;\nvar call5:= vowels_count(\"bYe\") ;\nvar call6:= vowels_count(\"ACEDY\") ;\nexpect call0==2;\nexpect call1==3;\nexpect call2==2;\nexpect call3==1;\nexpect call4==2;\nexpect call5==1;\nexpect call6==3;\nexpect true;\n}\n"
+    },
+    "HumanEval/65": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= circular_shift(100,2) ;\nvar call1:= circular_shift(12,2) ;\nvar call2:= circular_shift(97,8) ;\nvar call3:= circular_shift(12,1) ;\nvar call4:= circular_shift(11,101) ;\nexpect call0==\"001\";\nexpect call1==\"12\";\nexpect call2==\"79\";\nexpect call3==\"21\";\nexpect call4==\"11\";\n}\n"
+    },
+    "HumanEval/66": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= digitSum(\"\") ;\nvar call1:= digitSum(\"abAB\") ;\nvar call2:= digitSum(\"abcCd\") ;\nvar call3:= digitSum(\"helloE\") ;\nvar call4:= digitSum(\"woArBld\") ;\nvar call5:= digitSum(\"aAaaaXa\") ;\nvar call6:= digitSum(\" How are yOu?\") ;\nvar call7:= digitSum(\"You arE Very Smart\") ;\nexpect true;\nexpect call0==0;\nexpect call1==131;\nexpect call2==67;\nexpect call3==69;\nexpect call4==131;\nexpect call5==153;\nexpect true;\nexpect call6==151;\nexpect call7==327;\n}\n"
+    },
+    "HumanEval/67": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= fruit_distribution(\"5 apples and 6 oranges\",19) ;\nvar call1:= fruit_distribution(\"5 apples and 6 oranges\",21) ;\nvar call2:= fruit_distribution(\"0 apples and 1 oranges\",3) ;\nvar call3:= fruit_distribution(\"1 apples and 0 oranges\",3) ;\nvar call4:= fruit_distribution(\"2 apples and 3 oranges\",100) ;\nvar call5:= fruit_distribution(\"2 apples and 3 oranges\",5) ;\nvar call6:= fruit_distribution(\"1 apples and 100 oranges\",120) ;\nexpect call0==8;\nexpect call1==10;\nexpect call2==2;\nexpect call3==2;\nexpect call4==95;\nexpect call5==0;\nexpect call6==19;\n}\n"
+    },
+    "HumanEval/68": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= pluck([4,2,3]) ;\nvar call1:= pluck([1,2,3]) ;\nvar call2:= pluck([]) ;\nvar call3:= pluck([5,0,3,0,4,2]) ;\nvar call4:= pluck([1,2,3,0,5,3]) ;\nvar call5:= pluck([5,4,8,4,8]) ;\nvar call6:= pluck([7,6,7,1]) ;\nvar call7:= pluck([7,9,7,1]) ;\nexpect true;\nexpect call0==[2,1];\nexpect call1==[2,1];\nexpect call2==[];\nexpect call3==[0,1];\nexpect true;\nexpect call4==[0,3];\nexpect call5==[4,1];\nexpect call6==[6,1];\nexpect call7==[];\n}\n"
+    },
+    "HumanEval/69": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= search([5,5,5,5,1]) ;\nvar call1:= search([4,1,4,1,4,4]) ;\nvar call2:= search([3,3]) ;\nvar call3:= search([8,8,8,8,8,8,8,8]) ;\nvar call4:= search([2,3,3,2,2]) ;\nvar call5:= search([2,7,8,8,4,8,7,3,9,6,5,10,4,3,6,7,1,7,4,10,8,1]) ;\nvar call6:= search([3,2,8,2]) ;\nvar call7:= search([6,7,1,8,8,10,5,8,5,3,10]) ;\nvar call8:= search([8,8,3,6,5,6,4]) ;\nvar call9:= search([6,9,6,7,1,4,7,1,8,8,9,8,10,10,8,4,10,4,10,1,2,9,5,7,9]) ;\nvar call10:= search([1,9,10,1,3]) ;\nvar call11:= search([6,9,7,5,8,7,5,3,7,5,10,10,3,6,10,2,8,6,5,4,9,5,3,10]) ;\nvar call12:= search([1]) ;\nvar call13:= search([8,8,10,6,4,3,5,8,2,4,2,8,4,6,10,4,2,1,10,2,1,1,5]) ;\nvar call14:= search([2,10,4,8,2,10,5,1,2,9,5,5,6,3,8,6,4,10]) ;\nvar call15:= search([1,6,10,1,6,9,10,8,6,8,7,3]) ;\nvar call16:= search([9,2,4,1,5,1,5,2,5,7,7,7,3,10,1,5,4,2,8,4,1,9,10,7,10,2,8,10,9,4]) ;\nvar call17:= search([2,6,4,2,8,7,5,6,4,10,4,6,3,7,8,8,3,1,4,2,2,10,7]) ;\nvar call18:= search([9,8,6,10,2,6,10,2,7,8,10,3,8,2,6,2,3,1]) ;\nvar call19:= search([5,5,3,9,5,6,3,2,8,5,6,10,10,6,8,4,10,7,7,10,8]) ;\nvar call20:= search([10]) ;\nvar call21:= search([9,7,7,2,4,7,2,10,9,7,5,7,2]) ;\nvar call22:= search([5,4,10,2,1,1,10,3,6,1,8]) ;\nvar call23:= search([7,9,9,9,3,4,1,5,9,1,2,1,1,10,7,5,6,7,6,7,7,6]) ;\nvar call24:= search([3,10,10,9,2]) ;\nexpect call0==1;\nexpect call1==4;\nexpect call2==-1;\nexpect call3==8;\nexpect call4==2;\nexpect call5==1;\nexpect call6==2;\nexpect call7==1;\nexpect call8==-1;\nexpect call9==1;\nexpect call10==1;\nexpect call11==5;\nexpect call12==1;\nexpect call13==4;\nexpect call14==2;\nexpect call15==1;\nexpect call16==4;\nexpect call17==4;\nexpect call18==2;\nexpect call19==-1;\nexpect call20==-1;\nexpect call21==2;\nexpect call22==1;\nexpect call23==1;\nexpect call24==-1;\n}\n"
+    },
+    "HumanEval/70": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= strange_sort_list([1,2,3,4]) ;\nvar call1:= strange_sort_list([5,6,7,8,9]) ;\nvar call2:= strange_sort_list([1,2,3,4,5]) ;\nvar call3:= strange_sort_list([5,6,7,8,9,1]) ;\nvar call4:= strange_sort_list([5,5,5,5]) ;\nvar call5:= strange_sort_list([]) ;\nvar call6:= strange_sort_list([1,2,3,4,5,6,7,8]) ;\nvar call7:= strange_sort_list([0,2,2,2,5,5,-5,-5]) ;\nvar call8:= strange_sort_list([111111]) ;\nexpect call0==[1,4,2,3];\nexpect call1==[5,9,6,8,7];\nexpect call2==[1,5,2,4,3];\nexpect call3==[1,9,5,8,6,7];\nexpect call4==[5,5,5,5];\nexpect call5==[];\nexpect call6==[1,8,2,7,3,6,4,5];\nexpect call7==[-5,5,-5,5,0,2,2,2];\nexpect call8==[111111];\nexpect true;\n}\n"
+    },
+    "HumanEval/71": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= triangle_area(3.0,4.0,5.0) ;\nvar call1:= triangle_area(1.0,2.0,10.0) ;\nvar call2:= triangle_area(4.0,8.0,5.0) ;\nvar call3:= triangle_area(2.0,2.0,2.0) ;\nvar call4:= triangle_area(1.0,2.0,3.0) ;\nvar call5:= triangle_area(10.0,5.0,7.0) ;\nvar call6:= triangle_area(2.0,6.0,3.0) ;\nvar call7:= triangle_area(1.0,1.0,1.0) ;\nvar call8:= triangle_area(2.0,2.0,10.0) ;\nexpect call0==6.0000000000;\nexpect call1==-1.0;\nexpect call2==8.1800000000;\nexpect call3==1.7300000000;\nexpect call4==-1.0;\nexpect call5==16.2500000000;\nexpect call6==-1.0;\nexpect call7==0.4300000000;\nexpect call8==-1.0;\n}\n"
+    },
+    "HumanEval/72": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= will_it_fly([3,2,3],9) ;\nvar call1:= will_it_fly([1,2],5) ;\nvar call2:= will_it_fly([3],5) ;\nvar call3:= will_it_fly([3,2,3],1) ;\nvar call4:= will_it_fly([1,2,3],6) ;\nvar call5:= will_it_fly([5],5) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\nexpect call3==false;\nexpect call4==false;\nexpect call5==true;\n}\n"
+    },
+    "HumanEval/73": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= smallest_change([1,2,3,5,4,7,9,6]) ;\nvar call1:= smallest_change([1,2,3,4,3,2,2]) ;\nvar call2:= smallest_change([1,4,2]) ;\nvar call3:= smallest_change([1,4,4,2]) ;\nvar call4:= smallest_change([1,2,3,2,1]) ;\nvar call5:= smallest_change([3,1,1,3]) ;\nvar call6:= smallest_change([1]) ;\nvar call7:= smallest_change([0,1]) ;\nexpect call0==4;\nexpect call1==1;\nexpect call2==1;\nexpect call3==1;\nexpect call4==0;\nexpect call5==0;\nexpect call6==0;\nexpect call7==1;\n}\n"
+    },
+    "HumanEval/74": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= total_match([],[]) ;\nvar call1:= total_match([\"hi\",\"admin\"],[\"hi\",\"hi\"]) ;\nvar call2:= total_match([\"hi\",\"admin\"],[\"hi\",\"hi\",\"admin\",\"project\"]) ;\nvar call3:= total_match([\"4\"],[\"1\",\"2\",\"3\",\"4\",\"5\"]) ;\nvar call4:= total_match([\"hi\",\"admin\"],[\"hI\",\"Hi\"]) ;\nvar call5:= total_match([\"hi\",\"admin\"],[\"hI\",\"hi\",\"hi\"]) ;\nvar call6:= total_match([\"hi\",\"admin\"],[\"hI\",\"hi\",\"hii\"]) ;\nvar call7:= total_match([],[\"this\"]) ;\nvar call8:= total_match([\"this\"],[]) ;\nexpect true;\nexpect call0==[];\nexpect call1==[\"hi\",\"hi\"];\nexpect call2==[\"hi\",\"admin\"];\nexpect call3==[\"4\"];\nexpect call4==[\"hI\",\"Hi\"];\nexpect call5==[\"hI\",\"hi\",\"hi\"];\nexpect call6==[\"hi\",\"admin\"];\nexpect true;\nexpect call7==[];\nexpect call8==[];\n}\n"
+    },
+    "HumanEval/75": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_multiply_prime(5) ;\nvar call1:= is_multiply_prime(30) ;\nvar call2:= is_multiply_prime(8) ;\nvar call3:= is_multiply_prime(10) ;\nvar call4:= is_multiply_prime(125) ;\nvar call5:= is_multiply_prime(15*7) ;\nvar call6:= is_multiply_prime(18*7) ;\nvar call7:= is_multiply_prime(81*9) ;\nvar call8:= is_multiply_prime(99*9) ;\nvar call9:= is_multiply_prime(143*7) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\nexpect call3==false;\nexpect call4==true;\nexpect call5==true;\nexpect call6==false;\nexpect call7==false;\nexpect call8==false;\nexpect call9==true;\n}\n"
+    },
+    "HumanEval/76": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_simple_power(16,2) ;\nvar call1:= is_simple_power(143214,16) ;\nvar call2:= is_simple_power(4,2) ;\nvar call3:= is_simple_power(9,3) ;\nvar call4:= is_simple_power(16,4) ;\nvar call5:= is_simple_power(24,2) ;\nvar call6:= is_simple_power(128,4) ;\nvar call7:= is_simple_power(12,6) ;\nvar call8:= is_simple_power(1,1) ;\nvar call9:= is_simple_power(1,12) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\nexpect call3==true;\nexpect call4==true;\nexpect call5==false;\nexpect call6==false;\nexpect call7==false;\nexpect call8==true;\nexpect call9==true;\n}\n"
+    },
+    "HumanEval/77": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= iscube(1) ;\nvar call1:= iscube(2) ;\nvar call2:= iscube(-1) ;\nvar call3:= iscube(64) ;\nvar call4:= iscube(180) ;\nvar call5:= iscube(1000) ;\nvar call6:= iscube(0) ;\nvar call7:= iscube(1729) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\nexpect call3==true;\nexpect call4==false;\nexpect call5==true;\nexpect call6==true;\nexpect call7==false;\n}\n"
+    },
+    "HumanEval/78": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= hex_key(\"AB\") ;\nvar call1:= hex_key(\"1077E\") ;\nvar call2:= hex_key(\"ABED1A33\") ;\nvar call3:= hex_key(\"2020\") ;\nvar call4:= hex_key(\"123456789ABCDEF0\") ;\nvar call5:= hex_key(\"112233445566778899AABBCCDDEEFF00\") ;\nvar call6:= hex_key([]) ;\nexpect call0==1;\nexpect call1==2;\nexpect call2==4;\nexpect call3==2;\nexpect call4==6;\nexpect call5==12;\nexpect call6==0;\n}\n"
+    },
+    "HumanEval/79": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= decimal_to_binary(0) ;\nvar call1:= decimal_to_binary(32) ;\nvar call2:= decimal_to_binary(103) ;\nvar call3:= decimal_to_binary(15) ;\nexpect call0==\"db0db\";\nexpect call1==\"db100000db\";\nexpect call2==\"db1100111db\";\nexpect call3==\"db1111db\";\nexpect true;\n}\n"
+    },
+    "HumanEval/80": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_happy(\"a\") ;\nvar call1:= is_happy(\"aa\") ;\nvar call2:= is_happy(\"abcd\") ;\nvar call3:= is_happy(\"aabb\") ;\nvar call4:= is_happy(\"adb\") ;\nvar call5:= is_happy(\"xyy\") ;\nvar call6:= is_happy(\"iopaxpoi\") ;\nvar call7:= is_happy(\"iopaxioi\") ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\nexpect call3==false;\nexpect call4==true;\nexpect call5==false;\nexpect call6==true;\nexpect call7==false;\n}\n"
+    },
+    "HumanEval/81": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= numerical_letter_grade([4.0000000000,3.0,1.7000000000,2.0,3.5000000000]) ;\nvar call1:= numerical_letter_grade([1.2000000000]) ;\nvar call2:= numerical_letter_grade([0.5000000000]) ;\nvar call3:= numerical_letter_grade([0.0000000000]) ;\nvar call4:= numerical_letter_grade([1.0,0.3000000000,1.5000000000,2.8000000000,3.3000000000]) ;\nvar call5:= numerical_letter_grade([0.0,0.7000000000]) ;\nexpect call0==[\"A+\",\"B\",\"C-\",\"C\",\"A-\"];\nexpect call1==[\"D+\"];\nexpect call2==[\"D-\"];\nexpect call3==[\"E\"];\nexpect call4==[\"D\",\"D-\",\"C-\",\"B\",\"B+\"];\nexpect call5==[\"E\",\"D-\"];\nexpect true;\n}\n"
+    },
+    "HumanEval/82": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= prime_length(\"Hello\") ;\nvar call1:= prime_length(\"abcdcba\") ;\nvar call2:= prime_length(\"kittens\") ;\nvar call3:= prime_length(\"orange\") ;\nvar call4:= prime_length(\"wow\") ;\nvar call5:= prime_length(\"world\") ;\nvar call6:= prime_length(\"MadaM\") ;\nvar call7:= prime_length(\"Wow\") ;\nvar call8:= prime_length(\"\") ;\nvar call9:= prime_length(\"HI\") ;\nvar call10:= prime_length(\"go\") ;\nvar call11:= prime_length(\"gogo\") ;\nvar call12:= prime_length(\"aaaaaaaaaaaaaaa\") ;\nvar call13:= prime_length(\"Madam\") ;\nvar call14:= prime_length(\"M\") ;\nvar call15:= prime_length(\"0\") ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==true;\nexpect call3==false;\nexpect call4==true;\nexpect call5==true;\nexpect call6==true;\nexpect call7==true;\nexpect call8==false;\nexpect call9==true;\nexpect call10==true;\nexpect call11==false;\nexpect call12==false;\nexpect call13==true;\nexpect call14==false;\nexpect call15==false;\n}\n"
+    },
+    "HumanEval/83": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= starts_one_ends(1) ;\nvar call1:= starts_one_ends(2) ;\nvar call2:= starts_one_ends(3) ;\nvar call3:= starts_one_ends(4) ;\nvar call4:= starts_one_ends(5) ;\nexpect true;\nexpect call0==1;\nexpect call1==18;\nexpect call2==180;\nexpect call3==1800;\nexpect call4==18000;\nexpect true;\n}\n"
+    },
+    "HumanEval/84": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= solve(1000) ;\nvar call1:= solve(150) ;\nvar call2:= solve(147) ;\nvar call3:= solve(333) ;\nvar call4:= solve(963) ;\nexpect true;\nexpect call0==\"1\";\nexpect call1==\"110\";\nexpect call2==\"1100\";\nexpect true;\nexpect call3==\"1001\";\nexpect call4==\"10010\";\n}\n"
+    },
+    "HumanEval/85": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= add([4,88]) ;\nvar call1:= add([4,5,6,7,2,122]) ;\nvar call2:= add([4,0,6,7]) ;\nvar call3:= add([4,4,6,8]) ;\nexpect call0==88;\nexpect call1==122;\nexpect call2==0;\nexpect call3==12;\n}\n"
+    },
+    "HumanEval/86": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= anti_shuffle(\"Hi\") ;\nvar call1:= anti_shuffle(\"hello\") ;\nvar call2:= anti_shuffle(\"number\") ;\nvar call3:= anti_shuffle(\"abcd\") ;\nvar call4:= anti_shuffle(\"Hello World!!!\") ;\nvar call5:= anti_shuffle(\"\") ;\nvar call6:= anti_shuffle(\"Hi. My name is Mister Robot. How are you?\") ;\nexpect call0==\"Hi\";\nexpect call1==\"ehllo\";\nexpect call2==\"bemnru\";\nexpect call3==\"abcd\";\nexpect call4==\"Hello !!!Wdlor\";\nexpect call5==\"\";\nexpect call6==\".Hi My aemn is Meirst .Rboot How aer ?ouy\";\nexpect true;\n}\n"
+    },
+    "HumanEval/87": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= get_row([[1,2,3,4,5,6],[1,2,3,4,1,6],[1,2,3,4,5,1]],1) ;\nvar call1:= get_row([[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4,5,6]],2) ;\nvar call2:= get_row([[1,2,3,4,5,6],[1,2,3,4,5,6],[1,1,3,4,5,6],[1,2,1,4,5,6],[1,2,3,1,5,6],[1,2,3,4,1,6],[1,2,3,4,5,1]],1) ;\nvar call3:= get_row([],1) ;\nvar call4:= get_row([[1]],2) ;\nvar call5:= get_row([[],[1],[1,2,3]],3) ;\nexpect call0==[(0,0),(1,4),(1,0),(2,5),(2,0)];\nexpect call1==[(0,1),(1,1),(2,1),(3,1),(4,1),(5,1)];\nexpect call2==[(0,0),(1,0),(2,1),(2,0),(3,2),(3,0),(4,3),(4,0),(5,4),(5,0),(6,5),(6,0)];\nexpect call3==[];\nexpect call4==[];\nexpect call5==[(2,2)];\nexpect true;\n}\n"
+    },
+    "HumanEval/88": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sort_array([]) ;\nvar call1:= sort_array([5]) ;\nvar call2:= sort_array([2,4,3,0,1,5]) ;\nvar call3:= sort_array([2,4,3,0,1,5,6]) ;\nvar call4:= sort_array([2,1]) ;\nvar call5:= sort_array([15,42,87,32,11,0]) ;\nvar call6:= sort_array([21,14,23,11]) ;\nexpect true;\nexpect call0==[];\nexpect call1==[5];\nexpect call2==[0,1,2,3,4,5];\nexpect call3==[6,5,4,3,2,1,0];\nexpect true;\nexpect call4==[1,2];\nexpect call5==[0,11,15,32,42,87];\nexpect call6==[23,21,14,11];\n}\n"
+    },
+    "HumanEval/89": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= encrypt(\"hi\") ;\nvar call1:= encrypt(\"asdfghjkl\") ;\nvar call2:= encrypt(\"gf\") ;\nvar call3:= encrypt(\"et\") ;\nvar call4:= encrypt(\"faewfawefaewg\") ;\nvar call5:= encrypt(\"hellomyfriend\") ;\nvar call6:= encrypt(\"dxzdlmnilfuhmilufhlihufnmlimnufhlimnufhfucufh\") ;\nvar call7:= encrypt(\"a\") ;\nexpect call0==\"lm\";\nexpect call1==\"ewhjklnop\";\nexpect call2==\"kj\";\nexpect call3==\"ix\";\nexpect call4==\"jeiajeaijeiak\";\nexpect call5==\"lippsqcjvmirh\";\nexpect call6==\"hbdhpqrmpjylqmpyjlpmlyjrqpmqryjlpmqryjljygyjl\";\nexpect call7==\"e\";\n}\n"
+    },
+    "HumanEval/90": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= next_smallest([1,2,3,4,5]) ;\nvar call1:= next_smallest([5,1,4,3,2]) ;\nvar call2:= next_smallest([]) ;\nvar call3:= next_smallest([1,1]) ;\nvar call4:= next_smallest([1,1,1,1,0]) ;\nvar call5:= next_smallest([1,1]) ;\nvar call6:= next_smallest([-35,34,12,-45]) ;\nexpect call0==2;\nexpect call1==2;\nexpect call2==None;\nexpect call3==None;\nexpect call4==1;\nexpect call5==None;\nexpect call6==-35;\nexpect true;\n}\n"
+    },
+    "HumanEval/91": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_bored(\"Hello world\") ;\nvar call1:= is_bored(\"Is the sky blue?\") ;\nvar call2:= is_bored(\"I love It !\") ;\nvar call3:= is_bored(\"bIt\") ;\nvar call4:= is_bored(\"I feel good today. I will be productive. will kill It\") ;\nvar call5:= is_bored(\"You and I are going for a walk\") ;\nexpect call0==0;\nexpect call1==0;\nexpect call2==1;\nexpect call3==0;\nexpect call4==2;\nexpect call5==0;\nexpect true;\n}\n"
+    },
+    "HumanEval/92": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= any_int(2,3,1) ;\nvar call1:= any_int(2.5000000000,2,3) ;\nvar call2:= any_int(1.5000000000,5,3.5000000000) ;\nvar call3:= any_int(2,6,2) ;\nvar call4:= any_int(4,2,2) ;\nvar call5:= any_int(2.2000000000,2.2000000000,2.2000000000) ;\nvar call6:= any_int(-4,6,2) ;\nvar call7:= any_int(2,1,1) ;\nvar call8:= any_int(3,4,7) ;\nvar call9:= any_int(3.0000000000,4,7) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\nexpect call3==false;\nexpect call4==true;\nexpect call5==false;\nexpect call6==true;\nexpect call7==true;\nexpect call8==true;\nexpect call9==false;\n}\n"
+    },
+    "HumanEval/93": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= encode(\"TEST\") ;\nvar call1:= encode(\"Mudasir\") ;\nvar call2:= encode(\"YES\") ;\nvar call3:= encode(\"This is a message\") ;\nvar call4:= encode(\"I DoNt KnOw WhAt tO WrItE\") ;\nexpect call0==\"tgst\";\nexpect call1==\"mWDCSKR\";\nexpect call2==\"ygs\";\nexpect call3==\"tHKS KS C MGSSCGG\";\nexpect call4==\"k dQnT kNqW wHcT Tq wRkTg\";\n}\n"
+    },
+    "HumanEval/94": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= skjkasdkd([0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3]) ;\nvar call1:= skjkasdkd([1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1]) ;\nvar call2:= skjkasdkd([1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3]) ;\nvar call3:= skjkasdkd([0,724,32,71,99,32,6,0,5,91,83,0,5,6]) ;\nvar call4:= skjkasdkd([0,81,12,3,1,21]) ;\nvar call5:= skjkasdkd([0,8,1,2,1,7]) ;\nvar call6:= skjkasdkd([8191]) ;\nvar call7:= skjkasdkd([8191,123456,127,7]) ;\nvar call8:= skjkasdkd([127,97,8192]) ;\nexpect call0==10;\nexpect call1==25;\nexpect call2==13;\nexpect call3==11;\nexpect call4==3;\nexpect call5==7;\nexpect call6==19;\nexpect call7==19;\nexpect call8==10;\n}\n"
+    },
+    "HumanEval/95": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= check_dict_case(map[\"p\":=\"pineapple\",\"b\":=\"banana\"]) ;\nvar call1:= check_dict_case(map[\"p\":=\"pineapple\",\"A\":=\"banana\",\"B\":=\"banana\"]) ;\nvar call2:= check_dict_case(map[\"p\":=\"pineapple\",5:=\"banana\",\"a\":=\"apple\"]) ;\nvar call3:= check_dict_case(map[\"Name\":=\"John\",\"Age\":=\"36\",\"City\":=\"Houston\"]) ;\nvar call4:= check_dict_case(map[\"STATE\":=\"NC\",\"ZIP\":=\"12345\"]) ;\nvar call5:= check_dict_case(map[\"fruit\":=\"Orange\",\"taste\":=\"Sweet\"]) ;\nvar call6:= check_dict_case(map[]) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\nexpect call3==false;\nexpect call4==true;\nexpect call5==true;\nexpect call6==false;\n}\n"
+    },
+    "HumanEval/96": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= count_up_to(5) ;\nvar call1:= count_up_to(6) ;\nvar call2:= count_up_to(7) ;\nvar call3:= count_up_to(10) ;\nvar call4:= count_up_to(0) ;\nvar call5:= count_up_to(22) ;\nvar call6:= count_up_to(1) ;\nvar call7:= count_up_to(18) ;\nvar call8:= count_up_to(47) ;\nvar call9:= count_up_to(101) ;\nexpect call0==[2,3];\nexpect call1==[2,3,5];\nexpect call2==[2,3,5];\nexpect call3==[2,3,5,7];\nexpect call4==[];\nexpect call5==[2,3,5,7,11,13,17,19];\nexpect call6==[];\nexpect call7==[2,3,5,7,11,13,17];\nexpect call8==[2,3,5,7,11,13,17,19,23,29,31,37,41,43];\nexpect call9==[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97];\n}\n"
+    },
+    "HumanEval/97": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= multiply(148,412) ;\nvar call1:= multiply(19,28) ;\nvar call2:= multiply(2020,1851) ;\nvar call3:= multiply(14,-15) ;\nvar call4:= multiply(76,67) ;\nvar call5:= multiply(17,27) ;\nvar call6:= multiply(0,1) ;\nvar call7:= multiply(0,0) ;\nexpect call0==16;\nexpect call1==72;\nexpect call2==0;\nexpect call3==20;\nexpect call4==42;\nexpect call5==49;\nexpect call6==0;\nexpect call7==0;\n}\n"
+    },
+    "HumanEval/98": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= count_upper(\"aBCdEf\") ;\nvar call1:= count_upper(\"abcdefg\") ;\nvar call2:= count_upper(\"dBBE\") ;\nvar call3:= count_upper(\"B\") ;\nvar call4:= count_upper(\"U\") ;\nvar call5:= count_upper(\"\") ;\nvar call6:= count_upper(\"EEEE\") ;\nexpect call0==1;\nexpect call1==0;\nexpect call2==0;\nexpect call3==0;\nexpect call4==1;\nexpect call5==0;\nexpect call6==2;\nexpect true;\n}\n"
+    },
+    "HumanEval/99": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= closest_integer(\"10\") ;\nvar call1:= closest_integer(\"14.5\") ;\nvar call2:= closest_integer(\"-15.5\") ;\nvar call3:= closest_integer(\"15.3\") ;\nvar call4:= closest_integer(\"0\") ;\nexpect call0==10;\nexpect call1==15;\nexpect call2==-16;\nexpect call3==15;\nexpect call4==0;\n}\n"
+    },
+    "HumanEval/100": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= make_a_pile(3) ;\nvar call1:= make_a_pile(4) ;\nvar call2:= make_a_pile(5) ;\nvar call3:= make_a_pile(6) ;\nvar call4:= make_a_pile(8) ;\nexpect call0==[3,5,7];\nexpect call1==[4,6,8,10];\nexpect call2==[5,7,9,11,13];\nexpect call3==[6,8,10,12,14,16];\nexpect call4==[8,10,12,14,16,18,20,22];\nexpect true;\n}\n"
+    },
+    "HumanEval/101": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= words_string(\"Hi, my name is John\") ;\nvar call1:= words_string(\"One, two, three, four, five, six\") ;\nvar call2:= words_string(\"Hi, my name\") ;\nvar call3:= words_string(\"One,, two, three, four, five, six,\") ;\nvar call4:= words_string(\"\") ;\nvar call5:= words_string(\"ahmed     , gamal\") ;\nexpect true;\nexpect call0==[\"Hi\",\"my\",\"name\",\"is\",\"John\"];\nexpect call1==[\"One\",\"two\",\"three\",\"four\",\"five\",\"six\"];\nexpect call2==[\"Hi\",\"my\",\"name\"];\nexpect call3==[\"One\",\"two\",\"three\",\"four\",\"five\",\"six\"];\nexpect true;\nexpect call4==[];\nexpect call5==[\"ahmed\",\"gamal\"];\n}\n"
+    },
+    "HumanEval/102": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= choose_num(12,15) ;\nvar call1:= choose_num(13,12) ;\nvar call2:= choose_num(33,12354) ;\nvar call3:= choose_num(5234,5233) ;\nvar call4:= choose_num(6,29) ;\nvar call5:= choose_num(27,10) ;\nvar call6:= choose_num(7,7) ;\nvar call7:= choose_num(546,546) ;\nexpect call0==14;\nexpect call1==-1;\nexpect call2==12354;\nexpect call3==-1;\nexpect call4==28;\nexpect call5==-1;\nexpect call6==-1;\nexpect call7==546;\n}\n"
+    },
+    "HumanEval/103": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= rounded_avg(1,5) ;\nvar call1:= rounded_avg(7,13) ;\nvar call2:= rounded_avg(964,977) ;\nvar call3:= rounded_avg(996,997) ;\nvar call4:= rounded_avg(560,851) ;\nvar call5:= rounded_avg(185,546) ;\nvar call6:= rounded_avg(362,496) ;\nvar call7:= rounded_avg(350,902) ;\nvar call8:= rounded_avg(197,233) ;\nvar call9:= rounded_avg(7,5) ;\nvar call10:= rounded_avg(5,1) ;\nvar call11:= rounded_avg(5,5) ;\nexpect call0==\"0b11\";\nexpect call1==\"0b1010\";\nexpect call2==\"0b1111001010\";\nexpect call3==\"0b1111100100\";\nexpect call4==\"0b1011000010\";\nexpect call5==\"0b101101110\";\nexpect call6==\"0b110101101\";\nexpect call7==\"0b1001110010\";\nexpect call8==\"0b11010111\";\nexpect call9==-1;\nexpect call10==-1;\nexpect call11==\"0b101\";\n}\n"
+    },
+    "HumanEval/104": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= unique_digits([15,33,1422,1]) ;\nvar call1:= unique_digits([152,323,1422,10]) ;\nvar call2:= unique_digits([12345,2033,111,151]) ;\nvar call3:= unique_digits([135,103,31]) ;\nexpect call0==[1,15,33];\nexpect call1==[];\nexpect call2==[111,151];\nexpect call3==[31,135];\nexpect true;\n}\n"
+    },
+    "HumanEval/105": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= by_length([2,1,1,4,5,8,2,3]) ;\nvar call1:= by_length([]) ;\nvar call2:= by_length([1,-1,55]) ;\nvar call3:= by_length([1,-1,3,2]) ;\nvar call4:= by_length([9,4,8]) ;\nexpect true;\nexpect call0==[\"Eight\",\"Five\",\"Four\",\"Three\",\"Two\",\"Two\",\"One\",\"One\"];\nexpect call1==[];\nexpect call2==[\"One\"];\nexpect true;\nexpect call3==[\"Three\",\"Two\",\"One\"];\nexpect call4==[\"Nine\",\"Eight\",\"Four\"];\n}\n"
+    },
+    "HumanEval/106": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= f(5) ;\nvar call1:= f(7) ;\nvar call2:= f(1) ;\nvar call3:= f(3) ;\nexpect call0==[1,2,6,24,15];\nexpect call1==[1,2,6,24,15,720,28];\nexpect call2==[1];\nexpect call3==[1,2,6];\n}\n"
+    },
+    "HumanEval/107": {
+        "TestCase": "method{:test} valid_test(){\nvar call0_0,call0_1:= even_odd_palindrome(123);\nvar call1_0,call1_1:= even_odd_palindrome(12);\nvar call2_0,call2_1:= even_odd_palindrome(3);\nvar call3_0,call3_1:= even_odd_palindrome(63);\nvar call4_0,call4_1:= even_odd_palindrome(25);\nvar call5_0,call5_1:= even_odd_palindrome(19);\nvar call6_0,call6_1:= even_odd_palindrome(9);\nvar call7_0,call7_1:= even_odd_palindrome(1);\nexpect (call0_0,call0_1)==(8,13);\nexpect (call1_0,call1_1)==(4,6);\nexpect (call2_0,call2_1)==(1,2);\nexpect (call3_0,call3_1)==(6,8);\nexpect (call4_0,call4_1)==(5,6);\nexpect (call5_0,call5_1)==(4,6);\nexpect (call6_0,call6_1)==(4,5);\nexpect (call7_0,call7_1)==(0,1);\n}\n"
+    },
+    "HumanEval/108": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= count_nums([]) ;\nvar call1:= count_nums([-1,-2,0]) ;\nvar call2:= count_nums([1,1,2,-2,3,4,5]) ;\nvar call3:= count_nums([1,6,9,-6,0,1,5]) ;\nvar call4:= count_nums([1,100,98,-7,1,-1]) ;\nvar call5:= count_nums([12,23,34,-45,-56,0]) ;\nvar call6:= count_nums([-0,1]) ;\nvar call7:= count_nums([1]) ;\nexpect call0==0;\nexpect call1==0;\nexpect call2==6;\nexpect call3==5;\nexpect call4==4;\nexpect call5==5;\nexpect call6==1;\nexpect call7==1;\nexpect true;\n}\n"
+    },
+    "HumanEval/109": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= move_one_ball([3,4,5,1,2]) ;\nvar call1:= move_one_ball([3,5,10,1,2]) ;\nvar call2:= move_one_ball([4,3,1,2]) ;\nvar call3:= move_one_ball([3,5,4,1,2]) ;\nvar call4:= move_one_ball([]) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\nexpect call3==false;\nexpect call4==true;\n}\n"
+    },
+    "HumanEval/110": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= exchange([1,2,3,4],[1,2,3,4]) ;\nvar call1:= exchange([1,2,3,4],[1,5,3,4]) ;\nvar call2:= exchange([1,2,3,4],[2,1,4,3]) ;\nvar call3:= exchange([5,7,3],[2,6,4]) ;\nvar call4:= exchange([5,7,3],[2,6,3]) ;\nvar call5:= exchange([3,2,6,1,8,9],[3,5,5,1,1,1]) ;\nvar call6:= exchange([100,200],[200,200]) ;\nexpect call0==\"YES\";\nexpect call1==\"NO\";\nexpect call2==\"YES\";\nexpect call3==\"YES\";\nexpect call4==\"NO\";\nexpect call5==\"NO\";\nexpect call6==\"YES\";\n}\n"
+    },
+    "HumanEval/111": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= histogram(\"a b b a\") ;\nvar call1:= histogram(\"a b c a b\") ;\nvar call2:= histogram(\"a b c d g\") ;\nvar call3:= histogram(\"r t g\") ;\nvar call4:= histogram(\"b b b b a\") ;\nvar call5:= histogram(\"r t g\") ;\nvar call6:= histogram(\"\") ;\nvar call7:= histogram(\"a\") ;\nexpect call0==map[\"a\":=2,\"b\":=2];\nexpect call1==map[\"a\":=2,\"b\":=2];\nexpect call2==map[\"a\":=1,\"b\":=1,\"c\":=1,\"d\":=1,\"g\":=1];\nexpect call3==map[\"r\":=1,\"t\":=1,\"g\":=1];\nexpect call4==map[\"b\":=4];\nexpect call5==map[\"r\":=1,\"t\":=1,\"g\":=1];\nexpect call6==map[];\nexpect call7==map[\"a\":=1];\n}\n"
+    },
+    "HumanEval/112": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= reverse_delete(\"abcde\",\"ae\") ;\nvar call1:= reverse_delete(\"abcdef\",\"b\") ;\nvar call2:= reverse_delete(\"abcdedcba\",\"ab\") ;\nvar call3:= reverse_delete(\"dwik\",\"w\") ;\nvar call4:= reverse_delete(\"a\",\"a\") ;\nvar call5:= reverse_delete(\"abcdedcba\",\"\") ;\nvar call6:= reverse_delete(\"abcdedcba\",\"v\") ;\nvar call7:= reverse_delete(\"vabba\",\"v\") ;\nvar call8:= reverse_delete(\"mamma\",\"mia\") ;\nexpect call0==(\"bcd\",false);\nexpect call1==(\"acdef\",false);\nexpect call2==(\"cdedc\",true);\nexpect call3==(\"dik\",false);\nexpect call4==(\"\",true);\nexpect call5==(\"abcdedcba\",true);\nexpect call6==(\"abcdedcba\",true);\nexpect call7==(\"abba\",true);\nexpect call8==(\"\",true);\n}\n"
+    },
+    "HumanEval/113": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= odd_count([\"1234567\"]) ;\nvar call1:= odd_count([\"3\",\"11111111\"]) ;\nvar call2:= odd_count([\"271\",\"137\",\"314\"]) ;\nexpect call0==[\"the number of odd elements 4n the str4ng 4 of the 4nput.\"];\nexpect call1==[\"the number of odd elements 1n the str1ng 1 of the 1nput.\",\"the number of odd elements 8n the str8ng 8 of the 8nput.\"];\nexpect call2==[\"the number of odd elements 2n the str2ng 2 of the 2nput.\",\"the number of odd elements 3n the str3ng 3 of the 3nput.\",\"the number of odd elements 2n the str2ng 2 of the 2nput.\"];\nexpect true;\n}\n"
+    },
+    "HumanEval/114": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= minSubArraySum([2,3,4,1,2,4]) ;\nvar call1:= minSubArraySum([-1,-2,-3]) ;\nvar call2:= minSubArraySum([-1,-2,-3,2,-10]) ;\nvar call3:= minSubArraySum([-9999999999999999]) ;\nvar call4:= minSubArraySum([0,10,20,1000000]) ;\nvar call5:= minSubArraySum([-1,-2,-3,10,-5]) ;\nvar call6:= minSubArraySum([100,-1,-2,-3,10,-5]) ;\nvar call7:= minSubArraySum([10,11,13,8,3,4]) ;\nvar call8:= minSubArraySum([100,-33,32,-1,0,-2]) ;\nvar call9:= minSubArraySum([-10]) ;\nvar call10:= minSubArraySum([7]) ;\nvar call11:= minSubArraySum([1,-1]) ;\nexpect call0==1;\nexpect call1==-6;\nexpect call2==-14;\nexpect call3==-9999999999999999;\nexpect call4==0;\nexpect call5==-6;\nexpect call6==-6;\nexpect call7==3;\nexpect call8==-33;\nexpect call9==-10;\nexpect call10==7;\nexpect call11==-1;\n}\n"
+    },
+    "HumanEval/115": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= max_fill([[0,0,1,0],[0,1,0,0],[1,1,1,1]],1) ;\nvar call1:= max_fill([[0,0,1,1],[0,0,0,0],[1,1,1,1],[0,1,1,1]],2) ;\nvar call2:= max_fill([[0,0,0],[0,0,0]],5) ;\nvar call3:= max_fill([[1,1,1,1],[1,1,1,1]],2) ;\nvar call4:= max_fill([[1,1,1,1],[1,1,1,1]],9) ;\nexpect true;\nexpect call0==6;\nexpect call1==5;\nexpect call2==0;\nexpect true;\nexpect call3==4;\nexpect call4==2;\n}\n"
+    },
+    "HumanEval/116": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sort_array([1,5,2,3,4]) ;\nvar call1:= sort_array([-2,-3,-4,-5,-6]) ;\nvar call2:= sort_array([1,0,2,3,4]) ;\nvar call3:= sort_array([]) ;\nvar call4:= sort_array([2,5,77,4,5,3,5,7,2,3,4]) ;\nvar call5:= sort_array([3,6,44,12,32,5]) ;\nvar call6:= sort_array([2,4,8,16,32]) ;\nvar call7:= sort_array([2,4,8,16,32]) ;\nexpect true;\nexpect call0==[1,2,4,3,5];\nexpect call1==[-4,-2,-6,-5,-3];\nexpect call2==[0,1,2,4,3];\nexpect call3==[];\nexpect call4==[2,2,4,4,3,3,5,5,5,7,77];\nexpect call5==[32,3,5,6,12,44];\nexpect call6==[2,4,8,16,32];\nexpect call7==[2,4,8,16,32];\nexpect true;\n}\n"
+    },
+    "HumanEval/117": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= select_words(\"Mary had a little lamb\",4) ;\nvar call1:= select_words(\"Mary had a little lamb\",3) ;\nvar call2:= select_words(\"simple white space\",2) ;\nvar call3:= select_words(\"Hello world\",4) ;\nvar call4:= select_words(\"Uncle sam\",3) ;\nvar call5:= select_words(\"\",4) ;\nvar call6:= select_words(\"a b c d e f\",1) ;\nexpect call0==[\"little\"];\nexpect call1==[\"Mary\",\"lamb\"];\nexpect call2==[];\nexpect call3==[\"world\"];\nexpect call4==[\"Uncle\"];\nexpect call5==[];\nexpect call6==[\"b\",\"c\",\"d\",\"f\"];\n}\n"
+    },
+    "HumanEval/118": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= get_closest_vowel(\"yogurt\") ;\nvar call1:= get_closest_vowel(\"full\") ;\nvar call2:= get_closest_vowel(\"easy\") ;\nvar call3:= get_closest_vowel(\"eAsy\") ;\nvar call4:= get_closest_vowel(\"ali\") ;\nvar call5:= get_closest_vowel(\"bad\") ;\nvar call6:= get_closest_vowel(\"most\") ;\nvar call7:= get_closest_vowel(\"ab\") ;\nvar call8:= get_closest_vowel(\"ba\") ;\nvar call9:= get_closest_vowel(\"quick\") ;\nvar call10:= get_closest_vowel(\"anime\") ;\nvar call11:= get_closest_vowel(\"Asia\") ;\nvar call12:= get_closest_vowel(\"Above\") ;\nexpect call0==\"u\";\nexpect call1==\"u\";\nexpect call2==\"\";\nexpect call3==\"\";\nexpect call4==\"\";\nexpect call5==\"a\";\nexpect call6==\"o\";\nexpect call7==\"\";\nexpect call8==\"\";\nexpect call9==\"\";\nexpect call10==\"i\";\nexpect call11==\"\";\nexpect call12==\"o\";\nexpect true;\n}\n"
+    },
+    "HumanEval/119": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= match_parens([\"()(\",\")\"]) ;\nvar call1:= match_parens([\")\",\")\"]) ;\nvar call2:= match_parens([\"(()(())\",\"())())\"]) ;\nvar call3:= match_parens([\")())\",\"(()()(\"]) ;\nvar call4:= match_parens([\"(())))\",\"(()())((\"]) ;\nvar call5:= match_parens([\"()\",\"())\"]) ;\nvar call6:= match_parens([\"(()(\",\"()))()\"]) ;\nvar call7:= match_parens([\"((((\",\"((())\"]) ;\nvar call8:= match_parens([\")(()\",\"(()(\"]) ;\nvar call9:= match_parens([\")(\",\")(\"]) ;\nvar call10:= match_parens([\"(\",\")\"]) ;\nvar call11:= match_parens([\")\",\"(\"]) ;\nexpect call0==\"Yes\";\nexpect call1==\"No\";\nexpect call2==\"No\";\nexpect call3==\"Yes\";\nexpect call4==\"Yes\";\nexpect call5==\"No\";\nexpect call6==\"Yes\";\nexpect call7==\"No\";\nexpect call8==\"No\";\nexpect call9==\"No\";\nexpect call10==\"Yes\";\nexpect call11==\"Yes\";\n}\n"
+    },
+    "HumanEval/120": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= maximum([-3,-4,5],3) ;\nvar call1:= maximum([4,-4,4],2) ;\nvar call2:= maximum([-3,2,1,2,-1,-2,1],1) ;\nvar call3:= maximum([123,-123,20,0,1,2,-3],3) ;\nvar call4:= maximum([-123,20,0,1,2,-3],4) ;\nvar call5:= maximum([5,15,0,3,-13,-8,0],7) ;\nvar call6:= maximum([-1,0,2,5,3,-10],2) ;\nvar call7:= maximum([1,0,5,-7],1) ;\nvar call8:= maximum([4,-4],2) ;\nvar call9:= maximum([-10,10],2) ;\nvar call10:= maximum([1,2,3,-23,243,-400,0],0) ;\nexpect call0==[-4,-3,5];\nexpect call1==[4,4];\nexpect call2==[2];\nexpect call3==[2,20,123];\nexpect call4==[0,1,2,20];\nexpect call5==[-13,-8,0,0,3,5,15];\nexpect call6==[3,5];\nexpect call7==[5];\nexpect call8==[-4,4];\nexpect call9==[-10,10];\nexpect call10==[];\n}\n"
+    },
+    "HumanEval/121": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= solution([5,8,7,1]) ;\nvar call1:= solution([3,3,3,3,3]) ;\nvar call2:= solution([30,13,24,321]) ;\nvar call3:= solution([5,9]) ;\nvar call4:= solution([2,4,8]) ;\nvar call5:= solution([30,13,23,32]) ;\nvar call6:= solution([3,13,2,9]) ;\nexpect call0==12;\nexpect call1==9;\nexpect call2==0;\nexpect call3==5;\nexpect call4==0;\nexpect call5==23;\nexpect call6==3;\n}\n"
+    },
+    "HumanEval/122": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= add_elements([1,-2,-3,41,57,76,87,88,99],3) ;\nvar call1:= add_elements([111,121,3,4000,5,6],2) ;\nvar call2:= add_elements([11,21,3,90,5,6,7,8,9],4) ;\nvar call3:= add_elements([111,21,3,4000,5,6,7,8,9],4) ;\nvar call4:= add_elements([1],1) ;\nexpect call0==-4;\nexpect call1==0;\nexpect call2==125;\nexpect call3==24;\nexpect call4==1;\n}\n"
+    },
+    "HumanEval/123": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= get_odd_collatz(14) ;\nvar call1:= get_odd_collatz(5) ;\nvar call2:= get_odd_collatz(12) ;\nvar call3:= get_odd_collatz(1) ;\nexpect call0==[1,5,7,11,13,17];\nexpect call1==[1,5];\nexpect call2==[1,3,5];\nexpect call3==[1];\n}\n"
+    },
+    "HumanEval/124": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= valid_date(\"03-11-2000\") ;\nvar call1:= valid_date(\"15-01-2012\") ;\nvar call2:= valid_date(\"04-0-2040\") ;\nvar call3:= valid_date(\"06-04-2020\") ;\nvar call4:= valid_date(\"01-01-2007\") ;\nvar call5:= valid_date(\"03-32-2011\") ;\nvar call6:= valid_date(\"\") ;\nvar call7:= valid_date(\"04-31-3000\") ;\nvar call8:= valid_date(\"06-06-2005\") ;\nvar call9:= valid_date(\"21-31-2000\") ;\nvar call10:= valid_date(\"04-12-2003\") ;\nvar call11:= valid_date(\"04122003\") ;\nvar call12:= valid_date(\"20030412\") ;\nvar call13:= valid_date(\"2003-04\") ;\nvar call14:= valid_date(\"2003-04-12\") ;\nvar call15:= valid_date(\"04-2003\") ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\nexpect call3==true;\nexpect call4==true;\nexpect call5==false;\nexpect call6==false;\nexpect call7==false;\nexpect call8==true;\nexpect call9==false;\nexpect call10==true;\nexpect call11==false;\nexpect call12==false;\nexpect call13==false;\nexpect call14==false;\nexpect call15==false;\n}\n"
+    },
+    "HumanEval/125": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= split_words(\"Hello world!\") ;\nvar call1:= split_words(\"Hello,world!\") ;\nvar call2:= split_words(\"Hello world,!\") ;\nvar call3:= split_words(\"Hello,Hello,world !\") ;\nvar call4:= split_words(\"abcdef\") ;\nvar call5:= split_words(\"aaabb\") ;\nvar call6:= split_words(\"aaaBb\") ;\nvar call7:= split_words(\"\") ;\nexpect call0==[\"Hello\",\"world!\"];\nexpect call1==[\"Hello\",\"world!\"];\nexpect call2==[\"Hello\",\"world,!\"];\nexpect call3==[\"Hello,Hello,world\",\"!\"];\nexpect call4==3;\nexpect call5==2;\nexpect call6==1;\nexpect call7==0;\n}\n"
+    },
+    "HumanEval/126": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_sorted([5]) ;\nvar call1:= is_sorted([1,2,3,4,5]) ;\nvar call2:= is_sorted([1,3,2,4,5]) ;\nvar call3:= is_sorted([1,2,3,4,5,6]) ;\nvar call4:= is_sorted([1,2,3,4,5,6,7]) ;\nvar call5:= is_sorted([1,3,2,4,5,6,7]) ;\nvar call6:= is_sorted([]) ;\nvar call7:= is_sorted([1]) ;\nvar call8:= is_sorted([3,2,1]) ;\nvar call9:= is_sorted([1,2,2,2,3,4]) ;\nvar call10:= is_sorted([1,2,3,3,3,4]) ;\nvar call11:= is_sorted([1,2,2,3,3,4]) ;\nvar call12:= is_sorted([1,2,3,4]) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\nexpect call3==true;\nexpect call4==true;\nexpect call5==false;\nexpect call6==true;\nexpect call7==true;\nexpect call8==false;\nexpect call9==false;\nexpect call10==false;\nexpect call11==true;\nexpect call12==true;\n}\n"
+    },
+    "HumanEval/127": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= intersection((1,2),(2,3)) ;\nvar call1:= intersection((-1,1),(0,4)) ;\nvar call2:= intersection((-3,-1),(-5,5)) ;\nvar call3:= intersection((-2,2),(-4,0)) ;\nvar call4:= intersection((-11,2),(-1,-1)) ;\nvar call5:= intersection((1,2),(3,5)) ;\nvar call6:= intersection((1,2),(1,2)) ;\nvar call7:= intersection((-2,-2),(-3,-2)) ;\nexpect call0==\"NO\";\nexpect call1==\"NO\";\nexpect call2==\"YES\";\nexpect call3==\"YES\";\nexpect call4==\"NO\";\nexpect call5==\"NO\";\nexpect call6==\"NO\";\nexpect call7==\"NO\";\n}\n"
+    },
+    "HumanEval/128": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= prod_signs([1,2,2,-4]) ;\nvar call1:= prod_signs([0,1]) ;\nvar call2:= prod_signs([1,1,1,2,3,-1,1]) ;\nvar call3:= prod_signs([]) ;\nvar call4:= prod_signs([2,4,1,2,-1,-1,9]) ;\nvar call5:= prod_signs([-1,1,-1,1]) ;\nvar call6:= prod_signs([-1,1,1,1]) ;\nvar call7:= prod_signs([-1,1,1,0]) ;\nexpect true;\nexpect call0==-9;\nexpect call1==0;\nexpect call2==-10;\nexpect call3==None;\nexpect call4==20;\nexpect call5==4;\nexpect call6==-4;\nexpect call7==0;\nexpect true;\n}\n"
+    },
+    "HumanEval/129": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= minPath([[1,2,3],[4,5,6],[7,8,9]],3) ;\nvar call1:= minPath([[5,9,3],[4,1,6],[7,8,2]],1) ;\nvar call2:= minPath([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]],4) ;\nvar call3:= minPath([[6,4,13,10],[5,7,12,1],[3,16,11,15],[8,14,9,2]],7) ;\nvar call4:= minPath([[8,14,9,2],[6,4,13,15],[5,7,1,12],[3,10,11,16]],5) ;\nvar call5:= minPath([[11,8,7,2],[5,16,14,4],[9,3,15,6],[12,13,10,1]],9) ;\nvar call6:= minPath([[12,13,10,1],[9,3,15,6],[5,16,14,4],[11,8,7,2]],12) ;\nvar call7:= minPath([[2,7,4],[3,1,5],[6,8,9]],8) ;\nvar call8:= minPath([[6,1,5],[3,8,9],[2,7,4]],8) ;\nvar call9:= minPath([[1,2],[3,4]],10) ;\nvar call10:= minPath([[1,3],[3,2]],10) ;\nexpect call0==[1,2,1];\nexpect call1==[1];\nexpect call2==[1,2,1,2];\nexpect call3==[1,10,1,10,1,10,1];\nexpect call4==[1,7,1,7,1];\nexpect call5==[1,6,1,6,1,6,1,6,1];\nexpect call6==[1,6,1,6,1,6,1,6,1,6,1,6];\nexpect call7==[1,3,1,3,1,3,1,3];\nexpect call8==[1,5,1,5,1,5,1,5];\nexpect call9==[1,2,1,2,1,2,1,2,1,2];\nexpect call10==[1,3,1,3,1,3,1,3,1,3];\n}\n"
+    },
+    "HumanEval/130": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= tri(3) ;\nvar call1:= tri(4) ;\nvar call2:= tri(5) ;\nvar call3:= tri(6) ;\nvar call4:= tri(7) ;\nvar call5:= tri(8) ;\nvar call6:= tri(9) ;\nvar call7:= tri(20) ;\nvar call8:= tri(0) ;\nvar call9:= tri(1) ;\nexpect call0==[1,3,2,8];\nexpect call1==[1,3,2,8,3];\nexpect call2==[1,3,2,8,3,15];\nexpect call3==[1,3,2,8,3,15,4];\nexpect call4==[1,3,2,8,3,15,4,24];\nexpect call5==[1,3,2,8,3,15,4,24,5];\nexpect call6==[1,3,2,8,3,15,4,24,5,35];\nexpect call7==[1,3,2,8,3,15,4,24,5,35,6,48,7,63,8,80,9,99,10,120,11];\nexpect call8==[1];\nexpect call9==[1,3];\n}\n"
+    },
+    "HumanEval/131": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= digits(5) ;\nvar call1:= digits(54) ;\nvar call2:= digits(120) ;\nvar call3:= digits(5014) ;\nvar call4:= digits(98765) ;\nvar call5:= digits(5576543) ;\nvar call6:= digits(2468) ;\nexpect call0==5;\nexpect call1==5;\nexpect call2==1;\nexpect call3==5;\nexpect call4==315;\nexpect call5==2625;\nexpect call6==0;\n}\n"
+    },
+    "HumanEval/132": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_nested(\"[[]]\") ;\nvar call1:= is_nested(\"[]]]]]]][[[[[]\") ;\nvar call2:= is_nested(\"[][]\") ;\nvar call3:= is_nested(\"[]\") ;\nvar call4:= is_nested(\"[[[[]]]]\") ;\nvar call5:= is_nested(\"[]]]]]]]]]]\") ;\nvar call6:= is_nested(\"[][][[]]\") ;\nvar call7:= is_nested(\"[[]\") ;\nvar call8:= is_nested(\"[]]\") ;\nvar call9:= is_nested(\"[[]][[\") ;\nvar call10:= is_nested(\"[[][]]\") ;\nvar call11:= is_nested(\"\") ;\nvar call12:= is_nested(\"[[[[[[[[\") ;\nvar call13:= is_nested(\"]]]]]]]]\") ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\nexpect call3==false;\nexpect call4==true;\nexpect call5==false;\nexpect call6==true;\nexpect call7==false;\nexpect call8==false;\nexpect call9==true;\nexpect call10==true;\nexpect call11==false;\nexpect call12==false;\nexpect call13==false;\n}\n"
+    },
+    "HumanEval/133": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sum_squares([1.0,2.0,3.0]) ;\nvar call1:= sum_squares([1.0000000000,2.0,3.0]) ;\nvar call2:= sum_squares([1.0,3.0,5.0,7.0]) ;\nvar call3:= sum_squares([1.4000000000,4.2000000000,0.0]) ;\nvar call4:= sum_squares([-2.4000000000,1.0,1.0]) ;\nvar call5:= sum_squares([100.0,1.0,15.0,2.0]) ;\nvar call6:= sum_squares([10000.0,10000.0]) ;\nvar call7:= sum_squares([-1.4000000000,4.6000000000,6.3000000000]) ;\nvar call8:= sum_squares([-1.4000000000,17.9000000000,18.9000000000,19.9000000000]) ;\nvar call9:= sum_squares([0.0]) ;\nvar call10:= sum_squares([-1.0]) ;\nvar call11:= sum_squares([-1.0,1.0,0.0]) ;\nexpect call0==14;\nexpect call1==14;\nexpect call2==84;\nexpect call3==29;\nexpect call4==6;\nexpect call5==10230;\nexpect call6==200000000;\nexpect call7==75;\nexpect call8==1086;\nexpect call9==0;\nexpect call10==1;\nexpect call11==2;\n}\n"
+    },
+    "HumanEval/134": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= check_if_last_char_is_a_letter(\"apple\") ;\nvar call1:= check_if_last_char_is_a_letter(\"apple pi e\") ;\nvar call2:= check_if_last_char_is_a_letter(\"eeeee\") ;\nvar call3:= check_if_last_char_is_a_letter(\"A\") ;\nvar call4:= check_if_last_char_is_a_letter(\"Pumpkin pie \") ;\nvar call5:= check_if_last_char_is_a_letter(\"Pumpkin pie 1\") ;\nvar call6:= check_if_last_char_is_a_letter(\"\") ;\nvar call7:= check_if_last_char_is_a_letter(\"eeeee e \") ;\nvar call8:= check_if_last_char_is_a_letter(\"apple pie\") ;\nvar call9:= check_if_last_char_is_a_letter(\"apple pi e \") ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\nexpect call3==true;\nexpect call4==false;\nexpect call5==false;\nexpect call6==false;\nexpect call7==false;\nexpect call8==false;\nexpect call9==false;\nexpect true;\n}\n"
+    },
+    "HumanEval/135": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= can_arrange([1,2,4,3,5]) ;\nvar call1:= can_arrange([1,2,4,5]) ;\nvar call2:= can_arrange([1,4,2,5,6,7,8,9,10]) ;\nvar call3:= can_arrange([4,8,5,7,3]) ;\nvar call4:= can_arrange([]) ;\nexpect call0==3;\nexpect call1==-1;\nexpect call2==2;\nexpect call3==4;\nexpect call4==-1;\n}\n"
+    },
+    "HumanEval/136": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= largest_smallest_integers([2,4,1,3,5,7]) ;\nvar call1:= largest_smallest_integers([2,4,1,3,5,7,0]) ;\nvar call2:= largest_smallest_integers([1,3,2,4,5,6,-2]) ;\nvar call3:= largest_smallest_integers([4,5,3,6,2,7,-7]) ;\nvar call4:= largest_smallest_integers([7,3,8,4,9,2,5,-9]) ;\nvar call5:= largest_smallest_integers([]) ;\nvar call6:= largest_smallest_integers([0]) ;\nvar call7:= largest_smallest_integers([-1,-3,-5,-6]) ;\nvar call8:= largest_smallest_integers([-1,-3,-5,-6,0]) ;\nvar call9:= largest_smallest_integers([-6,-4,-4,-3,1]) ;\nvar call10:= largest_smallest_integers([-6,-4,-4,-3,-100,1]) ;\nexpect call0==(None,1);\nexpect call1==(None,1);\nexpect call2==(-2,1);\nexpect call3==(-7,2);\nexpect call4==(-9,2);\nexpect call5==(None,None);\nexpect call6==(None,None);\nexpect call7==(-1,None);\nexpect call8==(-1,None);\nexpect call9==(-3,1);\nexpect call10==(-3,1);\nexpect true;\n}\n"
+    },
+    "HumanEval/137": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= compare_one(1,2) ;\nvar call1:= compare_one(1,2.5000000000) ;\nvar call2:= compare_one(2,3) ;\nvar call3:= compare_one(5,6) ;\nvar call4:= compare_one(1,\"2,3\") ;\nvar call5:= compare_one(\"5,1\",\"6\") ;\nvar call6:= compare_one(\"1\",\"2\") ;\nvar call7:= compare_one(\"1\",1) ;\nexpect call0==2;\nexpect call1==2.5000000000;\nexpect call2==3;\nexpect call3==6;\nexpect call4==\"2,3\";\nexpect call5==\"6\";\nexpect call6==\"2\";\nexpect call7==None;\nexpect true;\n}\n"
+    },
+    "HumanEval/138": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= is_equal_to_sum_even(4) ;\nvar call1:= is_equal_to_sum_even(6) ;\nvar call2:= is_equal_to_sum_even(8) ;\nvar call3:= is_equal_to_sum_even(10) ;\nvar call4:= is_equal_to_sum_even(11) ;\nvar call5:= is_equal_to_sum_even(12) ;\nvar call6:= is_equal_to_sum_even(13) ;\nvar call7:= is_equal_to_sum_even(16) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\nexpect call3==true;\nexpect call4==false;\nexpect call5==true;\nexpect call6==false;\nexpect call7==true;\n}\n"
+    },
+    "HumanEval/139": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= special_factorial(4) ;\nvar call1:= special_factorial(5) ;\nvar call2:= special_factorial(7) ;\nvar call3:= special_factorial(1) ;\nexpect call0==288;\nexpect call1==34560;\nexpect call2==125411328000;\nexpect call3==1;\n}\n"
+    },
+    "HumanEval/140": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= fix_spaces(\"Example\") ;\nvar call1:= fix_spaces(\"Mudasir Hanif \") ;\nvar call2:= fix_spaces(\"Yellow Yellow  Dirty  Fellow\") ;\nvar call3:= fix_spaces(\"Exa   mple\") ;\nvar call4:= fix_spaces(\"   Exa 1 2 2 mple\") ;\nexpect call0==\"Example\";\nexpect call1==\"Mudasir_Hanif_\";\nexpect call2==\"Yellow_Yellow__Dirty__Fellow\";\nexpect call3==\"Exa-mple\";\nexpect call4==\"-Exa_1_2_2_mple\";\n}\n"
+    },
+    "HumanEval/141": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= file_name_check(\"example.txt\") ;\nvar call1:= file_name_check(\"1example.dll\") ;\nvar call2:= file_name_check(\"s1sdf3.asd\") ;\nvar call3:= file_name_check(\"K.dll\") ;\nvar call4:= file_name_check(\"MY16FILE3.exe\") ;\nvar call5:= file_name_check(\"His12FILE94.exe\") ;\nvar call6:= file_name_check(\"_Y.txt\") ;\nvar call7:= file_name_check(\"?aREYA.exe\") ;\nvar call8:= file_name_check(\"/this_is_valid.dll\") ;\nvar call9:= file_name_check(\"this_is_valid.wow\") ;\nvar call10:= file_name_check(\"this_is_valid.txt\") ;\nvar call11:= file_name_check(\"this_is_valid.txtexe\") ;\nvar call12:= file_name_check(\"#this2_i4s_5valid.ten\") ;\nvar call13:= file_name_check(\"@this1_is6_valid.exe\") ;\nvar call14:= file_name_check(\"this_is_12valid.6exe4.txt\") ;\nvar call15:= file_name_check(\"all.exe.txt\") ;\nvar call16:= file_name_check(\"I563_No.exe\") ;\nvar call17:= file_name_check(\"Is3youfault.txt\") ;\nvar call18:= file_name_check(\"no_one#knows.dll\") ;\nvar call19:= file_name_check(\"1I563_Yes3.exe\") ;\nvar call20:= file_name_check(\"I563_Yes3.txtt\") ;\nvar call21:= file_name_check(\"final..txt\") ;\nvar call22:= file_name_check(\"final132\") ;\nvar call23:= file_name_check(\"_f4indsartal132.\") ;\nvar call24:= file_name_check(\".txt\") ;\nvar call25:= file_name_check(\"s.\") ;\nexpect call0==\"Yes\";\nexpect call1==\"No\";\nexpect call2==\"No\";\nexpect call3==\"Yes\";\nexpect call4==\"Yes\";\nexpect call5==\"No\";\nexpect call6==\"No\";\nexpect call7==\"No\";\nexpect call8==\"No\";\nexpect call9==\"No\";\nexpect call10==\"Yes\";\nexpect call11==\"No\";\nexpect call12==\"No\";\nexpect call13==\"No\";\nexpect call14==\"No\";\nexpect call15==\"No\";\nexpect call16==\"Yes\";\nexpect call17==\"Yes\";\nexpect call18==\"Yes\";\nexpect call19==\"No\";\nexpect call20==\"No\";\nexpect call21==\"No\";\nexpect call22==\"No\";\nexpect call23==\"No\";\nexpect call24==\"No\";\nexpect call25==\"No\";\n}\n"
+    },
+    "HumanEval/142": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sum_squares([1,2,3]) ;\nvar call1:= sum_squares([1,4,9]) ;\nvar call2:= sum_squares([]) ;\nvar call3:= sum_squares([1,1,1,1,1,1,1,1,1]) ;\nvar call4:= sum_squares([-1,-1,-1,-1,-1,-1,-1,-1,-1]) ;\nvar call5:= sum_squares([0]) ;\nvar call6:= sum_squares([-1,-5,2,-1,-5]) ;\nvar call7:= sum_squares([-56,-99,1,0,-2]) ;\nvar call8:= sum_squares([-1,0,0,0,0,0,0,0,-1]) ;\nvar call9:= sum_squares([-16,-9,-2,36,36,26,-20,25,-40,20,-4,12,-26,35,37]) ;\nvar call10:= sum_squares([-1,-3,17,-1,-15,13,-1,14,-14,-12,-5,14,-14,6,13,11,16,16,4,10]) ;\nexpect call0==6;\nexpect call1==14;\nexpect call2==0;\nexpect call3==9;\nexpect call4==-3;\nexpect call5==0;\nexpect call6==-126;\nexpect call7==3030;\nexpect call8==0;\nexpect call9==-14196;\nexpect call10==-1448;\n}\n"
+    },
+    "HumanEval/143": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= words_in_sentence(\"This is a test\") ;\nvar call1:= words_in_sentence(\"lets go for swimming\") ;\nvar call2:= words_in_sentence(\"there is no place available here\") ;\nvar call3:= words_in_sentence(\"Hi I am Hussein\") ;\nvar call4:= words_in_sentence(\"go for it\") ;\nvar call5:= words_in_sentence(\"here\") ;\nvar call6:= words_in_sentence(\"here is\") ;\nexpect call0==\"is\";\nexpect call1==\"go for\";\nexpect call2==\"there is no place\";\nexpect call3==\"Hi am Hussein\";\nexpect call4==\"go for it\";\nexpect call5==\"\";\nexpect call6==\"is\";\n}\n"
+    },
+    "HumanEval/144": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= simplify(\"1/5\",\"5/1\") ;\nvar call1:= simplify(\"1/6\",\"2/1\") ;\nvar call2:= simplify(\"5/1\",\"3/1\") ;\nvar call3:= simplify(\"7/10\",\"10/2\") ;\nvar call4:= simplify(\"2/10\",\"50/10\") ;\nvar call5:= simplify(\"7/2\",\"4/2\") ;\nvar call6:= simplify(\"11/6\",\"6/1\") ;\nvar call7:= simplify(\"2/3\",\"5/2\") ;\nvar call8:= simplify(\"5/2\",\"3/5\") ;\nvar call9:= simplify(\"2/4\",\"8/4\") ;\nvar call10:= simplify(\"2/4\",\"4/2\") ;\nvar call11:= simplify(\"1/5\",\"5/1\") ;\nvar call12:= simplify(\"1/5\",\"1/5\") ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\nexpect call3==false;\nexpect call4==true;\nexpect call5==true;\nexpect call6==true;\nexpect call7==false;\nexpect call8==false;\nexpect call9==true;\nexpect call10==true;\nexpect call11==true;\nexpect call12==false;\n}\n"
+    },
+    "HumanEval/145": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= order_by_points([1,11,-1,-11,-12]) ;\nvar call1:= order_by_points([1234,423,463,145,2,423,423,53,6,37,3457,3,56,0,46]) ;\nvar call2:= order_by_points([]) ;\nvar call3:= order_by_points([1,-11,-32,43,54,-98,2,-3]) ;\nvar call4:= order_by_points([1,2,3,4,5,6,7,8,9,10,11]) ;\nvar call5:= order_by_points([0,6,6,-76,-21,23,4]) ;\nexpect call0==[-1,-11,1,-12,11];\nexpect call1==[0,2,3,6,53,423,423,423,1234,145,37,46,56,463,3457];\nexpect call2==[];\nexpect call3==[-3,-32,-98,-11,1,2,43,54];\nexpect call4==[1,10,2,11,3,4,5,6,7,8,9];\nexpect call5==[-76,-21,0,4,23,6,6];\nexpect true;\n}\n"
+    },
+    "HumanEval/146": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= specialFilter([5,-2,1,-5]) ;\nvar call1:= specialFilter([15,-73,14,-15]) ;\nvar call2:= specialFilter([33,-2,-3,45,21,109]) ;\nvar call3:= specialFilter([43,-12,93,125,121,109]) ;\nvar call4:= specialFilter([71,-2,-33,75,21,19]) ;\nvar call5:= specialFilter([1]) ;\nvar call6:= specialFilter([]) ;\nexpect call0==0;\nexpect call1==1;\nexpect call2==2;\nexpect call3==4;\nexpect call4==3;\nexpect call5==0;\nexpect call6==0;\n}\n"
+    },
+    "HumanEval/147": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= get_max_triples(5) ;\nvar call1:= get_max_triples(6) ;\nvar call2:= get_max_triples(10) ;\nvar call3:= get_max_triples(100) ;\nexpect call0==1;\nexpect call1==4;\nexpect call2==36;\nexpect call3==53361;\n}\n"
+    },
+    "HumanEval/148": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= bf(\"Jupiter\",\"Neptune\") ;\nvar call1:= bf(\"Earth\",\"Mercury\") ;\nvar call2:= bf(\"Mercury\",\"Uranus\") ;\nvar call3:= bf(\"Neptune\",\"Venus\") ;\nvar call4:= bf(\"Earth\",\"Earth\") ;\nvar call5:= bf(\"Mars\",\"Earth\") ;\nvar call6:= bf(\"Jupiter\",\"Makemake\") ;\nexpect call0==[\"Saturn\",\"Uranus\"];\nexpect call1==[\"Venus\"];\nexpect call2==[\"Venus\",\"Earth\",\"Mars\",\"Jupiter\",\"Saturn\"];\nexpect call3==[\"Earth\",\"Mars\",\"Jupiter\",\"Saturn\",\"Uranus\"];\nexpect call4==[];\nexpect call5==[];\nexpect call6==[];\n}\n"
+    },
+    "HumanEval/149": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= sorted_list_sum([\"aa\",\"a\",\"aaa\"]) ;\nvar call1:= sorted_list_sum([\"school\",\"AI\",\"asdf\",\"b\"]) ;\nvar call2:= sorted_list_sum([\"d\",\"b\",\"c\",\"a\"]) ;\nvar call3:= sorted_list_sum([\"d\",\"dcba\",\"abcd\",\"a\"]) ;\nvar call4:= sorted_list_sum([\"AI\",\"ai\",\"au\"]) ;\nvar call5:= sorted_list_sum([\"a\",\"b\",\"b\",\"c\",\"c\",\"a\"]) ;\nvar call6:= sorted_list_sum([\"aaaa\",\"bbbb\",\"dd\",\"cc\"]) ;\nexpect call0==[\"aa\"];\nexpect call1==[\"AI\",\"asdf\",\"school\"];\nexpect call2==[];\nexpect call3==[\"abcd\",\"dcba\"];\nexpect call4==[\"AI\",\"ai\",\"au\"];\nexpect call5==[];\nexpect call6==[\"cc\",\"dd\",\"aaaa\",\"bbbb\"];\n}\n"
+    },
+    "HumanEval/150": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= x_or_y(7,34,12) ;\nvar call1:= x_or_y(15,8,5) ;\nvar call2:= x_or_y(3,33,5212) ;\nvar call3:= x_or_y(1259,3,52) ;\nvar call4:= x_or_y(7919,-1,12) ;\nvar call5:= x_or_y(3609,1245,583) ;\nvar call6:= x_or_y(91,56,129) ;\nvar call7:= x_or_y(6,34,1234) ;\nvar call8:= x_or_y(1,2,0) ;\nvar call9:= x_or_y(2,2,0) ;\nexpect call0==34;\nexpect call1==5;\nexpect call2==33;\nexpect call3==3;\nexpect call4==-1;\nexpect call5==583;\nexpect call6==129;\nexpect call7==1234;\nexpect call8==0;\nexpect call9==2;\n}\n"
+    },
+    "HumanEval/151": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= double_the_difference([]) ;\nvar call1:= double_the_difference([5,4]) ;\nvar call2:= double_the_difference([0.1000000000,0.2000000000,0.3000000000]) ;\nvar call3:= double_the_difference([-10,-20,-30]) ;\nvar call4:= double_the_difference([-1,-2,8]) ;\nvar call5:= double_the_difference([0.2000000000,3,5]) ;\nvar call6:= double_the_difference([-99, -97, -95, -93, -91, -89, -87, -85, -83, -81, -79, -77, -75, -73, -71, -69, -67, -65, -63, -61, -59, -57, -55, -53, -51, -49, -47, -45, -43, -41, -39, -37, -35, -33, -31, -29, -27, -25, -23, -21, -19, -17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]) ;\nexpect call0==0;\nexpect call1==25;\nexpect call2==0;\nexpect call3==0;\nexpect call4==0;\nexpect call5==34;\nexpect call6==166650;\n}\n"
+    },
+    "HumanEval/152": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) ;\nvar call1:= compare([0,0,0,0,0,0],[0,0,0,0,0,0]) ;\nvar call2:= compare([1,2,3],[-1,-2,-3]) ;\nvar call3:= compare([1,2,3,5],[-1,2,3,4]) ;\nexpect call0==[0,0,0,0,3,3];\nexpect call1==[0,0,0,0,0,0];\nexpect call2==[2,4,6];\nexpect call3==[2,0,0,1];\nexpect true;\n}\n"
+    },
+    "HumanEval/153": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= Strongest_Extension(\"Watashi\",[\"tEN\",\"niNE\",\"eIGHt8OKe\"]) ;\nvar call1:= Strongest_Extension(\"Boku123\",[\"nani\",\"NazeDa\",\"YEs.WeCaNe\",\"32145tggg\"]) ;\nvar call2:= Strongest_Extension(\"__YESIMHERE\",[\"t\",\"eMptY\",\"nothing\",\"zeR00\",\"NuLl__\",\"123NoooneB321\"]) ;\nvar call3:= Strongest_Extension(\"K\",[\"Ta\",\"TAR\",\"t234An\",\"cosSo\"]) ;\nvar call4:= Strongest_Extension(\"__HAHA\",[\"Tab\",\"123\",\"781345\",\"-_-\"]) ;\nvar call5:= Strongest_Extension(\"YameRore\",[\"HhAas\",\"okIWILL123\",\"WorkOut\",\"Fails\",\"-_-\"]) ;\nvar call6:= Strongest_Extension(\"finNNalLLly\",[\"Die\",\"NowW\",\"Wow\",\"WoW\"]) ;\nvar call7:= Strongest_Extension(\"_\",[\"Bb\",\"91245\"]) ;\nvar call8:= Strongest_Extension(\"Sp\",[\"671235\",\"Bb\"]) ;\nexpect call0==\"Watashi.eIGHt8OKe\";\nexpect call1==\"Boku123.YEs.WeCaNe\";\nexpect call2==\"__YESIMHERE.NuLl__\";\nexpect call3==\"K.TAR\";\nexpect call4==\"__HAHA.123\";\nexpect call5==\"YameRore.okIWILL123\";\nexpect call6==\"finNNalLLly.WoW\";\nexpect call7==\"_.Bb\";\nexpect call8==\"Sp.671235\";\n}\n"
+    },
+    "HumanEval/154": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= cycpattern_check(\"xyzw\",\"xyw\") ;\nvar call1:= cycpattern_check(\"yello\",\"ell\") ;\nvar call2:= cycpattern_check(\"whattup\",\"ptut\") ;\nvar call3:= cycpattern_check(\"efef\",\"fee\") ;\nvar call4:= cycpattern_check(\"abab\",\"aabb\") ;\nvar call5:= cycpattern_check(\"winemtt\",\"tinem\") ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\nexpect call3==true;\nexpect call4==false;\nexpect call5==true;\n}\n"
+    },
+    "HumanEval/155": {
+        "TestCase": "method{:test} valid_test(){\nvar call0_0,call0_1:= even_odd_count(7);\nvar call1_0,call1_1:= even_odd_count(-78);\nvar call2_0,call2_1:= even_odd_count(3452);\nvar call3_0,call3_1:= even_odd_count(346211);\nvar call4_0,call4_1:= even_odd_count(-345821);\nvar call5_0,call5_1:= even_odd_count(-2);\nvar call6_0,call6_1:= even_odd_count(-45347);\nvar call7_0,call7_1:= even_odd_count(0);\nexpect (call0_0,call0_1)==(0,1);\nexpect (call1_0,call1_1)==(1,1);\nexpect (call2_0,call2_1)==(2,2);\nexpect (call3_0,call3_1)==(3,3);\nexpect (call4_0,call4_1)==(3,3);\nexpect (call5_0,call5_1)==(1,0);\nexpect (call6_0,call6_1)==(2,3);\nexpect (call7_0,call7_1)==(1,0);\nexpect true;\n}\n"
+    },
+    "HumanEval/156": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= int_to_mini_roman(19) ;\nvar call1:= int_to_mini_roman(152) ;\nvar call2:= int_to_mini_roman(251) ;\nvar call3:= int_to_mini_roman(426) ;\nvar call4:= int_to_mini_roman(500) ;\nvar call5:= int_to_mini_roman(1) ;\nvar call6:= int_to_mini_roman(4) ;\nvar call7:= int_to_mini_roman(43) ;\nvar call8:= int_to_mini_roman(90) ;\nvar call9:= int_to_mini_roman(94) ;\nvar call10:= int_to_mini_roman(532) ;\nvar call11:= int_to_mini_roman(900) ;\nvar call12:= int_to_mini_roman(994) ;\nvar call13:= int_to_mini_roman(1000) ;\nexpect call0==\"xix\";\nexpect call1==\"clii\";\nexpect call2==\"ccli\";\nexpect call3==\"cdxxvi\";\nexpect call4==\"d\";\nexpect call5==\"i\";\nexpect call6==\"iv\";\nexpect call7==\"xliii\";\nexpect call8==\"xc\";\nexpect call9==\"xciv\";\nexpect call10==\"dxxxii\";\nexpect call11==\"cm\";\nexpect call12==\"cmxciv\";\nexpect call13==\"m\";\nexpect true;\n}\n"
+    },
+    "HumanEval/157": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= right_angle_triangle(3,4,5) ;\nvar call1:= right_angle_triangle(1,2,3) ;\nvar call2:= right_angle_triangle(10,6,8) ;\nvar call3:= right_angle_triangle(2,2,2) ;\nvar call4:= right_angle_triangle(7,24,25) ;\nvar call5:= right_angle_triangle(10,5,7) ;\nvar call6:= right_angle_triangle(5,12,13) ;\nvar call7:= right_angle_triangle(15,8,17) ;\nvar call8:= right_angle_triangle(48,55,73) ;\nvar call9:= right_angle_triangle(1,1,1) ;\nvar call10:= right_angle_triangle(2,2,10) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\nexpect call3==false;\nexpect call4==true;\nexpect call5==false;\nexpect call6==true;\nexpect call7==true;\nexpect call8==true;\nexpect call9==false;\nexpect call10==false;\n}\n"
+    },
+    "HumanEval/158": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= find_max([\"name\",\"of\",\"string\"]) ;\nvar call1:= find_max([\"name\",\"enam\",\"game\"]) ;\nvar call2:= find_max([\"aaaaaaa\",\"bb\",\"cc\"]) ;\nvar call3:= find_max([\"abc\",\"cba\"]) ;\nvar call4:= find_max([\"play\",\"this\",\"game\",\"of\",\"footbott\"]) ;\nvar call5:= find_max([\"we\",\"are\",\"gonna\",\"rock\"]) ;\nvar call6:= find_max([\"we\",\"are\",\"a\",\"mad\",\"nation\"]) ;\nvar call7:= find_max([\"this\",\"is\",\"a\",\"prrk\"]) ;\nvar call8:= find_max([\"b\"]) ;\nvar call9:= find_max([\"play\",\"play\",\"play\"]) ;\nexpect call0==\"string\";\nexpect call1==\"enam\";\nexpect call2==\"aaaaaaa\";\nexpect call3==\"abc\";\nexpect call4==\"footbott\";\nexpect call5==\"gonna\";\nexpect call6==\"nation\";\nexpect call7==\"this\";\nexpect call8==\"b\";\nexpect call9==\"play\";\n}\n"
+    },
+    "HumanEval/159": {
+        "TestCase": "method{:test} valid_test(){\nvar call0_0,call0_1:= eat(5,6,10) ;\nvar call1_0,call1_1:= eat(4,8,9) ;\nvar call2_0,call2_1:= eat(1,10,10) ;\nvar call3_0,call3_1:= eat(2,11,5) ;\nvar call4_0,call4_1:= eat(4,5,7) ;\nvar call5_0,call5_1:= eat(4,5,1) ;\nexpect true;\nexpect (call0_0,call0_1)==(11,4);\nexpect (call1_0,call1_1)==(12,1);\nexpect (call2_0,call2_1)==(11,0);\nexpect (call3_0,call3_1)==(7,0);\nexpect true;\nexpect (call4_0,call4_1)==(9,2);\nexpect (call5_0,call5_1)==(5,0);\n}\n"
+    },
+    "HumanEval/160": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= do_algebra([\"**\",\"*\",\"+\"],[2,3,4,5]) ;\nvar call1:= do_algebra([\"+\",\"*\",\"-\"],[2,3,4,5]) ;\nvar call2:= do_algebra([\"//\",\"*\"],[7,3,4]) ;\nexpect call0==37;\nexpect call1==9;\nexpect call2==8;\nexpect true;\n}\n"
+    },
+    "HumanEval/161": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= solve(\"AsDf\") ;\nvar call1:= solve(\"1234\") ;\nvar call2:= solve(\"ab\") ;\nvar call3:= solve(\"#a@C\") ;\nvar call4:= solve(\"#AsdfW^45\") ;\nvar call5:= solve(\"#6@2\") ;\nvar call6:= solve(\"#$a^D\") ;\nvar call7:= solve(\"#ccc\") ;\nexpect call0==\"aSdF\";\nexpect call1==\"4321\";\nexpect call2==\"AB\";\nexpect call3==\"#A@c\";\nexpect call4==\"#aSDFw^45\";\nexpect call5==\"2@6#\";\nexpect call6==\"#$A^d\";\nexpect call7==\"#CCC\";\n}\n"
+    },
+    "HumanEval/162": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= string_to_md5(\"Hello world\") ;\nvar call1:= string_to_md5(\"\") ;\nvar call2:= string_to_md5(\"A B C\") ;\nvar call3:= string_to_md5(\"password\") ;\nexpect call0==\"3e25960a79dbc69b674cd4ec67a72c62\";\nexpect call1==None;\nexpect call2==\"0ef78513b0cb8cef12743f5aeb35f888\";\nexpect call3==\"5f4dcc3b5aa765d61d8327deb882cf99\";\nexpect true;\n}\n"
+    },
+    "HumanEval/163": {
+        "TestCase": "method{:test} valid_test(){\nvar call0:= generate_integers(2,10) ;\nvar call1:= generate_integers(10,2) ;\nvar call2:= generate_integers(132,2) ;\nvar call3:= generate_integers(17,89) ;\nexpect call0==[2,4,6,8];\nexpect call1==[2,4,6,8];\nexpect call2==[2,4,6,8];\nexpect call3==[];\nexpect true;\n}\n"
+    }
+}

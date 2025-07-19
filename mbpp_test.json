@@ -1,0 +1,1241 @@
+{
+    "2": {
+        "TestCase": "method{:test} check(){\nvar call0:= similar_elements([3,4,5,6],[5,7,4,10]) ;\nvar call1:= set x | x in call0 ;\nvar call2:= {4,5} ;\nvar call3:= similar_elements([1,2,3,4],[5,4,3,7]) ;\nvar call4:= set x | x in call3 ;\nvar call5:= {3,4} ;\nvar call6:= similar_elements([11,12,14,13],[17,15,14,13]) ;\nvar call7:= set x | x in call6 ;\nvar call8:= {13,14} ;\nexpect call1==call2;\nexpect call4==call5;\nexpect call7==call8;\n}\n"
+    },
+    "3": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_not_prime(2) ;\nvar call1:= is_not_prime(10) ;\nvar call2:= is_not_prime(35) ;\nvar call3:= is_not_prime(37) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\nexpect call3==false;\n}\n"
+    },
+    "4": {
+        "TestCase": "method{:test} check(){\nvar call0:= heap_queue_largest([25,35,22,85,14,65,75,22,58],3) ;\nvar call1:= heap_queue_largest([25,35,22,85,14,65,75,22,58],2) ;\nvar call2:= heap_queue_largest([25,35,22,85,14,65,75,22,58],5) ;\nexpect call0==[85,75,65];\nexpect call1==[85,75];\nexpect call2==[85,75,65,58,35];\n}\n"
+    },
+    "6": {
+        "TestCase": "method{:test} check(){\nvar call0:= differ_At_One_Bit_Pos(13,9) ;\nvar call1:= differ_At_One_Bit_Pos(15,8) ;\nvar call2:= differ_At_One_Bit_Pos(2,4) ;\nvar call3:= differ_At_One_Bit_Pos(2,3) ;\nvar call4:= differ_At_One_Bit_Pos(5,1) ;\nvar call5:= differ_At_One_Bit_Pos(1,5) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\nexpect call3==true;\nexpect call4==true;\nexpect call5==true;\n}\n"
+    },
+    "7": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_char_long(\"Please move back to stream\") ;\nvar call1:= set(call0) ;\nvar call2:= set([\"Please\",\"move\",\"back\",\"stream\"]) ;\nvar call3:= find_char_long(\"Jing Eco and Tech\") ;\nvar call4:= set(call3) ;\nvar call5:= set([\"Jing\",\"Tech\"]) ;\nvar call6:= find_char_long(\"Jhingai wulu road Zone 3\") ;\nvar call7:= set(call6) ;\nvar call8:= set([\"Jhingai\",\"wulu\",\"road\",\"Zone\"]) ;\nexpect call1==call2;\nexpect call4==call5;\nexpect call7==call8;\n}\n"
+    },
+    "8": {
+        "TestCase": "method{:test} check(){\nvar call0:= square_nums([1,2,3,4,5,6,7,8,9,10]) ;\nvar call1:= square_nums([10,20,30]) ;\nvar call2:= square_nums([12,15]) ;\nexpect call0==[1,4,9,16,25,36,49,64,81,100];\nexpect call1==[100,400,900];\nexpect call2==[144,225];\n}\n"
+    },
+    "9": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_Rotations(\"aaaa\") ;\nvar call1:= find_Rotations(\"ab\") ;\nvar call2:= find_Rotations(\"abc\") ;\nexpect call0==1;\nexpect call1==2;\nexpect call2==3;\n}\n"
+    },
+    "11": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_Occ(\"hello\",'l') ;\nvar call1:= remove_Occ(\"abcda\",'a') ;\nvar call2:= remove_Occ(\"PHP\",'P') ;\nexpect call0==\"heo\";\nexpect call1==\"bcd\";\nexpect call2==\"H\";\n}\n"
+    },
+    "12": {
+        "TestCase": "method{:test} check(){\nvar call0:= sort_matrix([[1,2,3],[2,4,5],[1,1,1]]) ;\nvar call1:= sort_matrix([[1,2,3],[-2,4,-5],[1,-1,1]]) ;\nvar call2:= sort_matrix([[5,8,9],[6,4,3],[2,1,4]]) ;\nexpect call0==[[1,1,1],[1,2,3],[2,4,5]];\nexpect call1==[[-2,4,-5],[1,-1,1],[1,2,3]];\nexpect call2==[[2,1,4],[6,4,3],[5,8,9]];\n}\n"
+    },
+    "14": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_Volume(10.0,8.0,6.0) ;\nvar call1:= find_Volume(3.0,2.0,2.0) ;\nvar call2:= find_Volume(1.0,2.0,1.0) ;\nexpect call0==240.0;\nexpect call1==6.0;\nexpect call2==1.0;\n}\n"
+    },
+    "16": {
+        "TestCase": "method{:test} check(){\nvar call0:= text_lowercase_underscore(\"aab_cbbbc\") ;\nvar call1:= text_lowercase_underscore(\"aab_Abbbc\") ;\nvar call2:= text_lowercase_underscore(\"Aaab_abbbc\") ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "17": {
+        "TestCase": "method{:test} check(){\nvar call0:= square_perimeter(10) ;\nvar call1:= square_perimeter(5) ;\nvar call2:= square_perimeter(4) ;\nexpect call0==40;\nexpect call1==20;\nexpect call2==16;\n}\n"
+    },
+    "18": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_dirty_chars(\"probasscurve\",\"pros\") ;\nvar call1:= remove_dirty_chars(\"digitalindia\",\"talent\") ;\nvar call2:= remove_dirty_chars(\"exoticmiles\",\"toxic\") ;\nexpect call0==\"bacuve\";\nexpect call1==\"digiidi\";\nexpect call2==\"emles\";\n}\n"
+    },
+    "19": {
+        "TestCase": "method{:test} check(){\nvar call0:= test_duplicate([1,2,3,4,5]) ;\nvar call1:= test_duplicate([1,2,3,4,4]) ;\nvar call2:= test_duplicate([1,1,2,2,3,3,4,4,5]) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\n}\n"
+    },
+    "20": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_woodall(383) ;\nvar call1:= is_woodall(254) ;\nvar call2:= is_woodall(200) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "56": {
+        "TestCase": "method{:test} check(){\nvar call0:= check(70) ;\nvar call1:= check(23) ;\nvar call2:= check(73) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "57": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_Max_Num([1,2,3]) ;\nvar call1:= find_Max_Num([4,5,6,1]) ;\nvar call2:= find_Max_Num([1,2,3,9]) ;\nexpect call0==321;\nexpect call1==6541;\nexpect call2==9321;\n}\n"
+    },
+    "58": {
+        "TestCase": "method{:test} check(){\nvar call0:= opposite_Signs(1,-2) ;\nvar call1:= opposite_Signs(3,2) ;\nvar call2:= opposite_Signs(-10,-10) ;\nvar call3:= opposite_Signs(-2,2) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\nexpect call3==true;\n}\n"
+    },
+    "59": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_octagonal(5) ;\nvar call1:= is_octagonal(10) ;\nvar call2:= is_octagonal(15) ;\nexpect call0==65;\nexpect call1==280;\nexpect call2==645;\n}\n"
+    },
+    "61": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_Substrings(\"112112\") ;\nvar call1:= count_Substrings(\"111\") ;\nvar call2:= count_Substrings(\"1101112\") ;\nexpect call0==6;\nexpect call1==6;\nexpect call2==12;\n}\n"
+    },
+    "62": {
+        "TestCase": "method{:test} check(){\nvar call0:= smallest_num([10,20,1,45,99]) ;\nvar call1:= smallest_num([1,2,3]) ;\nvar call2:= smallest_num([45,46,50,60]) ;\nexpect call0==1;\nexpect call1==1;\nexpect call2==45;\n}\n"
+    },
+    "63": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_difference([(3,5),(1,7),(10,3),(1,2)]) ;\nvar call1:= max_difference([(4,6),(2,17),(9,13),(11,12)]) ;\nvar call2:= max_difference([(12,35),(21,27),(13,23),(41,22)]) ;\nexpect call0==7;\nexpect call1==15;\nexpect call2==23;\n}\n"
+    },
+    "64": {
+        "TestCase": "method{:test} check(){\nvar call0:= subject_marks([(\"English\",88),(\"Science\",90),(\"Maths\",97),(\"Social sciences\",82)]) ;\nvar call1:= subject_marks([(\"Telugu\",49),(\"Hindhi\",54),(\"Social\",33)]) ;\nvar call2:= subject_marks([(\"Physics\",96),(\"Chemistry\",97),(\"Biology\",45)]) ;\nexpect call0==[(\"Social sciences\",82),(\"English\",88),(\"Science\",90),(\"Maths\",97)];\nexpect call1==[(\"Social\",33),(\"Telugu\",49),(\"Hindhi\",54)];\nexpect call2==[(\"Biology\",45),(\"Physics\",96),(\"Chemistry\",97)];\n}\n"
+    },
+    "65": {
+        "TestCase": "method{:test} check(){\nvar call0:= recursive_list_sum([1,2,[3,4],[5,6]]) ;\nvar call1:= recursive_list_sum([7,10,[15,14],[19,41]]) ;\nvar call2:= recursive_list_sum([10,20,[30,40],[50,60]]) ;\nexpect call0==21;\nexpect call1==106;\nexpect call2==210;\n}\n"
+    },
+    "66": {
+        "TestCase": "method{:test} check(){\nvar call0:= pos_count([1,-2,3,-4]) ;\nvar call1:= pos_count([3,4,5,-1]) ;\nvar call2:= pos_count([1,2,3,4]) ;\nexpect call0==2;\nexpect call1==3;\nexpect call2==4;\n}\n"
+    },
+    "67": {
+        "TestCase": "method{:test} check(){\nvar call0:= bell_number(2) ;\nvar call1:= bell_number(10) ;\nvar call2:= bell_number(56) ;\nexpect call0==2;\nexpect call1==115975;\nexpect call2==6775685320645824322581483068371419745979053216268760300;\n}\n"
+    },
+    "68": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_Monotonic([6,5,4,4]) ;\nvar call1:= is_Monotonic([1,2,2,3]) ;\nvar call2:= is_Monotonic([1,3,2]) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "69": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_sublist([2,4,3,5,7],[3,7]) ;\nvar call1:= is_sublist([2,4,3,5,7],[4,3]) ;\nvar call2:= is_sublist([2,4,3,5,7],[1,6]) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "70": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_equal([[11,22,33],[44,55,66]]) ;\nvar call1:= get_equal([[1,2,3],[4,5,6,7]]) ;\nvar call2:= get_equal([[1,2],[3,4]]) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "71": {
+        "TestCase": "method{:test} check(){\nvar call0:= comb_sort([5,15,37,25,79]) ;\nvar call1:= comb_sort([41,32,15,19,22]) ;\nvar call2:= comb_sort([99,15,13,47]) ;\nexpect call0==[5,15,25,37,79];\nexpect call1==[15,19,22,32,41];\nexpect call2==[13,15,47,99];\n}\n"
+    },
+    "72": {
+        "TestCase": "method{:test} check(){\nvar call0:= dif_Square(5) ;\nvar call1:= dif_Square(10) ;\nvar call2:= dif_Square(15) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "74": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_samepatterns([\"red\",\"green\",\"green\"],[\"a\",\"b\",\"b\"]) ;\nvar call1:= is_samepatterns([\"red\",\"green\",\"greenn\"],[\"a\",\"b\",\"b\"]) ;\nvar call2:= is_samepatterns([\"red\",\"green\",\"greenn\"],[\"a\",\"b\"]) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "75": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_tuples([[6,24,12],[7,9,6],[12,18,21]],6) ;\nvar call1:= find_tuples([[5,25,30],[4,2,3],[7,8,9]],5) ;\nvar call2:= find_tuples([[7,9,16],[8,16,4],[19,17,18]],4) ;\nexpect call0==[[6,24,12]];\nexpect call1==[[5,25,30]];\nexpect call2==[[8,16,4]];\n}\n"
+    },
+    "77": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_Diff(12345) ;\nvar call1:= is_Diff(1212112) ;\nvar call2:= is_Diff(1212) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "79": {
+        "TestCase": "method{:test} check(){\nvar call0:= word_len(\"Hadoop\") ;\nvar call1:= word_len(\"great\") ;\nvar call2:= word_len(\"structure\") ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\n}\n"
+    },
+    "80": {
+        "TestCase": "method{:test} check(){\nvar call0:= tetrahedral_number(5) ;\nvar call1:= tetrahedral_number(6) ;\nvar call2:= tetrahedral_number(7) ;\nexpect call0==35.0;\nexpect call1==56.0;\nexpect call2==84.0;\n}\n"
+    },
+    "83": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_Char(\"abc\") ;\nvar call1:= get_Char(\"gfg\") ;\nvar call2:= get_Char(\"ab\") ;\nexpect call0=='f';\nexpect call1=='t';\nexpect call2=='c';\n}\n"
+    },
+    "84": {
+        "TestCase": "method{:test} check(){\nvar call0:= sequence(10) ;\nvar call1:= sequence(2) ;\nvar call2:= sequence(3) ;\nexpect call0==6;\nexpect call1==1;\nexpect call2==2;\n}\n"
+    },
+    "86": {
+        "TestCase": "method{:test} check(){\nvar call0:= centered_hexagonal_number(10) ;\nvar call1:= centered_hexagonal_number(2) ;\nvar call2:= centered_hexagonal_number(9) ;\nexpect call0==271;\nexpect call1==7;\nexpect call2==217;\n}\n"
+    },
+    "87": {
+        "TestCase": "method{:test} check(){\nvar call0:= merge_dictionaries_three(map[\"R\":=\"Red\",\"B\":=\"Black\",\"P\":=\"Pink\"],map[\"G\":=\"Green\",\"W\":=\"White\"],map[\"O\":=\"Orange\",\"W\":=\"White\",\"B\":=\"Black\"]) ;\nvar call1:= merge_dictionaries_three(map[\"R\":=\"Red\",\"B\":=\"Black\",\"P\":=\"Pink\"],map[\"G\":=\"Green\",\"W\":=\"White\"],map[\"L\":=\"lavender\",\"B\":=\"Blue\"]) ;\nvar call2:= merge_dictionaries_three(map[\"R\":=\"Red\",\"B\":=\"Black\",\"P\":=\"Pink\"],map[\"L\":=\"lavender\",\"B\":=\"Blue\"],map[\"G\":=\"Green\",\"W\":=\"White\"]) ;\nexpect call0==map[\"B\":=\"Black\",\"R\":=\"Red\",\"P\":=\"Pink\",\"G\":=\"Green\",\"W\":=\"White\",\"O\":=\"Orange\"];\nexpect call1==map[\"W\":=\"White\",\"P\":=\"Pink\",\"B\":=\"Black\",\"R\":=\"Red\",\"G\":=\"Green\",\"L\":=\"lavender\"];\nexpect call2==map[\"B\":=\"Black\",\"P\":=\"Pink\",\"R\":=\"Red\",\"G\":=\"Green\",\"L\":=\"lavender\",\"W\":=\"White\"];\n}\n"
+    },
+    "88": {
+        "TestCase": "method{:test} check(){\nvar call0:= freq_count([10,10,10,10,20,20,20,20,40,40,50,50,30]) ;\nvar call1:= freq_count([1,2,3,4,3,2,4,1,3,1,4]) ;\nvar call2:= freq_count([5,6,7,4,9,10,4,5,6,7,9,5]) ;\nexpect call0==map[10:=4,20:=4,40:=2,50:=2,30:=1];\nexpect call1==map[1:=3,2:=2,3:=3,4:=3];\nexpect call2==map[10:=1,5:=3,6:=2,7:=2,4:=2,9:=2];\n}\n"
+    },
+    "89": {
+        "TestCase": "method{:test} check(){\nvar call0:= closest_num(11) ;\nvar call1:= closest_num(7) ;\nvar call2:= closest_num(12) ;\nexpect call0==10;\nexpect call1==6;\nexpect call2==11;\n}\n"
+    },
+    "90": {
+        "TestCase": "method{:test} check(){\nvar call0:= len_log([\"python\",\"PHP\",\"bigdata\"]) ;\nvar call1:= len_log([\"a\",\"ab\",\"abc\"]) ;\nvar call2:= len_log([\"small\",\"big\",\"tall\"]) ;\nexpect call0==7;\nexpect call1==3;\nexpect call2==5;\n}\n"
+    },
+    "91": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_substring([\"red\",\"black\",\"white\",\"green\",\"orange\"],\"ack\") ;\nvar call1:= find_substring([\"red\",\"black\",\"white\",\"green\",\"orange\"],\"abc\") ;\nvar call2:= find_substring([\"red\",\"black\",\"white\",\"green\",\"orange\"],\"ange\") ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "92": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_undulating(1212121) ;\nvar call1:= is_undulating(1991) ;\nvar call2:= is_undulating(121) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "93": {
+        "TestCase": "method{:test} check(){\nvar call0:= power(3,4) ;\nvar call1:= power(2,3) ;\nvar call2:= power(5,5) ;\nexpect call0==81;\nexpect call1==8;\nexpect call2==3125;\n}\n"
+    },
+    "94": {
+        "TestCase": "method{:test} check(){\nvar call0:= index_minimum([(\"Rash\",143),(\"Manjeet\",200),(\"Varsha\",100)]) ;\nvar call1:= index_minimum([(\"Yash\",185),(\"Dawood\",125),(\"Sanya\",175)]) ;\nvar call2:= index_minimum([(\"Sai\",345),(\"Salman\",145),(\"Ayesha\",96)]) ;\nexpect call0==\"Varsha\";\nexpect call1==\"Dawood\";\nexpect call2==\"Ayesha\";\n}\n"
+    },
+    "95": {
+        "TestCase": "method{:test} check(){\nvar call0:= Find_Min_Length([[1],[1,2]]) ;\nvar call1:= Find_Min_Length([[1,2],[1,2,3],[1,2,3,4]]) ;\nvar call2:= Find_Min_Length([[3,3,3],[4,4,4,4]]) ;\nexpect call0==1;\nexpect call1==2;\nexpect call2==3;\n}\n"
+    },
+    "96": {
+        "TestCase": "method{:test} check(){\nvar call0:= divisor(15) ;\nvar call1:= divisor(12) ;\nvar call2:= divisor(9) ;\nexpect call0==4;\nexpect call1==6;\nexpect call2==3;\n}\n"
+    },
+    "97": {
+        "TestCase": "method{:test} check(){\nvar call0:= frequency_lists([[1,2,3,2],[4,5,6,2],[7,8,9,5]]) ;\nvar call1:= frequency_lists([[1,2,3,4],[5,6,7,8],[9,10,11,12]]) ;\nvar call2:= frequency_lists([[20,30,40,17],[18,16,14,13],[10,20,30,40]]) ;\nexpect call0==map[1:=1,2:=3,3:=1,4:=1,5:=2,6:=1,7:=1,8:=1,9:=1];\nexpect call1==map[1:=1,2:=1,3:=1,4:=1,5:=1,6:=1,7:=1,8:=1,9:=1,10:=1,11:=1,12:=1];\nexpect call2==map[20:=2,30:=2,40:=2,17:=1,18:=1,16:=1,14:=1,13:=1,10:=1];\n}\n"
+    },
+    "99": {
+        "TestCase": "method{:test} check(){\nvar call0:= decimal_to_binary(8) ;\nvar call1:= decimal_to_binary(18) ;\nvar call2:= decimal_to_binary(7) ;\nexpect call0==\"1000\";\nexpect call1==\"10010\";\nexpect call2==\"111\";\n}\n"
+    },
+    "100": {
+        "TestCase": "method{:test} check(){\nvar call0:= next_smallest_palindrome(99) ;\nvar call1:= next_smallest_palindrome(1221) ;\nvar call2:= next_smallest_palindrome(120) ;\nexpect call0==101;\nexpect call1==1331;\nexpect call2==121;\n}\n"
+    },
+    "101": {
+        "TestCase": "method{:test} check(){\nvar call0:= kth_element([12,3,5,7,19],2) ;\nvar call1:= kth_element([17,24,8,23],3) ;\nvar call2:= kth_element([16,21,25,36,4],4) ;\nexpect call0==3;\nexpect call1==8;\nexpect call2==36;\n}\n"
+    },
+    "102": {
+        "TestCase": "method{:test} check(){\nvar call0:= snake_to_camel(\"python_program\") ;\nvar call1:= snake_to_camel(\"python_language\") ;\nvar call2:= snake_to_camel(\"programming_language\") ;\nexpect call0==\"PythonProgram\";\nexpect call1==\"PythonLanguage\";\nexpect call2==\"ProgrammingLanguage\";\n}\n"
+    },
+    "103": {
+        "TestCase": "method{:test} check(){\nvar call0:= eulerian_num(3,1) ;\nvar call1:= eulerian_num(4,1) ;\nvar call2:= eulerian_num(5,3) ;\nexpect call0==4;\nexpect call1==11;\nexpect call2==26;\n}\n"
+    },
+    "104": {
+        "TestCase": "method{:test} check(){\nvar call0:= sort_sublists(([\"green\",\"orange\"],[\"black\",\"white\"],[\"white\",\"black\",\"orange\"])) ;\nvar call1:= sort_sublists(([\" red \",\"green\"],[\"blue \",\" black\"],[\" orange\",\"brown\"])) ;\nvar call2:= sort_sublists(([\"zilver\",\"gold\"],[\"magnesium\",\"aluminium\"],[\"steel\",\"bronze\"])) ;\nexpect call0==[[\"green\",\"orange\"],[\"black\",\"white\"],[\"black\",\"orange\",\"white\"]];\nexpect call1==[[\" red \",\"green\"],[\" black\",\"blue \"],[\" orange\",\"brown\"]];\nexpect call2==[[\"gold\",\"zilver\"],[\"aluminium\",\"magnesium\"],[\"bronze\",\"steel\"]];\n}\n"
+    },
+    "105": {
+        "TestCase": "method{:test} check(){\nvar call0:= count([true,false,true]) ;\nvar call1:= count([false,false]) ;\nvar call2:= count([true,true,true]) ;\nexpect call0==2;\nexpect call1==0;\nexpect call2==3;\n}\n"
+    },
+    "106": {
+        "TestCase": "method{:test} check(){\nvar call0:= add_lists([5,6,7],(9,10)) ;\nvar call1:= add_lists([6,7,8],(10,11)) ;\nvar call2:= add_lists([7,8,9],(11,12)) ;\nexpect call0==(9,10,5,6,7);\nexpect call1==(10,11,6,7,8);\nexpect call2==(11,12,7,8,9);\n}\n"
+    },
+    "108": {
+        "TestCase": "method{:test} check(){\nvar call0:= merge_sorted_list([25,24,15,4,5,29,110],[19,20,11,56,25,233,154],[24,26,54,48]) ;\nvar call1:= merge_sorted_list([1,3,5,6,8,9],[2,5,7,11],[1,4,7,8,12]) ;\nvar call2:= merge_sorted_list([18,14,10,9,8,7,9,3,2,4,1],[25,35,22,85,14,65,75,25,58],[12,74,9,50,61,41]) ;\nexpect call0==[4,5,11,15,19,20,24,24,25,25,26,29,48,54,56,110,154,233];\nexpect call1==[1,1,2,3,4,5,5,6,7,7,8,8,9,11,12];\nexpect call2==[1,2,3,4,7,8,9,9,9,10,12,14,14,18,22,25,25,35,41,50,58,61,65,74,75,85];\n}\n"
+    },
+    "109": {
+        "TestCase": "method{:test} check(){\nvar call0:= odd_Equivalent(\"011001\",6) ;\nvar call1:= odd_Equivalent(\"11011\",5) ;\nvar call2:= odd_Equivalent(\"1010\",4) ;\nexpect call0==3;\nexpect call1==4;\nexpect call2==2;\n}\n"
+    },
+    "111": {
+        "TestCase": "method{:test} check(){\nvar call0:= common_in_nested_lists([[12,18,23,25,45],[7,12,18,24,28],[1,5,8,12,15,16,18]]) ;\nvar call1:= set x | x in call0 ;\nvar call2:= {18,12} ;\nvar call3:= common_in_nested_lists([[12,5,23,25,45],[7,11,5,23,28],[1,5,8,18,23,16]]) ;\nvar call4:= set x | x in call3 ;\nvar call5:= {5,23} ;\nvar call6:= common_in_nested_lists([[2,3,4,1],[4,5],[6,4,8],[4,5],[6,8,4]]) ;\nvar call7:= set x | x in call6 ;\nvar call8:= {4} ;\nexpect call1==call2;\nexpect call4==call5;\nexpect call7==call8;\n}\n"
+    },
+    "113": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_integer(\"python\") ;\nvar call1:= check_integer(\"1\") ;\nvar call2:= check_integer(\"12345\") ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\n}\n"
+    },
+    "115": {
+        "TestCase": "method{:test} check(){\nvar call0:= empty_dit([map[],map[],map[]]) ;\nvar call1:= empty_dit([{1,2},map[],map[]]) ;\nvar call2:= empty_dit(map[]) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "116": {
+        "TestCase": "method{:test} check(){\nvar call0:= tuple_to_int([1,2,3]) ;\nvar call1:= tuple_to_int([4,5,6]) ;\nvar call2:= tuple_to_int([5,6,7]) ;\nexpect call0==123;\nexpect call1==456;\nexpect call2==567;\n}\n"
+    },
+    "117": {
+        "TestCase": "method{:test} check(){\nvar call0:= list_to_float([(\"3\",\"4\"),(\"1\",\"26.45\"),(\"7.32\",\"8\"),(\"4\",\"8\")]) ;\nvar call1:= list_to_float([(\"4\",\"4\"),(\"2\",\"27\"),(\"4.12\",\"9\"),(\"7\",\"11\")]) ;\nvar call2:= list_to_float([(\"6\",\"78\"),(\"5\",\"26.45\"),(\"1.33\",\"4\"),(\"82\",\"13\")]) ;\nexpect call0==[(3.00000000,4.00000000),(1.00000000,26.45000000),(7.32000000,8.00000000),(4.00000000,8.00000000)];\nexpect call1==[(4.00000000,4.00000000),(2.00000000,27.00000000),(4.12000000,9.00000000),(7.00000000,11.00000000)];\nexpect call2==[(6.00000000,78.00000000),(5.00000000,26.45000000),(1.33000000,4.00000000),(82.00000000,13.00000000)];\n}\n"
+    },
+    "118": {
+        "TestCase": "method{:test} check(){\nvar call0:= string_to_list(\"python programming\") ;\nvar call1:= string_to_list(\"lists tuples strings\") ;\nvar call2:= string_to_list(\"write a program\") ;\nexpect call0==[\"python\",\"programming\"];\nexpect call1==[\"lists\",\"tuples\",\"strings\"];\nexpect call2==[\"write\",\"a\",\"program\"];\n}\n"
+    },
+    "119": {
+        "TestCase": "method{:test} check(){\nvar call0:= search([1,1,2,2,3]) ;\nvar call1:= search([1,1,3,3,4,4,5,5,7,7,8]) ;\nvar call2:= search([1,2,2,3,3,4,4]) ;\nexpect call0==3;\nexpect call1==8;\nexpect call2==1;\n}\n"
+    },
+    "120": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_product_tuple([(2,7),(2,6),(1,8),(4,9)]) ;\nvar call1:= max_product_tuple([(10,20),(15,2),(5,10)]) ;\nvar call2:= max_product_tuple([(11,44),(10,15),(20,5),(12,9)]) ;\nexpect call0==36;\nexpect call1==200;\nexpect call2==484;\n}\n"
+    },
+    "123": {
+        "TestCase": "method{:test} check(){\nvar call0:= amicable_numbers_sum(999) ;\nvar call1:= amicable_numbers_sum(9999) ;\nvar call2:= amicable_numbers_sum(99) ;\nexpect call0==504;\nexpect call1==31626;\nexpect call2==0;\n}\n"
+    },
+    "125": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_length(\"11000010001\") ;\nvar call1:= find_length(\"10111\") ;\nvar call2:= find_length(\"11011101100101\") ;\nexpect call0==6;\nexpect call1==1;\nexpect call2==2;\n}\n"
+    },
+    "126": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum(10,15) ;\nvar call1:= sum(100,150) ;\nvar call2:= sum(4,6) ;\nexpect call0==6;\nexpect call1==93;\nexpect call2==3;\n}\n"
+    },
+    "127": {
+        "TestCase": "method{:test} check(){\nvar call0:= multiply_int(10,20) ;\nvar call1:= multiply_int(5,10) ;\nvar call2:= multiply_int(4,8) ;\nexpect call0==200;\nexpect call1==50;\nexpect call2==32;\n}\n"
+    },
+    "128": {
+        "TestCase": "method{:test} check(){\nvar call0:= long_words(3,\"python is a programming language\") ;\nvar call1:= long_words(2,\"writing a program\") ;\nvar call2:= long_words(5,\"sorting list\") ;\nexpect call0==[\"python\",\"programming\",\"language\"];\nexpect call1==[\"writing\",\"program\"];\nexpect call2==[\"sorting\"];\n}\n"
+    },
+    "129": {
+        "TestCase": "method{:test} check(){\nvar call0:= magic_square_test([[7,12,1,14],[2,13,8,11],[16,3,10,5],[9,6,15,4]]) ;\nvar call1:= magic_square_test([[2,7,6],[9,5,1],[4,3,8]]) ;\nvar call2:= magic_square_test([[2,7,6],[9,5,1],[4,3,7]]) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "130": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_occurrences([2,3,8,4,7,9,8,2,6,5,1,6,1,2,3,2,4,6,9,1,2]) ;\nvar call1:= max_occurrences([2,3,8,4,7,9,8,7,9,15,14,10,12,13,16,18]) ;\nvar call2:= max_occurrences([10,20,20,30,40,90,80,50,30,20,50,10]) ;\nexpect call0==2;\nexpect call1==8;\nexpect call2==20;\n}\n"
+    },
+    "131": {
+        "TestCase": "method{:test} check(){\nvar call0:= reverse_vowels(\"Python\") ;\nvar call1:= reverse_vowels(\"USA\") ;\nvar call2:= reverse_vowels(\"ab\") ;\nexpect call0==\"Python\";\nexpect call1==\"ASU\";\nexpect call2==\"ab\";\n}\n"
+    },
+    "132": {
+        "TestCase": "method{:test} check(){\nvar call0:= tup_string([\"e\",\"x\",\"e\",\"r\",\"c\",\"i\",\"s\",\"e\",\"s\"]) ;\nvar call1:= tup_string([\"p\",\"y\",\"t\",\"h\",\"o\",\"n\"]) ;\nvar call2:= tup_string([\"p\",\"r\",\"o\",\"g\",\"r\",\"a\",\"m\"]) ;\nexpect call0==\"exercises\";\nexpect call1==\"python\";\nexpect call2==\"program\";\n}\n"
+    },
+    "133": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_negativenum([2,4,-6,-9,11,-12,14,-5,17]) ;\nvar call1:= sum_negativenum([10,15,-14,13,-18,12,-20]) ;\nvar call2:= sum_negativenum([19,-65,57,39,152,-639,121,44,90,-190]) ;\nexpect call0==-32;\nexpect call1==-52;\nexpect call2==-894;\n}\n"
+    },
+    "135": {
+        "TestCase": "method{:test} check(){\nvar call0:= hexagonal_num(10) ;\nvar call1:= hexagonal_num(5) ;\nvar call2:= hexagonal_num(7) ;\nexpect call0==190;\nexpect call1==45;\nexpect call2==91;\n}\n"
+    },
+    "138": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_Sum_Of_Powers_Of_Two(10) ;\nvar call1:= is_Sum_Of_Powers_Of_Two(7) ;\nvar call2:= is_Sum_Of_Powers_Of_Two(14) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "140": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_singly([(3,4,5),(4,5,7),(1,4)]) ;\nvar call1:= set(call0) ;\nvar call2:= set([3,4,5,7,1]) ;\nvar call3:= extract_singly([(1,2,3),(4,2,3),(7,8)]) ;\nvar call4:= set(call3) ;\nvar call5:= set([1,2,3,4,7,8]) ;\nvar call6:= extract_singly([(7,8,9),(10,11,12),(10,11)]) ;\nvar call7:= set(call6) ;\nvar call8:= set([7,8,9,10,11,12]) ;\nexpect call1==call2;\nexpect call4==call5;\nexpect call7==call8;\n}\n"
+    },
+    "141": {
+        "TestCase": "method{:test} check(){\nvar call0:= pancake_sort([15,79,25,38,69]) ;\nvar call1:= pancake_sort([98,12,54,36,85]) ;\nvar call2:= pancake_sort([41,42,32,12,23]) ;\nexpect call0==[15,25,38,69,79];\nexpect call1==[12,36,54,85,98];\nexpect call2==[12,23,32,41,42];\n}\n"
+    },
+    "142": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_samepair([1,2,3,4,5,6,7,8],[2,2,3,1,2,6,7,9],[2,1,3,1,2,6,7,9]) ;\nvar call1:= count_samepair([1,2,3,4,5,6,7,8],[2,2,3,1,2,6,7,8],[2,1,3,1,2,6,7,8]) ;\nvar call2:= count_samepair([1,2,3,4,2,6,7,8],[2,2,3,1,2,6,7,8],[2,1,3,1,2,6,7,8]) ;\nexpect call0==3;\nexpect call1==4;\nexpect call2==5;\n}\n"
+    },
+    "143": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_lists(([1,2,3,4],[5,6,7,8])) ;\nvar call1:= find_lists(([1,2],[3,4],[5,6])) ;\nvar call2:= find_lists([9,8,7,6,5,4,3,2,1]) ;\nexpect call0==2;\nexpect call1==3;\nexpect call2==1;\n}\n"
+    },
+    "145": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_Abs_Diff([2,1,5,3]) ;\nvar call1:= max_Abs_Diff([9,3,2,5,1]) ;\nvar call2:= max_Abs_Diff([3,2,1]) ;\nexpect call0==4;\nexpect call1==8;\nexpect call2==2;\n}\n"
+    },
+    "160": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_solution(2,3,7) ;\nvar call1:= find_solution(4,2,7) ;\nvar call2:= find_solution(1,13,17) ;\nexpect call0==(2,1);\nexpect call1==None;\nexpect call2==(4,1);\n}\n"
+    },
+    "161": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_elements([1,2,3,4,5,6,7,8,9,10],[2,4,6,8]) ;\nvar call1:= remove_elements([1,2,3,4,5,6,7,8,9,10],[1,3,5,7]) ;\nvar call2:= remove_elements([1,2,3,4,5,6,7,8,9,10],[5,7]) ;\nexpect call0==[1,3,5,7,9,10];\nexpect call1==[2,4,6,8,9,10];\nexpect call2==[1,2,3,4,6,8,9,10];\n}\n"
+    },
+    "162": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_series(6) ;\nvar call1:= sum_series(10) ;\nvar call2:= sum_series(9) ;\nexpect call0==12;\nexpect call1==30;\nexpect call2==25;\n}\n"
+    },
+    "164": {
+        "TestCase": "method{:test} check(){\nvar call0:= are_equivalent(36,57) ;\nvar call1:= are_equivalent(2,4) ;\nvar call2:= are_equivalent(23,47) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "165": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_char_position(\"xbcefg\") ;\nvar call1:= count_char_position(\"ABcED\") ;\nvar call2:= count_char_position(\"AbgdeF\") ;\nexpect call0==2;\nexpect call1==3;\nexpect call2==5;\n}\n"
+    },
+    "166": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_even_pair([5,4,7,2,1]) ;\nvar call1:= find_even_pair([7,2,8,1,0,5,11]) ;\nvar call2:= find_even_pair([1,2,3]) ;\nexpect call0==4;\nexpect call1==9;\nexpect call2==1;\n}\n"
+    },
+    "167": {
+        "TestCase": "method{:test} check(){\nvar call0:= next_power_of_2(0) ;\nvar call1:= next_power_of_2(5) ;\nvar call2:= next_power_of_2(17) ;\nexpect call0==1;\nexpect call1==8;\nexpect call2==32;\n}\n"
+    },
+    "168": {
+        "TestCase": "method{:test} check(){\nvar call0:= frequency([1,2,3],4) ;\nvar call1:= frequency([1,2,2,3,3,3,4],3) ;\nvar call2:= frequency([0,1,2,3,1,2],1) ;\nexpect call0==0;\nexpect call1==3;\nexpect call2==2;\n}\n"
+    },
+    "170": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_range_list([2,1,5,6,8,3,4,9,10,11,8,12],8,10) ;\nvar call1:= sum_range_list([2,1,5,6,8,3,4,9,10,11,8,12],5,7) ;\nvar call2:= sum_range_list([2,1,5,6,8,3,4,9,10,11,8,12],7,10) ;\nexpect call0==29;\nexpect call1==16;\nexpect call2==38;\n}\n"
+    },
+    "171": {
+        "TestCase": "method{:test} check(){\nvar call0:= perimeter_pentagon(5.0) ;\nvar call1:= perimeter_pentagon(10.0) ;\nvar call2:= perimeter_pentagon(15.0) ;\nexpect call0==25.0;\nexpect call1==50.0;\nexpect call2==75.0;\n}\n"
+    },
+    "172": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_occurance(\"letstdlenstdporstd\") ;\nvar call1:= count_occurance(\"truststdsolensporsd\") ;\nvar call2:= count_occurance(\"makestdsostdworthit\") ;\nvar call3:= count_occurance(\"stds\") ;\nvar call4:= count_occurance(\"\") ;\nexpect call0==3;\nexpect call1==1;\nexpect call2==2;\nexpect call3==1;\nexpect call4==0;\n}\n"
+    },
+    "222": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_type((5,6,7,3,5,6)) ;\nvar call1:= check_type((1,2,\"4\")) ;\nvar call2:= check_type((3,2,1,4,5)) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "223": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_majority([1,2,3,3,3,3,10],7,3) ;\nvar call1:= is_majority([1,1,2,4,4,4,6,6],8,4) ;\nvar call2:= is_majority([1,1,1,2,2],5,1) ;\nvar call3:= is_majority([1,1,2,2],5,1) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\nexpect call3==false;\n}\n"
+    },
+    "224": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_Set_Bits(2) ;\nvar call1:= count_Set_Bits(4) ;\nvar call2:= count_Set_Bits(6) ;\nexpect call0==1;\nexpect call1==1;\nexpect call2==2;\n}\n"
+    },
+    "226": {
+        "TestCase": "method{:test} check(){\nvar call0:= odd_values_string(\"abcdef\") ;\nvar call1:= odd_values_string(\"python\") ;\nvar call2:= odd_values_string(\"data\") ;\nvar call3:= odd_values_string(\"lambs\") ;\nexpect call0==\"ace\";\nexpect call1==\"pto\";\nexpect call2==\"dt\";\nexpect call3==\"lms\";\n}\n"
+    },
+    "227": {
+        "TestCase": "method{:test} check(){\nvar call0:= min_of_three(10,20,0) ;\nvar call1:= min_of_three(19,15,18) ;\nvar call2:= min_of_three(-10,-20,-30) ;\nexpect call0==0;\nexpect call1==15;\nexpect call2==-30;\n}\n"
+    },
+    "228": {
+        "TestCase": "method{:test} check(){\nvar call0:= all_Bits_Set_In_The_Given_Range(4,1,2) ;\nvar call1:= all_Bits_Set_In_The_Given_Range(17,2,4) ;\nvar call2:= all_Bits_Set_In_The_Given_Range(39,4,6) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "229": {
+        "TestCase": "method{:test} check(){\nvar call0:= re_arrange_array([-1,2,-3,4,5,6,-7,8,9],9) ;\nvar call1:= re_arrange_array([12,-14,-26,13,15],5) ;\nvar call2:= re_arrange_array([10,24,36,-42,-39,-78,85],7) ;\nexpect call0==[-1,-3,-7,4,5,6,2,8,9];\nexpect call1==[-14,-26,12,13,15];\nexpect call2==[-42,-39,-78,10,24,36,85];\n}\n"
+    },
+    "230": {
+        "TestCase": "method{:test} check(){\nvar call0:= replace_blank(\"hello people\",\"@\") ;\nvar call1:= replace_blank(\"python program language\",\"$\") ;\nvar call2:= replace_blank(\"blank space\",\"-\") ;\nexpect call0==\"hello@people\";\nexpect call1==\"python$program$language\";\nexpect call2==\"blank-space\";\n}\n"
+    },
+    "232": {
+        "TestCase": "method{:test} check(){\nvar call0:= larg_nnum([10,20,50,70,90,20,50,40,60,80,100],2) ;\nvar call1:= set(call0) ;\nvar call2:= set([100,90]) ;\nvar call3:= larg_nnum([10,20,50,70,90,20,50,40,60,80,100],5) ;\nvar call4:= set(call3) ;\nvar call5:= set([100,90,80,70,60]) ;\nvar call6:= larg_nnum([10,20,50,70,90,20,50,40,60,80,100],3) ;\nvar call7:= set(call6) ;\nvar call8:= set([100,90,80]) ;\nexpect call1==call2;\nexpect call4==call5;\nexpect call7==call8;\n}\n"
+    },
+    "234": {
+        "TestCase": "method{:test} check(){\nvar call0:= volume_cube(3) ;\nvar call1:= volume_cube(2) ;\nvar call2:= volume_cube(5) ;\nexpect call0==27;\nexpect call1==8;\nexpect call2==125;\n}\n"
+    },
+    "235": {
+        "TestCase": "method{:test} check(){\nvar call0:= even_bit_set_number(10) ;\nvar call1:= even_bit_set_number(20) ;\nvar call2:= even_bit_set_number(30) ;\nexpect call0==10;\nexpect call1==30;\nexpect call2==30;\n}\n"
+    },
+    "237": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_occurences([(3,1),(1,3),(2,5),(5,2),(6,3)]) ;\nvar call1:= check_occurences([(4,2),(2,4),(3,6),(6,3),(7,4)]) ;\nvar call2:= check_occurences([(13,2),(11,23),(12,25),(25,12),(16,23)]) ;\nexpect call0==map[(1,3):=2,(2,5):=2,(3,6):=1];\nexpect call1==map[(2,4):=2,(3,6):=2,(4,7):=1];\nexpect call2==map[(2,13):=1,(11,23):=1,(12,25):=2,(16,23):=1];\n}\n"
+    },
+    "238": {
+        "TestCase": "method{:test} check(){\nvar call0:= number_of_substrings(\"abc\") ;\nvar call1:= number_of_substrings(\"abcd\") ;\nvar call2:= number_of_substrings(\"abcde\") ;\nexpect call0==6;\nexpect call1==10;\nexpect call2==15;\n}\n"
+    },
+    "239": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_total_number_of_sequences(10,4) ;\nvar call1:= get_total_number_of_sequences(5,2) ;\nvar call2:= get_total_number_of_sequences(16,3) ;\nexpect call0==4;\nexpect call1==6;\nexpect call2==84;\n}\n"
+    },
+    "240": {
+        "TestCase": "method{:test} check(){\nvar call0:= replace_list([1,3,5,7,9,10],[2,4,6,8]) ;\nvar call1:= replace_list([1,2,3,4,5],[5,6,7,8]) ;\nvar call2:= replace_list([\"red\",\"blue\",\"green\"],[\"yellow\"]) ;\nexpect call0==[1,3,5,7,9,2,4,6,8];\nexpect call1==[1,2,3,4,5,6,7,8];\nexpect call2==[\"red\",\"blue\",\"yellow\"];\n}\n"
+    },
+    "242": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_charac(\"python programming\") ;\nvar call1:= count_charac(\"language\") ;\nvar call2:= count_charac(\"words\") ;\nexpect call0==18;\nexpect call1==8;\nexpect call2==5;\n}\n"
+    },
+    "244": {
+        "TestCase": "method{:test} check(){\nvar call0:= next_Perfect_Square(35) ;\nvar call1:= next_Perfect_Square(6) ;\nvar call2:= next_Perfect_Square(9) ;\nexpect call0==36;\nexpect call1==9;\nexpect call2==16;\n}\n"
+    },
+    "245": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_sum([1,15,51,45,33,100,12,18,9]) ;\nvar call1:= max_sum([80,60,30,40,20,10]) ;\nvar call2:= max_sum([2,3,14,16,21,23,29,30]) ;\nexpect call0==194;\nexpect call1==210;\nexpect call2==138;\n}\n"
+    },
+    "247": {
+        "TestCase": "method{:test} check(){\nvar call0:= lps(\"TENS FOR TENS\") ;\nvar call1:= lps(\"CARDIO FOR CARDS\") ;\nvar call2:= lps(\"PART OF THE JOURNEY IS PART\") ;\nexpect call0==5;\nexpect call1==7;\nexpect call2==9;\n}\n"
+    },
+    "249": {
+        "TestCase": "method{:test} check(){\nvar call0:= intersection_array([1,2,3,5,7,8,9,10],[1,2,4,8,9]) ;\nvar call1:= intersection_array([1,2,3,5,7,8,9,10],[3,5,7,9]) ;\nvar call2:= intersection_array([1,2,3,5,7,8,9,10],[10,20,30,40]) ;\nexpect call0==[1,2,8,9];\nexpect call1==[3,5,7,9];\nexpect call2==[10];\n}\n"
+    },
+    "250": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_X([10,8,5,2,10,15,10,8,5,8,8,2],4) ;\nvar call1:= count_X([10,8,5,2,10,15,10,8,5,8,8,2],10) ;\nvar call2:= count_X([10,8,5,2,10,15,10,8,5,8,8,2],8) ;\nexpect call0==0;\nexpect call1==3;\nexpect call2==4;\n}\n"
+    },
+    "251": {
+        "TestCase": "method{:test} check(){\nvar call0:= insert_element([\"Red\",\"Green\",\"Black\"],\"c\") ;\nvar call1:= insert_element([\"python\",\"java\"],\"program\") ;\nvar call2:= insert_element([\"happy\",\"sad\"],\"laugh\") ;\nexpect call0==[\"c\",\"Red\",\"c\",\"Green\",\"c\",\"Black\"];\nexpect call1==[\"program\",\"python\",\"program\",\"java\"];\nexpect call2==[\"laugh\",\"happy\",\"laugh\",\"sad\"];\n}\n"
+    },
+    "252": {
+        "TestCase": "method{:test} check(){\nvar call0:= convert(1) ;\nvar call1:= convert(4) ;\nvar call2:= convert(5) ;\nexpect call0==(1.00000000,0.00000000);\nexpect call1==(4.00000000,0.00000000);\nexpect call2==(5.00000000,0.00000000);\n}\n"
+    },
+    "253": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_integer([1,2,\"abc\",1.20000000]) ;\nvar call1:= count_integer([1,2,3]) ;\nvar call2:= count_integer([1,1.20000000,4,5.10000000]) ;\nexpect call0==2;\nexpect call1==3;\nexpect call2==2;\n}\n"
+    },
+    "255": {
+        "TestCase": "method{:test} check(){\nvar call0:= combinations_colors([\"Red\",\"Green\",\"Blue\"],1) ;\nvar call1:= combinations_colors([\"Red\",\"Green\",\"Blue\"],2) ;\nvar call2:= combinations_colors([\"Red\",\"Green\",\"Blue\"],3) ;\nexpect call0==[(\"Red\"),(\"Green\"),(\"Blue\")];\nexpect call1==[(\"Red\",\"Red\"),(\"Red\",\"Green\"),(\"Red\",\"Blue\"),(\"Green\",\"Green\"),(\"Green\",\"Blue\"),(\"Blue\",\"Blue\")];\nexpect call2==[(\"Red\",\"Red\",\"Red\"),(\"Red\",\"Red\",\"Green\"),(\"Red\",\"Red\",\"Blue\"),(\"Red\",\"Green\",\"Green\"),(\"Red\",\"Green\",\"Blue\"),(\"Red\",\"Blue\",\"Blue\"),(\"Green\",\"Green\",\"Green\"),(\"Green\",\"Green\",\"Blue\"),(\"Green\",\"Blue\",\"Blue\"),(\"Blue\",\"Blue\",\"Blue\")];\n}\n"
+    },
+    "256": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_Primes_nums(5) ;\nvar call1:= count_Primes_nums(10) ;\nvar call2:= count_Primes_nums(100) ;\nexpect call0==2;\nexpect call1==4;\nexpect call2==25;\n}\n"
+    },
+    "257": {
+        "TestCase": "method{:test} check(){\nvar call0_0,call0_1:= swap_numbers(10,20) ;\nvar call1_0,call1_1:= swap_numbers(15,17) ;\nvar call2_0,call2_1:= swap_numbers(100,200) ;\nexpect (call0_0,call0_1)==(20,10);\nexpect (call1_0,call1_1)==(17,15);\nexpect (call2_0,call2_1)==(200,100);\n}\n"
+    },
+    "259": {
+        "TestCase": "method{:test} check(){\nvar call0:= maximize_elements([[1,3],[4,5],[2,9],[1,10]]),[[6,7],[3,9],[1,1],[7,3]]) ;\nvar call1:= maximize_elements([[2,4],[5,6],[3,10],[2,11]],[[7,8],[4,10],[2,2],[8,4]]) ;\nvar call2:= maximize_elements([[3,5],[6,7],[4,11],[3,12]],[[8,9],[5,11],[3,3],[9,5]]) ;\nexpect call0==[[6,7],[4,9],[2,9],[7,10]];\nexpect call1==[[7,8],[5,10],[3,10],[8,11]];\nexpect call2==[[8,9],[6,11],[4,11],[9,12]];\n}\n"
+    },
+    "260": {
+        "TestCase": "method{:test} check(){\nvar call0:= newman_prime(3) ;\nvar call1:= newman_prime(4) ;\nvar call2:= newman_prime(5) ;\nexpect call0==7;\nexpect call1==17;\nexpect call2==41;\n}\n"
+    },
+    "261": {
+        "TestCase": "method{:test} check(){\nvar call0:= division_elements([10,4,6,9],[5,2,3,3]) ;\nvar call1:= division_elements([12,6,8,16],[6,3,4,4]) ;\nvar call2:= division_elements([20,14,36,18],[5,7,6,9]) ;\nexpect call0==[2,2,2,3];\nexpect call1==[2,2,2,4];\nexpect call2==[4,2,6,2];\n}\n"
+    },
+    "262": {
+        "TestCase": "method{:test} check(){\nvar call0:= split_two_parts([1,1,2,3,4,4,5,1],3) ;\nvar call1:= split_two_parts([\"a\",\"b\",\"c\",\"d\"],2) ;\nvar call2:= split_two_parts([\"p\",\"y\",\"t\",\"h\",\"o\",\"n\"],4) ;\nexpect call0==([1,1,2],[3,4,4,5,1]);\nexpect call1==([\"a\",\"b\"],[\"c\",\"d\"]);\nexpect call2==([\"p\",\"y\",\"t\",\"h\"],[\"o\",\"n\"]);\n}\n"
+    },
+    "264": {
+        "TestCase": "method{:test} check(){\nvar call0:= dog_age(12) ;\nvar call1:= dog_age(15) ;\nvar call2:= dog_age(24) ;\nexpect call0==61.0;\nexpect call1==73.0;\nexpect call2==109.0;\n}\n"
+    },
+    "265": {
+        "TestCase": "method{:test} check(){\nvar call0:= list_split([\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\"],3) ;\nvar call1:= list_split([1,2,3,4,5,6,7,8,9,10,11,12,13,14],3) ;\nvar call2:= list_split([\"python\",\"java\",\"C\",\"C++\",\"DBMS\",\"SQL\"],2) ;\nexpect call0==[[\"a\",\"d\",\"g\",\"j\",\"m\"],[\"b\",\"e\",\"h\",\"k\",\"n\"],[\"c\",\"f\",\"i\",\"l\"]];\nexpect call1==[[1,4,7,10,13],[2,5,8,11,14],[3,6,9,12]];\nexpect call2==[[\"python\",\"C\",\"DBMS\"],[\"java\",\"C++\",\"SQL\"]];\n}\n"
+    },
+    "266": {
+        "TestCase": "method{:test} check(){\nvar call0:= lateralsurface_cube(5) ;\nvar call1:= lateralsurface_cube(9) ;\nvar call2:= lateralsurface_cube(10) ;\nexpect call0==100;\nexpect call1==324;\nexpect call2==400;\n}\n"
+    },
+    "267": {
+        "TestCase": "method{:test} check(){\nvar call0:= square_Sum(2) ;\nvar call1:= square_Sum(3) ;\nvar call2:= square_Sum(4) ;\nexpect call0==10;\nexpect call1==35;\nexpect call2==84;\n}\n"
+    },
+    "268": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_star_num(3) ;\nvar call1:= find_star_num(4) ;\nvar call2:= find_star_num(5) ;\nexpect call0==37;\nexpect call1==73;\nexpect call2==121;\n}\n"
+    },
+    "269": {
+        "TestCase": "method{:test} check(){\nvar call0:= ascii_value('A') ;\nvar call1:= ascii_value('R') ;\nvar call2:= ascii_value('S') ;\nexpect call0==65;\nexpect call1==82;\nexpect call2==83;\n}\n"
+    },
+    "270": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_even_and_even_index([5,6,12,1,18,8]) ;\nvar call1:= sum_even_and_even_index([3,20,17,9,2,10,18,13,6,18]) ;\nvar call2:= sum_even_and_even_index([5,6,12,1]) ;\nexpect call0==30;\nexpect call1==26;\nexpect call2==12;\n}\n"
+    },
+    "271": {
+        "TestCase": "method{:test} check(){\nvar call0:= even_Power_Sum(2) ;\nvar call1:= even_Power_Sum(3) ;\nvar call2:= even_Power_Sum(1) ;\nexpect call0==1056;\nexpect call1==8832;\nexpect call2==32;\n}\n"
+    },
+    "272": {
+        "TestCase": "method{:test} check(){\nvar call0:= rear_extract([(1,\"Rash\",21),(2,\"Varsha\",20),(3,\"Kil\",19)]) ;\nvar call1:= rear_extract([(1,\"Sai\",36),(2,\"Ayesha\",25),(3,\"Salman\",45)]) ;\nvar call2:= rear_extract([(1,\"Sudeep\",14),(2,\"Vandana\",36),(3,\"Dawood\",56)]) ;\nexpect call0==[21,20,19];\nexpect call1==[36,25,45];\nexpect call2==[14,36,56];\n}\n"
+    },
+    "273": {
+        "TestCase": "method{:test} check(){\nvar call0:= substract_elements((10,4,5),(2,5,18)) ;\nvar call1:= substract_elements((11,2,3),(24,45,16)) ;\nvar call2:= substract_elements((7,18,9),(10,11,12)) ;\nexpect call0==(8,-1,-13);\nexpect call1==(-13,-43,-13);\nexpect call2==(-3,7,-3);\n}\n"
+    },
+    "274": {
+        "TestCase": "method{:test} check(){\nvar call0:= even_binomial_Coeff_Sum(4) ;\nvar call1:= even_binomial_Coeff_Sum(6) ;\nvar call2:= even_binomial_Coeff_Sum(2) ;\nexpect call0==8;\nexpect call1==32;\nexpect call2==2;\n}\n"
+    },
+    "277": {
+        "TestCase": "method{:test} check(){\nvar call0:= dict_filter(map[\"Cierra Vega\":=175,\"Alden Cantrell\":=180,\"Kierra Gentry\":=165,\"Pierre Cox\":=190],170) ;\nvar call1:= dict_filter(map[\"Cierra Vega\":=175,\"Alden Cantrell\":=180,\"Kierra Gentry\":=165,\"Pierre Cox\":=190],180) ;\nvar call2:= dict_filter(map[\"Cierra Vega\":=175,\"Alden Cantrell\":=180,\"Kierra Gentry\":=165,\"Pierre Cox\":=190],190) ;\nexpect call0==map[\"Cierra Vega\":=175,\"Alden Cantrell\":=180,\"Pierre Cox\":=190];\nexpect call1==map[\"Alden Cantrell\":=180,\"Pierre Cox\":=190];\nexpect call2==map[\"Pierre Cox\":=190];\n}\n"
+    },
+    "278": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_first_elements((1,5,7,(4,6),10)) ;\nvar call1:= count_first_elements((2,9,(5,7),11)) ;\nvar call2:= count_first_elements((11,15,5,8,(2,3),8)) ;\nexpect call0==3;\nexpect call1==2;\nexpect call2==4;\n}\n"
+    },
+    "279": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_num_decagonal(3) ;\nvar call1:= is_num_decagonal(7) ;\nvar call2:= is_num_decagonal(10) ;\nexpect call0==27;\nexpect call1==175;\nexpect call2==370;\n}\n"
+    },
+    "280": {
+        "TestCase": "method{:test} check(){\nvar call0_0,call0_1:= sequential_search([11,23,58,31,56,77,43,12,65,19],31) ;\nvar call1_0,call1_1:= sequential_search([12,32,45,62,35,47,44,61],61) ;\nvar call2_0,call2_1:= sequential_search([9,10,17,19,22,39,48,56],48) ;\nexpect (call0_0,call0_1)==(true,3);\nexpect (call1_0,call1_1)==(true,7);\nexpect (call2_0,call2_1)==(true,6);\n}\n"
+    },
+    "281": {
+        "TestCase": "method{:test} check(){\nvar call0:= all_unique([1,2,3]) ;\nvar call1:= all_unique([1,2,1,2]) ;\nvar call2:= all_unique([1,2,3,4,5]) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "282": {
+        "TestCase": "method{:test} check(){\nvar call0:= sub_list([1,2,3],[4,5,6]) ;\nvar call1:= sub_list([1,2],[3,4]) ;\nvar call2:= sub_list([90,120],[50,70]) ;\nexpect call0==[-3,-3,-3];\nexpect call1==[-2,-2];\nexpect call2==[40,50];\n}\n"
+    },
+    "283": {
+        "TestCase": "method{:test} check(){\nvar call0:= validate(1234) ;\nvar call1:= validate(51241) ;\nvar call2:= validate(321) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "284": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_element([\"green\",\"orange\",\"black\",\"white\"],\"blue\") ;\nvar call1:= check_element([1,2,3,4],7) ;\nvar call2:= check_element([\"green\",\"green\",\"green\",\"green\"],\"green\") ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "285": {
+        "TestCase": "method{:test} check(){\nvar call0:= text_match_two_three(\"ac\") ;\nvar call1:= text_match_two_three(\"dc\") ;\nvar call2:= text_match_two_three(\"abbbba\") ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "286": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_sub_array_sum_repeated([10,20,-30,-1],4,3) ;\nvar call1:= max_sub_array_sum_repeated([-1,10,20],3,2) ;\nvar call2:= max_sub_array_sum_repeated([-1,-2,-3],3,3) ;\nexpect call0==30;\nexpect call1==59;\nexpect call2==-1;\n}\n"
+    },
+    "287": {
+        "TestCase": "method{:test} check(){\nvar call0:= square_Sum(2) ;\nvar call1:= square_Sum(3) ;\nvar call2:= square_Sum(4) ;\nexpect call0==20;\nexpect call1==56;\nexpect call2==120;\n}\n"
+    },
+    "290": {
+        "TestCase": "method{:test} check(){\nvar call0_0,call0_1:= max_length([[0],[1,3],[5,7],[9,11],[13,15,17]]) ;\nvar call1_0,call1_1:= max_length([[1],[5,7],[10,12,14,15]]) ;\nvar call2_0,call2_1:= max_length([[5],[15,20,25]]) ;\nexpect (call0_0,call0_1)==(3,[13,15,17]);\nexpect (call1_0,call1_1)==(4,[10,12,14,15]);\nexpect (call2_0,call2_1)==(3,[15,20,25]);\n}\n"
+    },
+    "291": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_no_of_ways(2,4) ;\nvar call1:= count_no_of_ways(3,2) ;\nvar call2:= count_no_of_ways(4,4) ;\nexpect call0==16;\nexpect call1==6;\nexpect call2==228;\n}\n"
+    },
+    "292": {
+        "TestCase": "method{:test} check(){\nvar call0:= find(10,3) ;\nvar call1:= find(4,2) ;\nvar call2:= find(20,5) ;\nexpect call0==3;\nexpect call1==2;\nexpect call2==4;\n}\n"
+    },
+    "293": {
+        "TestCase": "method{:test} check(){\nvar call0:= otherside_rightangle(7,8) ;\nvar call1:= otherside_rightangle(3,4) ;\nvar call2:= otherside_rightangle(7,15) ;\nexpect call0==10.63014581;\nexpect call1==5;\nexpect call2==16.55294536;\n}\n"
+    },
+    "294": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_val([\"Python\",3,2,4,5,\"version\"]) ;\nvar call1:= max_val([\"Python\",15,20,25]) ;\nvar call2:= max_val([\"Python\",30,20,40,50,\"version\"]) ;\nexpect call0==5;\nexpect call1==25;\nexpect call2==50;\n}\n"
+    },
+    "295": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_div(8) ;\nvar call1:= sum_div(12) ;\nvar call2:= sum_div(7) ;\nexpect call0==7;\nexpect call1==16;\nexpect call2==1;\n}\n"
+    },
+    "296": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_Inv_Count([1,20,6,4,5]) ;\nvar call1:= get_Inv_Count([1,2,1]) ;\nvar call2:= get_Inv_Count([1,2,5,6,1]) ;\nexpect call0==5;\nexpect call1==1;\nexpect call2==3;\n}\n"
+    },
+    "297": {
+        "TestCase": "method{:test} check(){\nvar call0:= flatten_list([0,10,[20,30],40,50,[60,70,80],[90,100,110,120]]) ;\nvar call1:= flatten_list([[10,20],[40],[30,56,25],[10,20],[33],[40]]) ;\nvar call2:= flatten_list([[1,2,3],[4,5,6],[10,11,12],[7,8,9]]) ;\nexpect call0==[0,10,20,30,40,50,60,70,80,90,100,110,120];\nexpect call1==[10,20,40,30,56,25,10,20,33,40];\nexpect call2==[1,2,3,4,5,6,10,11,12,7,8,9];\n}\n"
+    },
+    "299": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_aggregate([(\"Juan Whelan\",90),(\"Sabah Colley\",88),(\"Peter Nichols\",7),(\"Juan Whelan\",122),(\"Sabah Colley\",84)]) ;\nvar call1:= max_aggregate([(\"Juan Whelan\",50),(\"Sabah Colley\",48),(\"Peter Nichols\",37),(\"Juan Whelan\",22),(\"Sabah Colley\",14)]) ;\nvar call2:= max_aggregate([(\"Juan Whelan\",10),(\"Sabah Colley\",20),(\"Peter Nichols\",30),(\"Juan Whelan\",40),(\"Sabah Colley\",50)]) ;\nexpect call0==(\"Juan Whelan\",212);\nexpect call1==(\"Juan Whelan\",72);\nexpect call2==(\"Sabah Colley\",70);\n}\n"
+    },
+    "301": {
+        "TestCase": "method{:test} check(){\nvar call0:= dict_depth(map[\"a\":=1,\"b\":=map[\"c\":=map[\"d\":=map[]]]]) ;\nvar call1:= dict_depth(map[\"a\":=1,\"b\":=map[\"c\":=\"python\"]]) ;\nvar call2:= dict_depth(map[1:=\"Sun\",2:=map[3:=map[4:=\"Mon\"]]]) ;\nexpect call0==4;\nexpect call1==2;\nexpect call2==3;\n}\n"
+    },
+    "304": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) ;\nvar call1:= find_Element([1,2,3,4],[[0,1],[0,2]],1,2) ;\nvar call2:= find_Element([1,2,3,4,5,6],[[0,1],[0,2]],1,1) ;\nexpect call0==3;\nexpect call1==3;\nexpect call2==1;\n}\n"
+    },
+    "305": {
+        "TestCase": "method{:test} check(){\nvar call0:= start_withp([\"Python PHP\",\"Java JavaScript\",\"c c++\"]) ;\nvar call1:= start_withp([\"Python Programming\",\"Java Programming\"]) ;\nvar call2:= start_withp([\"Pqrst Pqr\",\"qrstuv\"]) ;\nexpect call0==(\"Python\",\"PHP\");\nexpect call1==(\"Python\",\"Programming\");\nexpect call2==(\"Pqrst\",\"Pqr\");\n}\n"
+    },
+    "306": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_sum_increasing_subseq([1,101,2,3,100,4,5],7,4,6) ;\nvar call1:= max_sum_increasing_subseq([1,101,2,3,100,4,5],7,2,5) ;\nvar call2:= max_sum_increasing_subseq([11,15,19,21,26,28,31],7,2,4) ;\nexpect call0==11;\nexpect call1==7;\nexpect call2==71;\n}\n"
+    },
+    "307": {
+        "TestCase": "method{:test} check(){\nvar call0:= colon_tuplex((\"HELLO\",5,[],true),2,50) ;\nvar call1:= colon_tuplex((\"HELLO\",5,[],true),2,100) ;\nvar call2:= colon_tuplex((\"HELLO\",5,[],true),2,500) ;\nexpect call0==(\"HELLO\",5,[50],true);\nexpect call1==(\"HELLO\",5,[100],true);\nexpect call2==(\"HELLO\",5,[500],true);\n}\n"
+    },
+    "308": {
+        "TestCase": "method{:test} check(){\nvar call0:= large_product([1,2,3,4,5,6],[3,6,8,9,10,6],3) ;\nvar call1:= large_product([1,2,3,4,5,6],[3,6,8,9,10,6],4) ;\nvar call2:= large_product([1,2,3,4,5,6],[3,6,8,9,10,6],5) ;\nexpect call0==[60,54,50];\nexpect call1==[60,54,50,48];\nexpect call2==[60,54,50,48,45];\n}\n"
+    },
+    "309": {
+        "TestCase": "method{:test} check(){\nvar call0:= maximum(5,10) ;\nvar call1:= maximum(-1,-2) ;\nvar call2:= maximum(9,7) ;\nexpect call0==10;\nexpect call1==-1;\nexpect call2==9;\n}\n"
+    },
+    "310": {
+        "TestCase": "method{:test} check(){\nvar call0:= string_to_tuple(\"python 3.0\") ;\nvar call1:= string_to_tuple(\"item1\") ;\nvar call2:= string_to_tuple(\"15.10\") ;\nexpect call0==(\"p\",\"y\",\"t\",\"h\",\"o\",\"n\",\"3\",\".\",\"0\");\nexpect call1==(\"i\",\"t\",\"e\",\"m\",\"1\");\nexpect call2==(\"1\",\"5\",\".\",\"1\",\"0\");\n}\n"
+    },
+    "311": {
+        "TestCase": "method{:test} check(){\nvar call0:= set_left_most_unset_bit(10) ;\nvar call1:= set_left_most_unset_bit(12) ;\nvar call2:= set_left_most_unset_bit(15) ;\nexpect call0==14;\nexpect call1==14;\nexpect call2==15;\n}\n"
+    },
+    "388": {
+        "TestCase": "method{:test} check(){\nvar call0:= highest_Power_of_2(10) ;\nvar call1:= highest_Power_of_2(19) ;\nvar call2:= highest_Power_of_2(32) ;\nexpect call0==8;\nexpect call1==16;\nexpect call2==32;\n}\n"
+    },
+    "389": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_lucas(9) ;\nvar call1:= find_lucas(4) ;\nvar call2:= find_lucas(3) ;\nexpect call0==76;\nexpect call1==7;\nexpect call2==4;\n}\n"
+    },
+    "390": {
+        "TestCase": "method{:test} check(){\nvar call0:= add_string([1,2,3,4],\"temp{0}\") ;\nvar call1:= add_string([\"a\",\"b\",\"c\",\"d\"],\"python{0}\") ;\nvar call2:= add_string([5,6,7,8],\"string{0}\") ;\nexpect call0==[\"temp1\",\"temp2\",\"temp3\",\"temp4\"];\nexpect call1==[\"pythona\",\"pythonb\",\"pythonc\",\"pythond\"];\nexpect call2==[\"string5\",\"string6\",\"string7\",\"string8\"];\n}\n"
+    },
+    "391": {
+        "TestCase": "method{:test} check(){\nvar call0:= convert_list_dictionary([\"S001\",\"S002\",\"S003\",\"S004\"],[\"Adina Park\",\"Leyton Marsh\",\"Duncan Boyle\",\"Saim Richards\"],[85,98,89,92]) ;\nvar call1:= convert_list_dictionary([\"abc\",\"def\",\"ghi\",\"jkl\"],[\"python\",\"program\",\"language\",\"programs\"],[100,200,300,400]) ;\nvar call2:= convert_list_dictionary([\"A1\",\"A2\",\"A3\",\"A4\"],[\"java\",\"C\",\"C++\",\"DBMS\"],[10,20,30,40]) ;\nexpect call0==[map[\"S001\":=map[\"Adina Park\":=85]],map[\"S002\":=map[\"Leyton Marsh\":=98]],map[\"S003\":=map[\"Duncan Boyle\":=89]],map[\"S004\":=map[\"Saim Richards\":=92]]];\nexpect call1==[map[\"abc\":=map[\"python\":=100]],map[\"def\":=map[\"program\":=200]],map[\"ghi\":=map[\"language\":=300]],map[\"jkl\":=map[\"programs\":=400]]];\nexpect call2==[map[\"A1\":=map[\"java\":=10]],map[\"A2\":=map[\"C\":=20]],map[\"A3\":=map[\"C++\":=30]],map[\"A4\":=map[\"DBMS\":=40]]];\n}\n"
+    },
+    "392": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_max_sum(60) ;\nvar call1:= get_max_sum(10) ;\nvar call2:= get_max_sum(2) ;\nexpect call0==106;\nexpect call1==12;\nexpect call2==2;\n}\n"
+    },
+    "393": {
+        "TestCase": "method{:test} check(){\nvar call0_0,call0_1:= max_length_list([[0],[1,3],[5,7],[9,11],[13,15,17]]) ;\nvar call1_0,call1_1:= max_length_list([[1,2,3,4,5],[1,2,3,4],[1,2,3],[1,2],[1]]) ;\nvar call2_0,call2_1:= max_length_list([[3,4,5],[6,7,8,9],[10,11,12]]) ;\nexpect (call0_0,call0_1)==(3,[13,15,17]);\nexpect (call1_0,call1_1)==(5,[1,2,3,4,5]);\nexpect (call2_0,call2_1)==(4,[6,7,8,9]);\n}\n"
+    },
+    "394": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_distinct([1,4,5,6,1,4]) ;\nvar call1:= check_distinct([1,4,5,6]) ;\nvar call2:= check_distinct([2,3,4,5,6]) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\n}\n"
+    },
+    "395": {
+        "TestCase": "method{:test} check(){\nvar call0:= first_non_repeating_character(\"abcabc\") ;\nvar call1:= first_non_repeating_character(\"abc\") ;\nvar call2:= first_non_repeating_character(\"ababc\") ;\nexpect call0==None;\nexpect call1==\"a\";\nexpect call2==\"c\";\n}\n"
+    },
+    "396": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_char(\"abba\") ;\nvar call1:= check_char(\"a\") ;\nvar call2:= check_char(\"abcd\") ;\nexpect call0==\"Valid\";\nexpect call1==\"Valid\";\nexpect call2==\"Invalid\";\n}\n"
+    },
+    "397": {
+        "TestCase": "method{:test} check(){\nvar call0:= median_numbers(25,55,65) ;\nvar call1:= median_numbers(20,10,30) ;\nvar call2:= median_numbers(15,45,75) ;\nexpect call0==55.00000000;\nexpect call1==20.00000000;\nexpect call2==45.00000000;\n}\n"
+    },
+    "398": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_of_digits([10,2,56]) ;\nvar call1:= sum_of_digits([[10,20,4,5,\"b\",70,\"a\"]]) ;\nvar call2:= sum_of_digits([10,20,-4,5,-70]) ;\nexpect call0==14;\nexpect call1==19;\nexpect call2==19;\n}\n"
+    },
+    "399": {
+        "TestCase": "method{:test} check(){\nvar call0:= bitwise_xor((10,4,6,9),(5,2,3,3)) ;\nvar call1:= bitwise_xor((11,5,7,10),(6,3,4,4)) ;\nvar call2:= bitwise_xor((12,6,8,11),(7,4,5,6)) ;\nexpect call0==(15,6,5,10);\nexpect call1==(13,6,3,14);\nexpect call2==(11,2,13,13);\n}\n"
+    },
+    "400": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_freq([(3,4),(1,2),(4,3),(5,6)]) ;\nvar call1:= extract_freq([(4,15),(2,3),(5,4),(6,7)]) ;\nvar call2:= extract_freq([(5,16),(2,3),(6,5),(6,9)]) ;\nexpect call0==3;\nexpect call1==4;\nexpect call2==4;\n}\n"
+    },
+    "401": {
+        "TestCase": "method{:test} check(){\nvar call0:= add_nested_tuples(((1,3),(4,5),(2,9),(1,10)),((6,7),(3,9),(1,1),(7,3))) ;\nvar call1:= add_nested_tuples(((2,4),(5,6),(3,10),(2,11)),((7,8),(4,10),(2,2),(8,4))) ;\nvar call2:= add_nested_tuples(((3,5),(6,7),(4,11),(3,12)),((8,9),(5,11),(3,3),(9,5))) ;\nexpect call0==((7,10),(7,14),(3,10),(8,13));\nexpect call1==((9,12),(9,16),(5,12),(10,15));\nexpect call2==((11,14),(11,18),(7,14),(12,17));\n}\n"
+    },
+    "404": {
+        "TestCase": "method{:test} check(){\nvar call0:= minimum(1,2) ;\nvar call1:= minimum(-5,-4) ;\nvar call2:= minimum(0,0) ;\nexpect call0==1;\nexpect call1==-5;\nexpect call2==0;\n}\n"
+    },
+    "405": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_tuplex((\"w\",3,\"r\",\"e\",\"s\",\"o\",\"u\",\"r\",\"c\",\"e\"),\"r\") ;\nvar call1:= check_tuplex((\"w\",3,\"r\",\"e\",\"s\",\"o\",\"u\",\"r\",\"c\",\"e\"),\"5\") ;\nvar call2:= check_tuplex((\"w\",3,\"r\",\"e\",\"s\",\"o\",\"u\",\"r\",\"c\",\"e\"),3) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "406": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_Parity(12) ;\nvar call1:= find_Parity(7) ;\nvar call2:= find_Parity(10) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "407": {
+        "TestCase": "method{:test} check(){\nvar call0:= rearrange_bigger(12) ;\nvar call1:= rearrange_bigger(10) ;\nvar call2:= rearrange_bigger(102) ;\nexpect call0==21;\nexpect call1==false;\nexpect call2==120;\n}\n"
+    },
+    "408": {
+        "TestCase": "method{:test} check(){\nvar call0:= k_smallest_pairs([1,3,7],[2,4,6],2) ;\nvar call1:= k_smallest_pairs([1,3,7],[2,4,6],1) ;\nvar call2:= k_smallest_pairs([1,3,7],[2,4,6],7) ;\nexpect call0==[[1,2],[1,4]];\nexpect call1==[[1,2]];\nexpect call2==[[1,2],[1,4],[3,2],[1,6],[3,4],[3,6],[7,2]];\n}\n"
+    },
+    "409": {
+        "TestCase": "method{:test} check(){\nvar call0:= min_product_tuple([(2,7),(2,6),(1,8),(4,9)]) ;\nvar call1:= min_product_tuple([(10,20),(15,2),(5,10)]) ;\nvar call2:= min_product_tuple([(11,44),(10,15),(20,5),(12,9)]) ;\nexpect call0==8;\nexpect call1==30;\nexpect call2==100;\n}\n"
+    },
+    "410": {
+        "TestCase": "method{:test} check(){\nvar call0:= min_val([\"Python\",3,2,4,5,\"version\"]) ;\nvar call1:= min_val([\"Python\",15,20,25]) ;\nvar call2:= min_val([\"Python\",30,20,40,50,\"version\"]) ;\nexpect call0==2;\nexpect call1==15;\nexpect call2==20;\n}\n"
+    },
+    "411": {
+        "TestCase": "method{:test} check(){\nvar call0:= snake_to_camel(\"android_tv\") ;\nvar call1:= snake_to_camel(\"google_pixel\") ;\nvar call2:= snake_to_camel(\"apple_watch\") ;\nexpect call0==\"AndroidTv\";\nexpect call1==\"GooglePixel\";\nexpect call2==\"AppleWatch\";\n}\n"
+    },
+    "412": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_odd([1,2,3]) ;\nvar call1:= remove_odd([2,4,6]) ;\nvar call2:= remove_odd([10,20,3]) ;\nexpect call0==[2];\nexpect call1==[2,4,6];\nexpect call2==[10,20];\n}\n"
+    },
+    "413": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_nth_element([(\"Greyson Fulton\",98,99),(\"Brady Kent\",97,96),(\"Wyatt Knott\",91,94),(\"Beau Turnbull\",94,98)],0) ;\nvar call1:= extract_nth_element([(\"Greyson Fulton\",98,99),(\"Brady Kent\",97,96),(\"Wyatt Knott\",91,94),(\"Beau Turnbull\",94,98)],2) ;\nvar call2:= extract_nth_element([(\"Greyson Fulton\",98,99),(\"Brady Kent\",97,96),(\"Wyatt Knott\",91,94),(\"Beau Turnbull\",94,98)],1) ;\nexpect call0==[\"Greyson Fulton\",\"Brady Kent\",\"Wyatt Knott\",\"Beau Turnbull\"];\nexpect call1==[99,96,94,98];\nexpect call2==[98,97,91,94];\n}\n"
+    },
+    "414": {
+        "TestCase": "method{:test} check(){\nvar call0:= overlapping([1,2,3,4,5],[6,7,8,9]) ;\nvar call1:= overlapping([1,2,3],[4,5,6]) ;\nvar call2:= overlapping([1,4,5],[1,4,5]) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "415": {
+        "TestCase": "method{:test} check(){\nvar call0_0,call0_1:= max_Product([1,2,3,4,7,0,8,4]) ;\nvar call1_0,call1_1:= max_Product([0,-1,-2,-4,5,0,-6]) ;\nvar call2_0,call2_1:= max_Product([1,2,3]) ;\nexpect (call0_0,call0_1)==(7,8);\nexpect (call1_0,call1_1)==(-4,-6);\nexpect (call2_0,call2_1)==(2,3);\n}\n"
+    },
+    "417": {
+        "TestCase": "method{:test} check(){\nvar call0:= group_tuples([(\"x\",\"y\"),(\"x\",\"z\"),(\"w\",\"t\")]) ;\nvar call1:= group_tuples([(\"a\",\"b\"),(\"a\",\"c\"),(\"d\",\"e\")]) ;\nvar call2:= group_tuples([(\"f\",\"g\"),(\"f\",\"g\"),(\"h\",\"i\")]) ;\nexpect call0==[(\"x\",\"y\",\"z\"),(\"w\",\"t\")];\nexpect call1==[(\"a\",\"b\",\"c\"),(\"d\",\"e\")];\nexpect call2==[(\"f\",\"g\",\"g\"),(\"h\",\"i\")];\n}\n"
+    },
+    "418": {
+        "TestCase": "method{:test} check(){\nvar call0:= Find_Max([[\"A\"],[\"A\",\"B\"],[\"A\",\"B\",\"C\"]]) ;\nvar call1:= Find_Max([[1],[1,2],[1,2,3]]) ;\nvar call2:= Find_Max([[1,1],[1,2,3],[1,5,6,1]]) ;\nexpect call0==[\"A\",\"B\",\"C\"];\nexpect call1==[1,2,3];\nexpect call2==[1,5,6,1];\n}\n"
+    },
+    "419": {
+        "TestCase": "method{:test} check(){\nvar call0:= round_and_sum([22.40000000,4.00000000,-16.22000000,-9.10000000,11.00000000,-12.22000000,14.20000000,-5.20000000,17.50000000]) ;\nvar call1:= round_and_sum([5.0,2.0,9.0,24.30000000,29.0]) ;\nvar call2:= round_and_sum([25.00000000,56.70000000,89.20000000]) ;\nexpect call0==243;\nexpect call1==345;\nexpect call2==513;\n}\n"
+    },
+    "420": {
+        "TestCase": "method{:test} check(){\nvar call0:= cube_Sum(2) ;\nvar call1:= cube_Sum(3) ;\nvar call2:= cube_Sum(4) ;\nexpect call0==72;\nexpect call1==288;\nexpect call2==800;\n}\n"
+    },
+    "421": {
+        "TestCase": "method{:test} check(){\nvar call0:= concatenate_tuple((\"ID\",\"is\",4,\"UTS\")) ;\nvar call1:= concatenate_tuple((\"QWE\",\"is\",4,\"RTY\")) ;\nvar call2:= concatenate_tuple((\"ZEN\",\"is\",4,\"OP\")) ;\nexpect call0==\"ID-is-4-UTS\";\nexpect call1==\"QWE-is-4-RTY\";\nexpect call2==\"ZEN-is-4-OP\";\n}\n"
+    },
+    "422": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_Average_Of_Cube(2) ;\nvar call1:= find_Average_Of_Cube(3) ;\nvar call2:= find_Average_Of_Cube(1) ;\nexpect call0==4.50000000;\nexpect call1==12;\nexpect call2==1;\n}\n"
+    },
+    "424": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_rear((\"Mers\",\"for\",\"Vers\")) ;\nvar call1:= extract_rear((\"Avenge\",\"for\",\"People\")) ;\nvar call2:= extract_rear((\"Gotta\",\"get\",\"go\")) ;\nexpect call0==[\"s\",\"r\",\"s\"];\nexpect call1==[\"e\",\"r\",\"e\"];\nexpect call2==[\"a\",\"t\",\"o\"];\n}\n"
+    },
+    "425": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_element_in_list([[1,3],[5,7],[1,11],[1,15,7]],1) ;\nvar call1:= count_element_in_list([[\"A\",\"B\"],[\"A\",\"C\"],[\"A\",\"D\",\"E\"],[\"B\",\"C\",\"D\"]],\"A\") ;\nvar call2:= count_element_in_list([[\"A\",\"B\"],[\"A\",\"C\"],[\"A\",\"D\",\"E\"],[\"B\",\"C\",\"D\"]],\"E\") ;\nexpect call0==3;\nexpect call1==3;\nexpect call2==1;\n}\n"
+    },
+    "426": {
+        "TestCase": "method{:test} check(){\nvar call0:= filter_oddnumbers([1,2,3,4,5,6,7,8,9,10]) ;\nvar call1:= filter_oddnumbers([10,20,45,67,84,93]) ;\nvar call2:= filter_oddnumbers([5,7,9,8,6,4,3]) ;\nexpect call0==[1,3,5,7,9];\nexpect call1==[45,67,93];\nexpect call2==[5,7,9,3];\n}\n"
+    },
+    "427": {
+        "TestCase": "method{:test} check(){\nvar call0:= change_date_format(\"2026-01-02\") ;\nvar call1:= change_date_format(\"2020-11-13\") ;\nvar call2:= change_date_format(\"2021-04-26\") ;\nexpect call0==\"02-01-2026\";\nexpect call1==\"13-11-2020\";\nexpect call2==\"26-04-2021\";\n}\n"
+    },
+    "428": {
+        "TestCase": "method{:test} check(){\nvar call0:= shell_sort([12,23,4,5,3,2,12,81,56,95]) ;\nvar call1:= shell_sort([24,22,39,34,87,73,68]) ;\nvar call2:= shell_sort([32,30,16,96,82,83,74]) ;\nexpect call0==[2,3,4,5,12,12,23,56,81,95];\nexpect call1==[22,24,34,39,68,73,87];\nexpect call2==[16,30,32,74,82,83,96];\n}\n"
+    },
+    "429": {
+        "TestCase": "method{:test} check(){\nvar call0:= and_tuples((10,4,6,9),(5,2,3,3)) ;\nvar call1:= and_tuples((1,2,3,4),(5,6,7,8)) ;\nvar call2:= and_tuples((8,9,11,12),(7,13,14,17)) ;\nexpect call0==(0,0,2,1);\nexpect call1==(1,2,3,0);\nexpect call2==(0,9,10,0);\n}\n"
+    },
+    "430": {
+        "TestCase": "method{:test} check(){\nvar call0:= parabola_directrix(5,3,2) ;\nvar call1:= parabola_directrix(9,8,4) ;\nvar call2:= parabola_directrix(2,4,6) ;\nexpect call0==-198;\nexpect call1==-2336;\nexpect call2==-130;\n}\n"
+    },
+    "431": {
+        "TestCase": "method{:test} check(){\nvar call0:= common_element([1,2,3,4,5],[5,6,7,8,9]) ;\nvar call1:= common_element([1,2,3,4,5],[6,7,8,9]) ;\nvar call2:= common_element([\"a\",\"b\",\"c\"],[\"d\",\"b\",\"e\"]) ;\nexpect call0==true;\nexpect call1==None;\nexpect call2==true;\n}\n"
+    },
+    "432": {
+        "TestCase": "method{:test} check(){\nvar call0:= median_trapezium(15.0,25.0,35.0) ;\nvar call1:= median_trapezium(10.0,20.0,30.0) ;\nvar call2:= median_trapezium(6.0,9.0,4.0) ;\nexpect call0==20.0;\nexpect call1==15.0;\nexpect call2==7.50000000;\n}\n"
+    },
+    "433": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_greater([1,2,3,4,5],4) ;\nvar call1:= check_greater([2,3,4,5,6],8) ;\nvar call2:= check_greater([9,7,4,8,6,1],11) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\n}\n"
+    },
+    "434": {
+        "TestCase": "method{:test} check(){\nvar call0:= text_match_one(\"ac\") ;\nvar call1:= text_match_one(\"dc\") ;\nvar call2:= text_match_one(\"abba\") ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "435": {
+        "TestCase": "method{:test} check(){\nvar call0:= last_Digit(123) ;\nvar call1:= last_Digit(25) ;\nvar call2:= last_Digit(30) ;\nexpect call0==3;\nexpect call1==5;\nexpect call2==0;\n}\n"
+    },
+    "436": {
+        "TestCase": "method{:test} check(){\nvar call0:= neg_nos([-1,4,5,-6]) ;\nvar call1:= neg_nos([-1,-2,3,4]) ;\nvar call2:= neg_nos([-7,-6,8,9]) ;\nexpect call0==[-1,-6];\nexpect call1==[-1,-2];\nexpect call2==[-7,-6];\n}\n"
+    },
+    "437": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_odd(\"python\") ;\nvar call1:= remove_odd(\"program\") ;\nvar call2:= remove_odd(\"language\") ;\nexpect call0==\"yhn\";\nexpect call1==\"rga\";\nexpect call2==\"agae\";\n}\n"
+    },
+    "438": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_bidirectional([(5,6),(1,2),(6,5),(9,1),(6,5),(2,1)]) ;\nvar call1:= count_bidirectional([(5,6),(1,3),(6,5),(9,1),(6,5),(2,1)]) ;\nvar call2:= count_bidirectional([(5,6),(1,2),(6,5),(9,2),(6,5),(2,1)]) ;\nexpect call0==3;\nexpect call1==2;\nexpect call2==4;\n}\n"
+    },
+    "439": {
+        "TestCase": "method{:test} check(){\nvar call0:= multiple_to_single([11,33,50]) ;\nvar call1:= multiple_to_single([-1,2,3,4,5,6]) ;\nvar call2:= multiple_to_single([10,15,20,25]) ;\nexpect call0==113350;\nexpect call1==-123456;\nexpect call2==10152025;\n}\n"
+    },
+    "440": {
+        "TestCase": "method{:test} check(){\nvar call0_0,call0_1,call0_2:= find_adverb_position(\"clearly!! we can see the sky\") ;\nvar call1_0,call1_1,call1_2:= find_adverb_position(\"seriously!! there are many roses\") ;\nvar call2_0,call2_1,call2_2:= find_adverb_position(\"unfortunately!! sita is going to home\") ;\nexpect (call0_0,call0_1,call0_2)==(0,7,\"clearly\");\nexpect (call1_0,call1_1,call1_2)==(0,9,\"seriously\");\nexpect (call2_0,call2_1,call2_2)==(0,13,\"unfortunately\");\n}\n"
+    },
+    "441": {
+        "TestCase": "method{:test} check(){\nvar call0:= surfacearea_cube(5) ;\nvar call1:= surfacearea_cube(3) ;\nvar call2:= surfacearea_cube(10) ;\nexpect call0==150;\nexpect call1==54;\nexpect call2==600;\n}\n"
+    },
+    "442": {
+        "TestCase": "method{:test} check(){\nvar call0:= positive_count([0.0,1.0,2.0,-1.0,-5.0,6.0,0.0,-3.0,-2.0,3.0,4.0,6.0,8.0]) ;\nvar call1:= positive_count([2.0,1.0,2.0,-1.0,-5.0,6.0,4.0,-3.0,-2.0,3.0,4.0,6.0,8.0]) ;\nvar call2:= positive_count([2.0,4.0,-6.0,-9.0,11.0,-12.0,14.0,-5.0,17.0]) ;\nexpect call0==0.54000000;\nexpect call1==0.69000000;\nexpect call2==0.56000000;\n}\n"
+    },
+    "443": {
+        "TestCase": "method{:test} check(){\nvar call0:= largest_neg([1,2,3,-4,-6]) ;\nvar call1:= largest_neg([1,2,3,-8,-9]) ;\nvar call2:= largest_neg([1,2,3,4,-1]) ;\nexpect call0==-6;\nexpect call1==-9;\nexpect call2==-1;\n}\n"
+    },
+    "444": {
+        "TestCase": "method{:test} check(){\nvar call0:= trim_tuple([(5,3,2,1,4),(3,4,9,2,1),(9,1,2,3,5),(4,8,2,1,7)],2) ;\nvar call1:= trim_tuple([(5,3,2,1,4),(3,4,9,2,1),(9,1,2,3,5),(4,8,2,1,7)],1) ;\nvar call2:= trim_tuple([(7,8,4,9),(11,8,12,4),(4,1,7,8),(3,6,9,7)],1) ;\nexpect call0==\"[(2,), (9,), (2,), (2,)]\";\nexpect call1==\"[(3, 2, 1), (4, 9, 2), (1, 2, 3), (8, 2, 1)]\";\nexpect call2==\"[(8, 4), (8, 12), (1, 7), (6, 9)]\";\n}\n"
+    },
+    "445": {
+        "TestCase": "method{:test} check(){\nvar call0:= index_multiplication([[1,3],[4,5],[2,9],[1,10]],[[6,7],[3,9],[1,1],[7,3]]) ;\nvar call1:= index_multiplication([[2,4],[5,6],[3,10],[2,11]),[[7,8],[4,10],[2,2],[8,4]]) ;\nvar call2:= index_multiplication([[3,5],[6,7],[4,11],[3,12]],[[8,9],[5,11],[3,3],[9,5]]) ;\nexpect call0==[[6,21],[12,45],[2,9],[7,30]];\nexpect call1==[[14,32],[20,60],[6,20],[16,44]];\nexpect call2==[[24,45],[30,77],[12,33],[27,60]];\n}\n"
+    },
+    "446": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_Occurrence((\"a\",\"a\",\"c\",\"b\",\"d\"),[\"a\",\"b\"]) ;\nvar call1:= count_Occurrence((1,2,3,1,4,6,7,1,4),[1,4,7]) ;\nvar call2:= count_Occurrence((1,2,3,4,5,6),[1,2]) ;\nexpect call0==3;\nexpect call1==6;\nexpect call2==2;\n}\n"
+    },
+    "447": {
+        "TestCase": "method{:test} check(){\nvar call0:= cube_nums([1,2,3,4,5,6,7,8,9,10]) ;\nvar call1:= cube_nums([10,20,30]) ;\nvar call2:= cube_nums([12,15]) ;\nexpect call0==[1,8,27,64,125,216,343,512,729,1000];\nexpect call1==[1000,8000,27000];\nexpect call2==[1728,3375];\n}\n"
+    },
+    "448": {
+        "TestCase": "method{:test} check(){\nvar call0:= cal_sum(9) ;\nvar call1:= cal_sum(10) ;\nvar call2:= cal_sum(11) ;\nexpect call0==49;\nexpect call1==66;\nexpect call2==88;\n}\n"
+    },
+    "450": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_string([\"Python\",\"list\",\"exercises\",\"practice\",\"solution\"],8) ;\nvar call1:= extract_string([\"Python\",\"list\",\"exercises\",\"practice\",\"solution\"],6) ;\nvar call2:= extract_string([\"Python\",\"list\",\"exercises\",\"practice\",\"solution\"],9) ;\nexpect call0==[\"practice\",\"solution\"];\nexpect call1==[\"Python\"];\nexpect call2==[\"exercises\"];\n}\n"
+    },
+    "451": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_whitespaces(\" Google    Flutter \") ;\nvar call1:= remove_whitespaces(\" Google    Dart \") ;\nvar call2:= remove_whitespaces(\" iOS    Swift \") ;\nexpect call0==\"GoogleFlutter\";\nexpect call1==\"GoogleDart\";\nexpect call2==\"iOSSwift\";\n}\n"
+    },
+    "452": {
+        "TestCase": "method{:test} check(){\nvar call0:= loss_amount(1500,1200) ;\nvar call1:= loss_amount(100,200) ;\nvar call2:= loss_amount(2000,5000) ;\nexpect call0==0;\nexpect call1==100;\nexpect call2==3000;\n}\n"
+    },
+    "453": {
+        "TestCase": "method{:test} check(){\nvar call0:= sumofFactors(18) ;\nvar call1:= sumofFactors(30) ;\nvar call2:= sumofFactors(6) ;\nexpect call0==26;\nexpect call1==48;\nexpect call2==8;\n}\n"
+    },
+    "454": {
+        "TestCase": "method{:test} check(){\nvar call0:= text_match_wordz(\"pythonz.\") ;\nvar call1:= text_match_wordz(\"xyz.\") ;\nvar call2:= text_match_wordz(\"  lang  .\") ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "455": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_monthnumb_number(5) ;\nvar call1:= check_monthnumb_number(2) ;\nvar call2:= check_monthnumb_number(6) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "456": {
+        "TestCase": "method{:test} check(){\nvar call0:= reverse_string_list([\"Red\",\"Green\",\"Blue\",\"White\",\"Black\"]) ;\nvar call1:= reverse_string_list([\"john\",\"amal\",\"joel\",\"george\"]) ;\nvar call2:= reverse_string_list([\"jack\",\"john\",\"mary\"]) ;\nexpect call0==[\"deR\",\"neerG\",\"eulB\",\"etihW\",\"kcalB\"];\nexpect call1==[\"nhoj\",\"lama\",\"leoj\",\"egroeg\"];\nexpect call2==[\"kcaj\",\"nhoj\",\"yram\"];\n}\n"
+    },
+    "457": {
+        "TestCase": "method{:test} check(){\nvar call0:= Find_Min([[1],[1,2],[1,2,3]]) ;\nvar call1:= Find_Min([[1,1],[1,1,1],[1,2,7,8]]) ;\nvar call2:= Find_Min([[\"x\"],[\"x\",\"y\"],[\"x\",\"y\",\"z\"]]) ;\nexpect call0==[1];\nexpect call1==[1,1];\nexpect call2==[\"x\"];\n}\n"
+    },
+    "458": {
+        "TestCase": "method{:test} check(){\nvar call0:= rectangle_area(10,20) ;\nvar call1:= rectangle_area(10,5) ;\nvar call2:= rectangle_area(4,2) ;\nexpect call0==200;\nexpect call1==50;\nexpect call2==8;\n}\n"
+    },
+    "459": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_uppercase(\"cAstyoUrFavoRitETVshoWs\") ;\nvar call1:= remove_uppercase(\"wAtchTheinTernEtrAdIo\") ;\nvar call2:= remove_uppercase(\"VoicESeaRchAndreComMendaTionS\") ;\nexpect call0==\"cstyoravoitshos\";\nexpect call1==\"wtchheinerntrdo\";\nexpect call2==\"oiceachndreomendaion\";\n}\n"
+    },
+    "460": {
+        "TestCase": "method{:test} check(){\nvar call0:= Extract([[1,2],[3,4,5],[6,7,8,9]]) ;\nvar call1:= Extract([[1,2,3],[4,5]]) ;\nvar call2:= Extract([[9,8,1],[1,2]]) ;\nexpect call0==[1,3,6];\nexpect call1==[1,4];\nexpect call2==[9,1];\n}\n"
+    },
+    "461": {
+        "TestCase": "method{:test} check(){\nvar call0:= upper_ctr(\"PYthon\") ;\nvar call1:= upper_ctr(\"BigData\") ;\nvar call2:= upper_ctr(\"program\") ;\nexpect call0==1;\nexpect call1==1;\nexpect call2==0;\n}\n"
+    },
+    "462": {
+        "TestCase": "method{:test} check(){\nvar call0:= combinations_list([\"orange\",\"red\",\"green\",\"blue\"]) ;\nvar call1:= combinations_list([\"red\",\"green\",\"blue\",\"white\",\"black\",\"orange\"]) ;\nvar call2:= combinations_list([\"red\",\"green\",\"black\",\"orange\"]) ;\nexpect call0==[[],[\"orange\"],[\"red\"],[\"red\",\"orange\"],[\"green\"],[\"green\",\"orange\"],[\"green\",\"red\"],[\"green\",\"red\",\"orange\"],[\"blue\"],[\"blue\",\"orange\"],[\"blue\",\"red\"],[\"blue\",\"red\",\"orange\"],[\"blue\",\"green\"],[\"blue\",\"green\",\"orange\"],[\"blue\",\"green\",\"red\"],[\"blue\",\"green\",\"red\",\"orange\"]];\nexpect call1==[[],[\"red\"],[\"green\"],[\"green\",\"red\"],[\"blue\"],[\"blue\",\"red\"],[\"blue\",\"green\"],[\"blue\",\"green\",\"red\"],[\"white\"],[\"white\",\"red\"],[\"white\",\"green\"],[\"white\",\"green\",\"red\"],[\"white\",\"blue\"],[\"white\",\"blue\",\"red\"],[\"white\",\"blue\",\"green\"],[\"white\",\"blue\",\"green\",\"red\"],[\"black\"],[\"black\",\"red\"],[\"black\",\"green\"],[\"black\",\"green\",\"red\"],[\"black\",\"blue\"],[\"black\",\"blue\",\"red\"],[\"black\",\"blue\",\"green\"],[\"black\",\"blue\",\"green\",\"red\"],[\"black\",\"white\"],[\"black\",\"white\",\"red\"],[\"black\",\"white\",\"green\"],[\"black\",\"white\",\"green\",\"red\"],[\"black\",\"white\",\"blue\"],[\"black\",\"white\",\"blue\",\"red\"],[\"black\",\"white\",\"blue\",\"green\"],[\"black\",\"white\",\"blue\",\"green\",\"red\"],[\"orange\"],[\"orange\",\"red\"],[\"orange\",\"green\"],[\"orange\",\"green\",\"red\"],[\"orange\",\"blue\"],[\"orange\",\"blue\",\"red\"],[\"orange\",\"blue\",\"green\"],[\"orange\",\"blue\",\"green\",\"red\"],[\"orange\",\"white\"],[\"orange\",\"white\",\"red\"],[\"orange\",\"white\",\"green\"],[\"orange\",\"white\",\"green\",\"red\"],[\"orange\",\"white\",\"blue\"],[\"orange\",\"white\",\"blue\",\"red\"],[\"orange\",\"white\",\"blue\",\"green\"],[\"orange\",\"white\",\"blue\",\"green\",\"red\"],[\"orange\",\"black\"],[\"orange\",\"black\",\"red\"],[\"orange\",\"black\",\"green\"],[\"orange\",\"black\",\"green\",\"red\"],[\"orange\",\"black\",\"blue\"],[\"orange\",\"black\",\"blue\",\"red\"],[\"orange\",\"black\",\"blue\",\"green\"],[\"orange\",\"black\",\"blue\",\"green\",\"red\"],[\"orange\",\"black\",\"white\"],[\"orange\",\"black\",\"white\",\"red\"],[\"orange\",\"black\",\"white\",\"green\"],[\"orange\",\"black\",\"white\",\"green\",\"red\"],[\"orange\",\"black\",\"white\",\"blue\"],[\"orange\",\"black\",\"white\",\"blue\",\"red\"],[\"orange\",\"black\",\"white\",\"blue\",\"green\"],[\"orange\",\"black\",\"white\",\"blue\",\"green\",\"red\"]];\nexpect call2==[[],[\"red\"],[\"green\"],[\"green\",\"red\"],[\"black\"],[\"black\",\"red\"],[\"black\",\"green\"],[\"black\",\"green\",\"red\"],[\"orange\"],[\"orange\",\"red\"],[\"orange\",\"green\"],[\"orange\",\"green\",\"red\"],[\"orange\",\"black\"],[\"orange\",\"black\",\"red\"],[\"orange\",\"black\",\"green\"],[\"orange\",\"black\",\"green\",\"red\"]];\n}\n"
+    },
+    "463": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_subarray_product([1,-2,-3,0,7,-8,-2]) ;\nvar call1:= max_subarray_product([6,-3,-10,0,2]) ;\nvar call2:= max_subarray_product([-2,-40,0,-2,-3]) ;\nexpect call0==112;\nexpect call1==180;\nexpect call2==80;\n}\n"
+    },
+    "464": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_value(map[\"Cierra Vega\":=12,\"Alden Cantrell\":=12,\"Kierra Gentry\":=12,\"Pierre Cox\":=12],10) ;\nvar call1:= check_value(map[\"Cierra Vega\":=12,\"Alden Cantrell\":=12,\"Kierra Gentry\":=12,\"Pierre Cox\":=12],12) ;\nvar call2:= check_value(map[\"Cierra Vega\":=12,\"Alden Cantrell\":=12,\"Kierra Gentry\":=12,\"Pierre Cox\":=12],5) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "465": {
+        "TestCase": "method{:test} check(){\nvar call0:= drop_empty(map[\"c1\":=\"Red\",\"c2\":=\"Green\",\"c3\":=None]) ;\nvar call1:= drop_empty(map[\"c1\":=\"Red\",\"c2\":=None,\"c3\":=None]) ;\nvar call2:= drop_empty(map[\"c1\":=None,\"c2\":=\"Green\",\"c3\":=None]) ;\nexpect call0==map[\"c1\":=\"Red\",\"c2\":=\"Green\"];\nexpect call1==map[\"c1\":=\"Red\"];\nexpect call2==map[\"c2\":=\"Green\"];\n}\n"
+    },
+    "468": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_product([3,100,4,5,150,6]) ;\nvar call1:= max_product([4,42,55,68,80]) ;\nvar call2:= max_product([10,22,9,33,21,50,41,60]) ;\nexpect call0==3000;\nexpect call1==50265600;\nexpect call2==2460;\n}\n"
+    },
+    "470": {
+        "TestCase": "method{:test} check(){\nvar call0:= add_pairwise([1,5,7,8,10]) ;\nvar call1:= add_pairwise([2,6,8,9,11]) ;\nvar call2:= add_pairwise([3,7,9,10,12]) ;\nexpect call0==[6,12,15,18];\nexpect call1==[8,14,17,20];\nexpect call2==[10,16,19,22];\n}\n"
+    },
+    "471": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_remainder([100,10,5,25,35,14],11) ;\nvar call1:= find_remainder([1,1,1],1) ;\nvar call2:= find_remainder([1,2,1],2) ;\nexpect call0==9;\nexpect call1==0;\nexpect call2==0;\n}\n"
+    },
+    "472": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_Consecutive([1,2,3,4,5]) ;\nvar call1:= check_Consecutive([1,2,3,5,6]) ;\nvar call2:= check_Consecutive([1,2,1]) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "473": {
+        "TestCase": "method{:test} check(){\nvar call0:= tuple_intersection([(3,4),(5,6),(9,10),(4,5)],[(5,4),(3,4),(6,5),(9,11)]) ;\nvar call1:= tuple_intersection([(4,1),(7,4),(11,13),(17,14)],[(1,4),(7,4),(16,12),(10,13)]) ;\nvar call2:= tuple_intersection([(2,1),(3,2),(1,3),(1,4)],[(11,2),(2,3),(6,2),(1,3)]) ;\nexpect call0=={(4,5),(3,4),(5,6)};\nexpect call1=={(4,7),(1,4)};\nexpect call2=={(1,3),(2,3)};\n}\n"
+    },
+    "474": {
+        "TestCase": "method{:test} check(){\nvar call0:= replace_char(\"polygon\",\"y\",\"l\") ;\nvar call1:= replace_char(\"character\",\"c\",\"a\") ;\nvar call2:= replace_char(\"python\",\"l\",\"a\") ;\nexpect call0==\"pollgon\";\nexpect call1==\"aharaater\";\nexpect call2==\"python\";\n}\n"
+    },
+    "475": {
+        "TestCase": "method{:test} check(){\nvar call0:= sort_counter(map[\"Math\":=81,\"Physics\":=83,\"Chemistry\":=87]) ;\nvar call1:= sort_counter(map[\"Math\":=400,\"Physics\":=300,\"Chemistry\":=250]) ;\nvar call2:= sort_counter(map[\"Math\":=900,\"Physics\":=1000,\"Chemistry\":=1250]) ;\nexpect call0==[(\"Chemistry\",87),(\"Physics\",83),(\"Math\",81)];\nexpect call1==[(\"Math\",400),(\"Physics\",300),(\"Chemistry\",250)];\nexpect call2==[(\"Chemistry\",1250),(\"Physics\",1000),(\"Math\",900)];\n}\n"
+    },
+    "476": {
+        "TestCase": "method{:test} check(){\nvar call0:= big_sum([1,2,3]) ;\nvar call1:= big_sum([-1,2,3,4]) ;\nvar call2:= big_sum([2,3,6]) ;\nexpect call0==4;\nexpect call1==3;\nexpect call2==8;\n}\n"
+    },
+    "477": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_lower(\"InValid\") ;\nvar call1:= is_lower(\"TruE\") ;\nvar call2:= is_lower(\"SenTenCE\") ;\nexpect call0==\"invalid\";\nexpect call1==\"true\";\nexpect call2==\"sentence\";\n}\n"
+    },
+    "478": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_lowercase(\"PYTHon\") ;\nvar call1:= remove_lowercase(\"FInD\") ;\nvar call2:= remove_lowercase(\"STRinG\") ;\nexpect call0==\"PYTH\";\nexpect call1==\"FID\";\nexpect call2==\"STRG\";\n}\n"
+    },
+    "479": {
+        "TestCase": "method{:test} check(){\nvar call0:= first_Digit(123) ;\nvar call1:= first_Digit(456) ;\nvar call2:= first_Digit(12) ;\nexpect call0==1;\nexpect call1==4;\nexpect call2==1;\n}\n"
+    },
+    "554": {
+        "TestCase": "method{:test} check(){\nvar call0:= Split([1,2,3,4,5,6]) ;\nvar call1:= Split([10,11,12,13]) ;\nvar call2:= Split([7,8,9,1]) ;\nexpect call0==[1,3,5];\nexpect call1==[11,13];\nexpect call2==[7,9,1];\n}\n"
+    },
+    "555": {
+        "TestCase": "method{:test} check(){\nvar call0:= difference(3) ;\nvar call1:= difference(5) ;\nvar call2:= difference(2) ;\nexpect call0==30;\nexpect call1==210;\nexpect call2==6;\n}\n"
+    },
+    "556": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_Odd_Pair([5,4,7,2,1],5) ;\nvar call1:= find_Odd_Pair([7,2,8,1,0,5,11],7) ;\nvar call2:= find_Odd_Pair([1,2,3],3) ;\nexpect call0==6;\nexpect call1==12;\nexpect call2==2;\n}\n"
+    },
+    "557": {
+        "TestCase": "method{:test} check(){\nvar call0:= toggle_string(\"Python\") ;\nvar call1:= toggle_string(\"Pangram\") ;\nvar call2:= toggle_string(\"LIttLE\") ;\nexpect call0==\"pYTHON\";\nexpect call1==\"pANGRAM\";\nexpect call2==\"liTTle\";\n}\n"
+    },
+    "558": {
+        "TestCase": "method{:test} check(){\nvar call0:= digit_distance_nums(1,2) ;\nvar call1:= digit_distance_nums(23,56) ;\nvar call2:= digit_distance_nums(123,256) ;\nexpect call0==1;\nexpect call1==6;\nexpect call2==7;\n}\n"
+    },
+    "559": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_sub_array_sum([-2,-3,4,-1,-2,1,5,-3],8) ;\nvar call1:= max_sub_array_sum([-3,-4,5,-2,-3,2,6,-4],8) ;\nvar call2:= max_sub_array_sum([-4,-5,6,-3,-4,3,7,-5],8) ;\nexpect call0==7;\nexpect call1==8;\nexpect call2==10;\n}\n"
+    },
+    "560": {
+        "TestCase": "method{:test} check(){\nvar call0:= union_elements([3,4,5,6],[5,7,4,10]) ;\nvar call1:= union_elements([1,2,3,4],[3,4,5,6]) ;\nvar call2:= union_elements([11,12,13,14],[13,15,16,17]) ;\nexpect call0==[3,4,5,6,7,10];\nexpect call1==[1,2,3,4,5,6];\nexpect call2==[11,12,13,14,15,16,17];\n}\n"
+    },
+    "562": {
+        "TestCase": "method{:test} check(){\nvar call0:= Find_Max_Length([[1],[1,4],[5,6,7,8]]) ;\nvar call1:= Find_Max_Length([[0,1],[2,2],[3,2,1]]) ;\nvar call2:= Find_Max_Length([[7],[22,23],[13,14,15],[10,20,30,40,50]]) ;\nexpect call0==4;\nexpect call1==3;\nexpect call2==5;\n}\n"
+    },
+    "563": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_values(\"\"Python\", \"PHP\", \"Java\"\") ;\nvar call1:= extract_values(\"\"python\",\"program\",\"language\"\") ;\nvar call2:= extract_values(\"\"red\",\"blue\",\"green\",\"yellow\"\") ;\nexpect call0==[\"Python\",\"PHP\",\"Java\"];\nexpect call1==[\"python\",\"program\",\"language\"];\nexpect call2==[\"red\",\"blue\",\"green\",\"yellow\"];\n}\n"
+    },
+    "564": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_Pairs([1,2,1],3) ;\nvar call1:= count_Pairs([1,1,1,1],4) ;\nvar call2:= count_Pairs([1,2,3,4,5],5) ;\nexpect call0==2;\nexpect call1==0;\nexpect call2==10;\n}\n"
+    },
+    "565": {
+        "TestCase": "method{:test} check(){\nvar call0:= split(\"python\") ;\nvar call1:= split(\"Name\") ;\nvar call2:= split(\"program\") ;\nexpect call0==[\"p\",\"y\",\"t\",\"h\",\"o\",\"n\"];\nexpect call1==[\"N\",\"a\",\"m\",\"e\"];\nexpect call2==[\"p\",\"r\",\"o\",\"g\",\"r\",\"a\",\"m\"];\n}\n"
+    },
+    "566": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_digits(345) ;\nvar call1:= sum_digits(12) ;\nvar call2:= sum_digits(97) ;\nexpect call0==12;\nexpect call1==3;\nexpect call2==16;\n}\n"
+    },
+    "567": {
+        "TestCase": "method{:test} check(){\nvar call0:= issort_list([1,2,4,6,8,10,12,14,16,17]) ;\nvar call1:= issort_list([1,2,4,6,8,10,12,14,20,17]) ;\nvar call2:= issort_list([1,2,4,6,8,10,15,14,20]) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "568": {
+        "TestCase": "method{:test} check(){\nvar call0:= empty_list(5) ;\nvar call1:= empty_list(6) ;\nvar call2:= empty_list(7) ;\nexpect call0==[map[],map[],map[],map[],map[]];\nexpect call1==[map[],map[],map[],map[],map[],map[]];\nexpect call2==[map[],map[],map[],map[],map[],map[],map[]];\n}\n"
+    },
+    "569": {
+        "TestCase": "method{:test} check(){\nvar call0:= sort_sublists([[\"green\",\"orange\"],[\"black\",\"white\"],[\"white\",\"black\",\"orange\"]]) ;\nvar call1:= sort_sublists([[\"green\",\"orange\"],[\"black\"],[\"green\",\"orange\"],[\"white\"]]) ;\nvar call2:= sort_sublists([[\"a\",\"b\"],[\"d\",\"c\"],[\"g\",\"h\"],[\"f\",\"e\"]]) ;\nexpect call0==[[\"green\",\"orange\"],[\"black\",\"white\"],[\"black\",\"orange\",\"white\"]];\nexpect call1==[[\"green\",\"orange\"],[\"black\"],[\"green\",\"orange\"],[\"white\"]];\nexpect call2==[[\"a\",\"b\"],[\"c\",\"d\"],[\"g\",\"h\"],[\"e\",\"f\"]];\n}\n"
+    },
+    "572": {
+        "TestCase": "method{:test} check(){\nvar call0:= two_unique_nums([1,2,3,2,3,4,5]) ;\nvar call1:= two_unique_nums([1,2,3,2,4,5]) ;\nvar call2:= two_unique_nums([1,2,3,4,5]) ;\nexpect call0==[1,4,5];\nexpect call1==[1,3,4,5];\nexpect call2==[1,2,3,4,5];\n}\n"
+    },
+    "573": {
+        "TestCase": "method{:test} check(){\nvar call0:= unique_product([10,20,30,40,20,50,60,40]) ;\nvar call1:= unique_product([1,2,3,1]) ;\nvar call2:= unique_product([7,8,9,0,1,1]) ;\nexpect call0==720000000;\nexpect call1==6;\nexpect call2==0;\n}\n"
+    },
+    "574": {
+        "TestCase": "method{:test} check(){\nvar call0:= surfacearea_cylinder(10.0,5.0) ;\nvar call1:= surfacearea_cylinder(4.0,5.0) ;\nvar call2:= surfacearea_cylinder(4.0,10.0) ;\nexpect call0==942.45000000;\nexpect call1==226.18800000;\nexpect call2==351.84800000;\n}\n"
+    },
+    "576": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_Sub_Array([1,4,3,5],[1,2]) ;\nvar call1:= is_Sub_Array([1,2,1],[1,2,1]) ;\nvar call2:= is_Sub_Array([1,0,2,2],[2,2,0]) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "577": {
+        "TestCase": "method{:test} check(){\nvar call0:= last_Digit_Factorial(4) ;\nvar call1:= last_Digit_Factorial(21) ;\nvar call2:= last_Digit_Factorial(30) ;\nexpect call0==4;\nexpect call1==0;\nexpect call2==0;\n}\n"
+    },
+    "578": {
+        "TestCase": "method{:test} check(){\nvar call0:= interleave_lists([1,2,3,4,5,6,7],[10,20,30,40,50,60,70],[100,200,300,400,500,600,700]) ;\nvar call1:= interleave_lists([10,20],[15,2],[5,10]) ;\nvar call2:= interleave_lists([11,44],[10,15],[20,5]) ;\nexpect call0==[1,10,100,2,20,200,3,30,300,4,40,400,5,50,500,6,60,600,7,70,700];\nexpect call1==[10,15,5,20,2,10];\nexpect call2==[11,10,20,44,15,5];\n}\n"
+    },
+    "579": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_dissimilar([3,4,5,6],[5,7,4,10]) ;\nvar call1:= find_dissimilar([1,2,3,4],[7,2,3,9]) ;\nvar call2:= find_dissimilar([21,11,25,26],[26,34,21,36]) ;\nexpect call0==[3,6,7,10];\nexpect call1==[1,4,7,9];\nexpect call2==[34,36,11,25];\n}\n"
+    },
+    "580": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_even((4,5,(7,6,(2,4)),6,8)) ;\nvar call1:= extract_even((5,6,(8,7,(4,8)),7,9)) ;\nvar call2:= extract_even((5,6,(9,8,(4,6)),8,10)) ;\nexpect call0==(4,(6,(2,4)),6,8);\nexpect call1==(6,(8,(4,8)));\nexpect call2==(6,(8,(4,6)),8,10);\n}\n"
+    },
+    "581": {
+        "TestCase": "method{:test} check(){\nvar call0:= surface_Area(3.0,4.0) ;\nvar call1:= surface_Area(4.0,5.0) ;\nvar call2:= surface_Area(1.0,2.0) ;\nexpect call0==33.0;\nexpect call1==56.0;\nexpect call2==5.0;\n}\n"
+    },
+    "582": {
+        "TestCase": "method{:test} check(){\nvar call0:= my_dict({10}) ;\nvar call1:= my_dict({11}) ;\nvar call2:= my_dict(map[]) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "583": {
+        "TestCase": "method{:test} check(){\nvar call0:= catalan_number(10) ;\nvar call1:= catalan_number(9) ;\nvar call2:= catalan_number(7) ;\nexpect call0==16796;\nexpect call1==4862;\nexpect call2==429;\n}\n"
+    },
+    "584": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_adverbs(\"Clearly, he has no excuse for such behavior.\") ;\nvar call1:= find_adverbs(\"Please handle the situation carefuly\") ;\nvar call2:= find_adverbs(\"Complete the task quickly\") ;\nexpect call0==\"0-7: Clearly\";\nexpect call1==\"28-36: carefuly\";\nexpect call2==\"18-25: quickly\";\n}\n"
+    },
+    "585": {
+        "TestCase": "method{:test} check(){\nvar call0:= expensive_items([map[\"name\":=\"Item-1\",\"price\":=101.10000000],map[\"name\":=\"Item-2\",\"price\":=555.22000000]],1) ;\nvar call1:= expensive_items([map[\"name\":=\"Item-1\",\"price\":=101.10000000],map[\"name\":=\"Item-2\",\"price\":=555.22000000],map[\"name\":=\"Item-3\",\"price\":=45.09000000]],2) ;\nvar call2:= expensive_items([map[\"name\":=\"Item-1\",\"price\":=101.10000000],map[\"name\":=\"Item-2\",\"price\":=555.22000000],map[\"name\":=\"Item-3\",\"price\":=45.09000000],map[\"name\":=\"Item-4\",\"price\":=22.75000000]],1) ;\nexpect call0==[map[\"name\":=\"Item-2\",\"price\":=555.22000000]];\nexpect call1==[map[\"name\":=\"Item-2\",\"price\":=555.22000000],map[\"name\":=\"Item-1\",\"price\":=101.10000000]];\nexpect call2==[map[\"name\":=\"Item-2\",\"price\":=555.22000000]];\n}\n"
+    },
+    "586": {
+        "TestCase": "method{:test} check(){\nvar call0:= split_Arr([12,10,5,6,52,36],2) ;\nvar call1:= split_Arr([1,2,3,4],1) ;\nvar call2:= split_Arr([0,1,2,3,4,5,6,7],3) ;\nexpect call0==[5,6,52,36,12,10];\nexpect call1==[2,3,4,1];\nexpect call2==[3,4,5,6,7,0,1,2];\n}\n"
+    },
+    "587": {
+        "TestCase": "method{:test} check(){\nvar call0:= list_tuple([5,10,7,4,15,3]) ;\nvar call1:= list_tuple([2,4,5,6,2,3,4,4,7]) ;\nvar call2:= list_tuple([58,44,56]) ;\nexpect call0==(5,10,7,4,15,3);\nexpect call1==(2,4,5,6,2,3,4,4,7);\nexpect call2==(58,44,56);\n}\n"
+    },
+    "588": {
+        "TestCase": "method{:test} check(){\nvar call0:= big_diff([1,2,3,4]) ;\nvar call1:= big_diff([4,5,12]) ;\nvar call2:= big_diff([9,2,3]) ;\nexpect call0==3;\nexpect call1==8;\nexpect call2==7;\n}\n"
+    },
+    "589": {
+        "TestCase": "method{:test} check(){\nvar call0:= perfect_squares(1,30) ;\nvar call1:= perfect_squares(50,100) ;\nvar call2:= perfect_squares(100,200) ;\nexpect call0==[1,4,9,16,25];\nexpect call1==[64,81,100];\nexpect call2==[100,121,144,169,196];\n}\n"
+    },
+    "590": {
+        "TestCase": "method{:test} check(){\nvar call0:= polar_rect(3,4) ;\nvar call1:= polar_rect(4,7) ;\nvar call2:= polar_rect(15,17) ;\nexpect call0==((5.00000000,0.92729522),-2+2.4492935982947064e-16j);\nexpect call1==((8.06225775,1.05165021),-2+2.4492935982947064e-16j);\nexpect call2==((22.67156810,0.84781697),-2+2.4492935982947064e-16j);\n}\n"
+    },
+    "591": {
+        "TestCase": "method{:test} check(){\nvar call0:= swap_List([12,35,9,56,24]) ;\nvar call1:= swap_List([1,2,3]) ;\nvar call2:= swap_List([4,5,6]) ;\nexpect call0==[24,35,9,56,12];\nexpect call1==[3,2,1];\nexpect call2==[6,5,4];\n}\n"
+    },
+    "592": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_Of_product(3) ;\nvar call1:= sum_Of_product(4) ;\nvar call2:= sum_Of_product(1) ;\nexpect call0==15;\nexpect call1==56;\nexpect call2==1;\n}\n"
+    },
+    "593": {
+        "TestCase": "method{:test} check(){\nvar call0:= removezero_ip(\"216.08.094.196\") ;\nvar call1:= removezero_ip(\"12.01.024\") ;\nvar call2:= removezero_ip(\"216.08.094.0196\") ;\nexpect call0==\"216.8.94.196\";\nexpect call1==\"12.1.24\";\nexpect call2==\"216.8.94.196\";\n}\n"
+    },
+    "594": {
+        "TestCase": "method{:test} check(){\nvar call0:= diff_even_odd([1,3,5,7,4,1,6,8]) ;\nvar call1:= diff_even_odd([1,2,3,4,5,6,7,8,9,10]) ;\nvar call2:= diff_even_odd([1,5,7,9,10]) ;\nexpect call0==3;\nexpect call1==1;\nexpect call2==9;\n}\n"
+    },
+    "595": {
+        "TestCase": "method{:test} check(){\nvar call0:= min_Swaps(\"1101\",\"1110\") ;\nvar call1:= min_Swaps(\"111\",\"000\") ;\nvar call2:= min_Swaps(\"111\",\"110\") ;\nexpect call0==1;\nexpect call1==\"Not Possible\";\nexpect call2==\"Not Possible\";\n}\n"
+    },
+    "597": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_kth([2,3,6,7,9],[1,4,8,10],5) ;\nvar call1:= find_kth([100,112,256,349,770],[72,86,113,119,265,445,892],7) ;\nvar call2:= find_kth([3,4,7,8,10],[2,5,9,11],6) ;\nexpect call0==6;\nexpect call1==256;\nexpect call2==8;\n}\n"
+    },
+    "598": {
+        "TestCase": "method{:test} check(){\nvar call0:= armstrong_number(153) ;\nvar call1:= armstrong_number(259) ;\nvar call2:= armstrong_number(4458) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "599": {
+        "TestCase": "method{:test} check(){\nvar call0_0,call0_1:= sum_average(10) ;\nvar call1_0,call1_1:= sum_average(15) ;\nvar call2_0,call2_1:= sum_average(20) ;\nexpect (call0_0,call0_1)==(55,5.50000000);\nexpect (call1_0,call1_1)==(120,8.00000000);\nexpect (call2_0,call2_1)==(210,10.50000000);\n}\n"
+    },
+    "600": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_Even(1) ;\nvar call1:= is_Even(2) ;\nvar call2:= is_Even(3) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "602": {
+        "TestCase": "method{:test} check(){\nvar call0:= first_repeated_char(\"abcabc\") ;\nvar call1:= first_repeated_char(\"abc\") ;\nvar call2:= first_repeated_char(\"123123\") ;\nexpect call0==\"a\";\nexpect call1==None;\nexpect call2==\"1\";\n}\n"
+    },
+    "603": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_ludic(10) ;\nvar call1:= get_ludic(25) ;\nvar call2:= get_ludic(45) ;\nexpect call0==[1,2,3,5,7];\nexpect call1==[1,2,3,5,7,11,13,17,23,25];\nexpect call2==[1,2,3,5,7,11,13,17,23,25,29,37,41,43];\n}\n"
+    },
+    "604": {
+        "TestCase": "method{:test} check(){\nvar call0:= reverse_words(\"python program\") ;\nvar call1:= reverse_words(\"java language\") ;\nvar call2:= reverse_words(\"indian man\") ;\nexpect call0==\"program python\";\nexpect call1==\"language java\";\nexpect call2==\"man indian\";\n}\n"
+    },
+    "605": {
+        "TestCase": "method{:test} check(){\nvar call0:= prime_num(13) ;\nvar call1:= prime_num(7) ;\nvar call2:= prime_num(-1010) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "606": {
+        "TestCase": "method{:test} check(){\nvar call0:= radian_degree(90.0) ;\nvar call1:= radian_degree(60.0) ;\nvar call2:= radian_degree(120.0) ;\nexpect call0==1.57079633;\nexpect call1==1.04719755;\nexpect call2==2.09439510;\n}\n"
+    },
+    "607": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_literals(\"The quick brown fox jumps over the lazy dog.\",\"fox\") ;\nvar call1:= find_literals(\"Its been a very crazy procedure right\",\"crazy\") ;\nvar call2:= find_literals(\"Hardest choices required strongest will\",\"will\") ;\nexpect call0==(\"fox\",16,19);\nexpect call1==(\"crazy\",16,21);\nexpect call2==(\"will\",35,39);\n}\n"
+    },
+    "608": {
+        "TestCase": "method{:test} check(){\nvar call0:= bell_Number(2) ;\nvar call1:= bell_Number(3) ;\nvar call2:= bell_Number(4) ;\nexpect call0==2;\nexpect call1==5;\nexpect call2==15;\n}\n"
+    },
+    "610": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_kth_element([1,1,2,3,4,4,5,1],3) ;\nvar call1:= remove_kth_element([0,0,1,2,3,4,4,5,6,6,6,7,8,9,4,4],4) ;\nvar call2:= remove_kth_element([10,10,15,19,18,18,17,26,26,17,18,10],5) ;\nexpect call0==[1,1,3,4,4,5,1];\nexpect call1==[0,0,1,3,4,4,5,6,6,6,7,8,9,4,4];\nexpect call2==[10,10,15,19,18,17,26,26,17,18,10];\n}\n"
+    },
+    "611": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_of_nth([[5,6,7],[1,3,5],[8,9,19]],2) ;\nvar call1:= max_of_nth([[6,7,8],[2,4,6],[9,10,20]],1) ;\nvar call2:= max_of_nth([[7,8,9],[3,5,7],[10,11,21]],1) ;\nexpect call0==19;\nexpect call1==10;\nexpect call2==11;\n}\n"
+    },
+    "612": {
+        "TestCase": "method{:test} check(){\nvar call0:= merge([[\"x\",\"y\"],[\"a\",\"b\"],[\"m\",\"n\"]]) ;\nvar call1:= merge([[1,2],[3,4],[5,6],[7,8]]) ;\nvar call2:= merge([[\"x\",\"y\",\"z\"],[\"a\",\"b\",\"c\"],[\"m\",\"n\",\"o\"]]) ;\nexpect call0==[[\"x\",\"a\",\"m\"],[\"y\",\"b\",\"n\"]];\nexpect call1==[[1,3,5,7],[2,4,6,8]];\nexpect call2==[[\"x\",\"a\",\"m\"],[\"y\",\"b\",\"n\"],[\"z\",\"c\",\"o\"]];\n}\n"
+    },
+    "614": {
+        "TestCase": "method{:test} check(){\nvar call0:= cummulative_sum([[1,3],[5,6,7],[2,6]]) ;\nvar call1:= cummulative_sum([[2,4],[6,7,8],[3,7]]) ;\nvar call2:= cummulative_sum([[3,5],[7,8,9],[4,8]]) ;\nexpect call0==30;\nexpect call1==37;\nexpect call2==44;\n}\n"
+    },
+    "615": {
+        "TestCase": "method{:test} check(){\nvar call0:= average_tuple([[10.0,10.0,10.0,12.0],[30.0,45.0,56.0,45.0],[81.0,80.0,39.0,32.0],[1.0,2.0,3.0,4.0]]) ;\nvar call1:= average_tuple([[1.0,1.0,-5.0],[30.0,-15.0,56.0],[81.0,-60.0,-39.0],[-10.0,2.0,3.0]]) ;\nvar call2:= average_tuple([[100.0,100.0,100.0,120.0],[300.0,450.0,560.0,450.0],[810.0,800.0,390.0,320.0],[10.0,20.0,30.0,40.0]]) ;\nexpect call0==[30.50000000,34.25000000,27.00000000,23.25000000];\nexpect call1==[25.50000000,-18.00000000,3.75000000];\nexpect call2==[305.00000000,342.50000000,270.00000000,232.50000000];\n}\n"
+    },
+    "616": {
+        "TestCase": "method{:test} check(){\nvar call0:= tuple_modulo((10,4,5,6),(5,6,7,5)) ;\nvar call1:= tuple_modulo((11,5,6,7),(6,7,8,6)) ;\nvar call2:= tuple_modulo((12,6,7,8),(7,8,9,7)) ;\nexpect call0==(0,4,5,1);\nexpect call1==(5,5,6,1);\nexpect call2==(5,6,7,1);\n}\n"
+    },
+    "617": {
+        "TestCase": "method{:test} check(){\nvar call0:= min_Jumps((3,4),11) ;\nvar call1:= min_Jumps((3,4),0) ;\nvar call2:= min_Jumps((11,14),11) ;\nexpect call0==3.50000000;\nexpect call1==0.0;\nexpect call2==1.0;\n}\n"
+    },
+    "618": {
+        "TestCase": "method{:test} check(){\nvar call0:= div_list([4.0,5.0,6.0],[1.0,2.0,3.0]) ;\nvar call1:= div_list([3.0,2.0],[1.0,4.0]) ;\nvar call2:= div_list([90.0,120.0],[50.0,70.0]) ;\nexpect call0==[4.00000000,2.50000000,2.00000000];\nexpect call1==[3.00000000,0.50000000];\nexpect call2==[1.80000000,1.71428571];\n}\n"
+    },
+    "619": {
+        "TestCase": "method{:test} check(){\nvar call0:= move_num(\"I1love143you55three3000thousand\") ;\nvar call1:= move_num(\"Avengers124Assemble\") ;\nvar call2:= move_num(\"Its11our12path13to14see15things16do17things\") ;\nexpect call0==\"Iloveyouthreethousand1143553000\";\nexpect call1==\"AvengersAssemble124\";\nexpect call2==\"Itsourpathtoseethingsdothings11121314151617\";\n}\n"
+    },
+    "620": {
+        "TestCase": "method{:test} check(){\nvar call0:= largest_subset([1,3,6,13,17,18]) ;\nvar call1:= largest_subset([10,5,3,15,20]) ;\nvar call2:= largest_subset([18,1,3,6,13,17]) ;\nexpect call0==4;\nexpect call1==3;\nexpect call2==4;\n}\n"
+    },
+    "622": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_median([1,12,15,26,38],[2,13,17,30,45],5) ;\nvar call1:= get_median([2,4,8,9],[7,13,19,28],4) ;\nvar call2:= get_median([3,6,14,23,36,42],[2,18,27,39,49,55],6) ;\nexpect call0==16.00000000;\nexpect call1==8.50000000;\nexpect call2==25.00000000;\n}\n"
+    },
+    "623": {
+        "TestCase": "method{:test} check(){\nvar call0:= nth_nums([1,2,3,4,5,6,7,8,9,10],2) ;\nvar call1:= nth_nums([10,20,30],3) ;\nvar call2:= nth_nums([12,15],5) ;\nexpect call0==[1,4,9,16,25,36,49,64,81,100];\nexpect call1==[1000,8000,27000];\nexpect call2==[248832,759375];\n}\n"
+    },
+    "624": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_upper(\"person\") ;\nvar call1:= is_upper(\"final\") ;\nvar call2:= is_upper(\"Valid\") ;\nexpect call0==\"PERSON\";\nexpect call1==\"FINAL\";\nexpect call2==\"VALID\";\n}\n"
+    },
+    "625": {
+        "TestCase": "method{:test} check(){\nvar call0:= swap_List([1,2,3]) ;\nvar call1:= swap_List([1,2,3,4,4]) ;\nvar call2:= swap_List([4,5,6]) ;\nexpect call0==[3,2,1];\nexpect call1==[4,2,3,4,1];\nexpect call2==[6,5,4];\n}\n"
+    },
+    "626": {
+        "TestCase": "method{:test} check(){\nvar call0:= triangle_area(-1) ;\nvar call1:= triangle_area(0) ;\nvar call2:= triangle_area(2) ;\nexpect call0==None;\nexpect call1==0;\nexpect call2==4;\n}\n"
+    },
+    "627": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_First_Missing([0,1,2,3]) ;\nvar call1:= find_First_Missing([0,1,2,6,9]) ;\nvar call2:= find_First_Missing([2,3,5,8,9]) ;\nexpect call0==4;\nexpect call1==3;\nexpect call2==0;\n}\n"
+    },
+    "628": {
+        "TestCase": "method{:test} check(){\nvar call0:= replace_spaces(\"My Name is Dawood\") ;\nvar call1:= replace_spaces(\"I am a Programmer\") ;\nvar call2:= replace_spaces(\"I love Coding\") ;\nexpect call0==\"My%20Name%20is%20Dawood\";\nexpect call1==\"I%20am%20a%20Programmer\";\nexpect call2==\"I%20love%20Coding\";\n}\n"
+    },
+    "629": {
+        "TestCase": "method{:test} check(){\nvar call0:= Split([1,2,3,4,5]) ;\nvar call1:= Split([4,5,6,7,8,0,1]) ;\nvar call2:= Split([8,12,15,19]) ;\nexpect call0==[2,4];\nexpect call1==[4,6,8,0];\nexpect call2==[8,12];\n}\n"
+    },
+    "630": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_coordinates((3,4)) ;\nvar call1:= get_coordinates((4,5)) ;\nvar call2:= get_coordinates((5,6)) ;\nexpect call0==[[2,3],[2,4],[2,5],[3,3],[3,4],[3,5],[4,3],[4,4],[4,5]];\nexpect call1==[[3,4],[3,5],[3,6],[4,4],[4,5],[4,6],[5,4],[5,5],[5,6]];\nexpect call2==[[4,5],[4,6],[4,7],[5,5],[5,6],[5,7],[6,5],[6,6],[6,7]];\n}\n"
+    },
+    "631": {
+        "TestCase": "method{:test} check(){\nvar call0:= replace_spaces(\"Jumanji The Jungle\") ;\nvar call1:= replace_spaces(\"The_Avengers\") ;\nvar call2:= replace_spaces(\"Fast and Furious\") ;\nexpect call0==\"Jumanji_The_Jungle\";\nexpect call1==\"The Avengers\";\nexpect call2==\"Fast_and_Furious\";\n}\n"
+    },
+    "632": {
+        "TestCase": "method{:test} check(){\nvar call0:= move_zero([1,0,2,0,3,4]) ;\nvar call1:= move_zero([2,3,2,0,0,4,0,5,0]) ;\nvar call2:= move_zero([0,1,0,1,1]) ;\nexpect call0==[1,2,3,4,0,0];\nexpect call1==[2,3,2,4,5,0,0,0,0];\nexpect call2==[1,1,1,0,0];\n}\n"
+    },
+    "633": {
+        "TestCase": "method{:test} check(){\nvar call0:= pair_xor_Sum([5,9,7,6],4) ;\nvar call1:= pair_xor_Sum([7,3,5],3) ;\nvar call2:= pair_xor_Sum([7,3],2) ;\nexpect call0==47;\nexpect call1==12;\nexpect call2==4;\n}\n"
+    },
+    "635": {
+        "TestCase": "method{:test} check(){\nvar call0:= heap_sort([1,3,5,7,9,2,4,6,8,0]) ;\nvar call1:= heap_sort([25,35,22,85,14,65,75,25,58]) ;\nvar call2:= heap_sort([7,1,9,5]) ;\nexpect call0==[0,1,2,3,4,5,6,7,8,9];\nexpect call1==[14,22,25,25,35,58,65,75,85];\nexpect call2==[1,5,7,9];\n}\n"
+    },
+    "637": {
+        "TestCase": "method{:test} check(){\nvar call0:= noprofit_noloss(1500,1200) ;\nvar call1:= noprofit_noloss(100,100) ;\nvar call2:= noprofit_noloss(2000,5000) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "638": {
+        "TestCase": "method{:test} check(){\nvar call0:= wind_chill(120,35) ;\nvar call1:= wind_chill(40,20) ;\nvar call2:= wind_chill(10,8) ;\nexpect call0==40;\nexpect call1==19;\nexpect call2==6;\n}\n"
+    },
+    "639": {
+        "TestCase": "method{:test} check(){\nvar call0:= sample_nam([\"sally\",\"Dylan\",\"rebecca\",\"Diana\",\"Joanne\",\"keith\"]) ;\nvar call1:= sample_nam([\"php\",\"res\",\"Python\",\"abcd\",\"Java\",\"aaa\"]) ;\nvar call2:= sample_nam([\"abcd\",\"Python\",\"abba\",\"aba\"]) ;\nexpect call0==16;\nexpect call1==10;\nexpect call2==6;\n}\n"
+    },
+    "640": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_parenthesis([\"python (chrome)\"]) ;\nvar call1:= remove_parenthesis([\"string(.abc)\"]) ;\nvar call2:= remove_parenthesis([\"alpha(num)\"]) ;\nexpect call0==\"python\";\nexpect call1==\"string\";\nexpect call2==\"alpha\";\n}\n"
+    },
+    "641": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_nonagonal(10) ;\nvar call1:= is_nonagonal(15) ;\nvar call2:= is_nonagonal(18) ;\nexpect call0==325;\nexpect call1==750;\nexpect call2==1089;\n}\n"
+    },
+    "643": {
+        "TestCase": "method{:test} check(){\nvar call0:= text_match_wordz_middle(\"pythonzabc.\") ;\nvar call1:= text_match_wordz_middle(\"zxyabc.\") ;\nvar call2:= text_match_wordz_middle(\"  lang  .\") ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "644": {
+        "TestCase": "method{:test} check(){\nvar call0:= reverse_Array_Upto_K([1,2,3,4,5,6],4) ;\nvar call1:= reverse_Array_Upto_K([4,5,6,7],2) ;\nvar call2:= reverse_Array_Upto_K([9,8,7,6,5],3) ;\nexpect call0==[4,3,2,1,5,6];\nexpect call1==[5,4,6,7];\nexpect call2==[7,8,9,6,5];\n}\n"
+    },
+    "720": {
+        "TestCase": "method{:test} check(){\nvar call0:= add_dict_to_tuple((4,5,6),map[\"MSAM\":=1,\"is\":=2,\"best\":=3]) ;\nvar call1:= add_dict_to_tuple((1,2,3),map[\"UTS\":=2,\"is\":=3,\"Worst\":=4]) ;\nvar call2:= add_dict_to_tuple((8,9,10),map[\"POS\":=3,\"is\":=4,\"Okay\":=5]) ;\nexpect call0==(4,5,6,map[\"MSAM\":=1,\"is\":=2,\"best\":=3]);\nexpect call1==(1,2,3,map[\"UTS\":=2,\"is\":=3,\"Worst\":=4]);\nexpect call2==(8,9,10,map[\"POS\":=3,\"is\":=4,\"Okay\":=5]);\n}\n"
+    },
+    "721": {
+        "TestCase": "method{:test} check(){\nvar call0:= maxAverageOfPath([[1,2,3],[6,5,4],[7,3,9]]) ;\nvar call1:= maxAverageOfPath([[2,3,4],[7,6,5],[8,4,10]]) ;\nvar call2:= maxAverageOfPath([[3,4,5],[8,7,6],[9,5,11]]) ;\nvar call3:= maxAverageOfPath([[1,2,3],[4,5,6],[7,8,9]]) ;\nexpect call0==5.20000000;\nexpect call1==6.20000000;\nexpect call2==7.20000000;\nexpect call3==5.80000000;\n}\n"
+    },
+    "722": {
+        "TestCase": "method{:test} check(){\nvar call0:= filter_data(map[\"Cierra Vega\":=(6.20000000,70),\"Alden Cantrell\":=(5.90000000,65),\"Kierra Gentry\":=(6.00000000,68),\"Pierre Cox\":=(5.80000000,66)],6.00000000,70) ;\nvar call1:= filter_data(map[\"Cierra Vega\":=(6.20000000,70),\"Alden Cantrell\":=(5.90000000,65),\"Kierra Gentry\":=(6.00000000,68),\"Pierre Cox\":=(5.80000000,66)],5.90000000,67) ;\nvar call2:= filter_data(map[\"Cierra Vega\":=(6.20000000,70),\"Alden Cantrell\":=(5.90000000,65),\"Kierra Gentry\":=(6.00000000,68),\"Pierre Cox\":=(5.80000000,66)],5.70000000,64) ;\nexpect call0==map[\"Cierra Vega\":=(6.20000000,70)];\nexpect call1==map[\"Cierra Vega\":=(6.20000000,70),\"Kierra Gentry\":=(6.00000000,68)];\nexpect call2==map[\"Cierra Vega\":=(6.20000000,70),\"Alden Cantrell\":=(5.90000000,65),\"Kierra Gentry\":=(6.00000000,68),\"Pierre Cox\":=(5.80000000,66)];\n}\n"
+    },
+    "723": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_same_pair([1,2,3,4,5,6,7,8],[2,2,3,1,2,6,7,9]) ;\nvar call1:= count_same_pair([0,1,2,-1,-5,6,0,-3,-2,3,4,6,8],[2,1,2,-1,-5,6,4,-3,-2,3,4,6,8]) ;\nvar call2:= count_same_pair([2,4,-6,-9,11,-12,14,-5,17],[2,1,2,-1,-5,6,4,-3,-2,3,4,6,8]) ;\nvar call3:= count_same_pair([0,1,1,2],[0,1,2,2]) ;\nexpect call0==4;\nexpect call1==11;\nexpect call2==1;\nexpect call3==3;\n}\n"
+    },
+    "724": {
+        "TestCase": "method{:test} check(){\nvar call0:= power_base_sum(2,100) ;\nvar call1:= power_base_sum(8,10) ;\nvar call2:= power_base_sum(8,15) ;\nvar call3:= power_base_sum(3,3) ;\nexpect call0==115;\nexpect call1==37;\nexpect call2==62;\nexpect call3==9;\n}\n"
+    },
+    "725": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_quotation(\"Cortex \"A53\" Based \"multi\" tasking \"Processor\"\") ;\nvar call1:= extract_quotation(\"Cast your \"favorite\" entertainment \"apps\"\") ;\nvar call2:= extract_quotation(\"Watch content \"4k Ultra HD\" resolution with \"HDR 10\" Support\") ;\nvar call3:= extract_quotation(\"Watch content '4k Ultra HD' resolution with 'HDR 10' Support\") ;\nexpect call0==[\"A53\",\"multi\",\"Processor\"];\nexpect call1==[\"favorite\",\"apps\"];\nexpect call2==[\"4k Ultra HD\",\"HDR 10\"];\nexpect call3==[];\n}\n"
+    },
+    "726": {
+        "TestCase": "method{:test} check(){\nvar call0:= multiply_elements([1,5,7,8,10]) ;\nvar call1:= multiply_elements([2,4,5,6,7]) ;\nvar call2:= multiply_elements([12,13,14,9,15]) ;\nvar call3:= multiply_elements([12]) ;\nexpect call0==[5,35,56,80];\nexpect call1==[8,20,30,42];\nexpect call2==[156,182,126,135];\nexpect call3==[];\n}\n"
+    },
+    "728": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_list([10,20,30],[15,25,35]) ;\nvar call1:= sum_list([1,2,3],[5,6,7]) ;\nvar call2:= sum_list([15,20,30],[15,45,75]) ;\nexpect call0==[25,45,65];\nexpect call1==[6,8,10];\nexpect call2==[30,65,105];\n}\n"
+    },
+    "730": {
+        "TestCase": "method{:test} check(){\nvar call0:= consecutive_duplicates([0,0,1,2,3,4,4,5,6,6,6,7,8,9,4,4]) ;\nvar call1:= consecutive_duplicates([10,10,15,19,18,18,17,26,26,17,18,10]) ;\nvar call2:= consecutive_duplicates([\"a\",\"a\",\"b\",\"c\",\"d\",\"d\"]) ;\nvar call3:= consecutive_duplicates([\"a\",\"a\",\"b\",\"c\",\"d\",\"d\",\"a\",\"a\"]) ;\nexpect call0==[0,1,2,3,4,5,6,7,8,9,4];\nexpect call1==[10,15,19,18,17,26,17,18,10];\nexpect call2==[\"a\",\"b\",\"c\",\"d\"];\nexpect call3==[\"a\",\"b\",\"c\",\"d\",\"a\"];\n}\n"
+    },
+    "731": {
+        "TestCase": "method{:test} check(){\nvar call0:= lateralsurface_cone(5,12) ;\nvar call1:= lateralsurface_cone(10,15) ;\nvar call2:= lateralsurface_cone(19,17) ;\nexpect call0==204.20352248;\nexpect call1==566.35866996;\nexpect call2==1521.80901322;\n}\n"
+    },
+    "732": {
+        "TestCase": "method{:test} check(){\nvar call0:= replace_specialchar(\"Python language, Programming language.\") ;\nvar call1:= replace_specialchar(\"a b c,d e f\") ;\nvar call2:= replace_specialchar(\"ram reshma,ram rahim\") ;\nexpect call0==\"Python:language::Programming:language:\";\nexpect call1==\"a:b:c:d:e:f\";\nexpect call2==\"ram:reshma:ram:rahim\";\n}\n"
+    },
+    "733": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_first_occurrence([2,5,5,5,6,6,8,9,9,9],5) ;\nvar call1:= find_first_occurrence([2,3,5,5,6,6,8,9,9,9],5) ;\nvar call2:= find_first_occurrence([2,4,1,5,6,6,8,9,9,9],6) ;\nexpect call0==1;\nexpect call1==2;\nexpect call2==4;\n}\n"
+    },
+    "734": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_Of_Subarray_Prod([1,2,3]) ;\nvar call1:= sum_Of_Subarray_Prod([1,2]) ;\nvar call2:= sum_Of_Subarray_Prod([1,2,3,4]) ;\nexpect call0==20;\nexpect call1==5;\nexpect call2==84;\n}\n"
+    },
+    "735": {
+        "TestCase": "method{:test} check(){\nvar call0:= toggle_middle_bits(9) ;\nvar call1:= toggle_middle_bits(10) ;\nvar call2:= toggle_middle_bits(11) ;\nvar call3:= toggle_middle_bits(65) ;\nvar call4:= toggle_middle_bits(77) ;\nexpect call0==15;\nexpect call1==12;\nexpect call2==13;\nexpect call3==127;\nexpect call4==115;\n}\n"
+    },
+    "736": {
+        "TestCase": "method{:test} check(){\nvar call0:= left_insertion([1,2,4,5],6) ;\nvar call1:= left_insertion([1,2,4,5],3) ;\nvar call2:= left_insertion([1,2,4,5],7) ;\nexpect call0==4;\nexpect call1==2;\nexpect call2==4;\n}\n"
+    },
+    "737": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_str(\"annie\") ;\nvar call1:= check_str(\"dawood\") ;\nvar call2:= check_str(\"Else\") ;\nexpect call0;\nexpect !call1;\nexpect call2;\n}\n"
+    },
+    "738": {
+        "TestCase": "method{:test} check(){\nvar call0:= geometric_sum(7) ;\nvar call1:= geometric_sum(4) ;\nvar call2:= geometric_sum(8) ;\nexpect call0==1.99218750;\nexpect call1==1.93750000;\nexpect call2==1.99609375;\n}\n"
+    },
+    "739": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_Index(2) ;\nvar call1:= find_Index(3) ;\nvar call2:= find_Index(4) ;\nexpect call0==4;\nexpect call1==14;\nexpect call2==45;\n}\n"
+    },
+    "740": {
+        "TestCase": "method{:test} check(){\nvar call0:= tuple_to_dict((1,5,7,10,13,5)) ;\nvar call1:= tuple_to_dict((1,2,3,4,5,6)) ;\nvar call2:= tuple_to_dict((7,8,9,10,11,12)) ;\nexpect call0==map[1:=5,7:=10,13:=5];\nexpect call1==map[1:=2,3:=4,5:=6];\nexpect call2==map[7:=8,9:=10,11:=12];\n}\n"
+    },
+    "741": {
+        "TestCase": "method{:test} check(){\nvar call0:= all_Characters_Same(\"python\") ;\nvar call1:= all_Characters_Same(\"aaa\") ;\nvar call2:= all_Characters_Same(\"data\") ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "742": {
+        "TestCase": "method{:test} check(){\nvar call0:= area_tetrahedron(3) ;\nvar call1:= area_tetrahedron(20) ;\nvar call2:= area_tetrahedron(10) ;\nexpect call0==15.58845727;\nexpect call1==692.82032303;\nexpect call2==173.20508076;\n}\n"
+    },
+    "743": {
+        "TestCase": "method{:test} check(){\nvar call0:= rotate_right([1,2,3,4,5,6,7,8,9,10],3) ;\nvar call1:= rotate_right([1,2,3,4,5,6,7,8,9,10],2) ;\nvar call2:= rotate_right([1,2,3,4,5,6,7,8,9,10],5) ;\nexpect call0==[8,9,10,1,2,3,4,5,6,7];\nexpect call1==[9,10,1,2,3,4,5,6,7,8];\nexpect call2==[6,7,8,9,10,1,2,3,4,5];\n}\n"
+    },
+    "744": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_none((10,4,5,6,None)) ;\nvar call1:= check_none((7,8,9,11,14)) ;\nvar call2:= check_none((1,2,3,4,None)) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "745": {
+        "TestCase": "method{:test} check(){\nvar call0:= divisible_by_digits(1,22) ;\nvar call1:= divisible_by_digits(1,15) ;\nvar call2:= divisible_by_digits(20,25) ;\nexpect call0==[1,2,3,4,5,6,7,8,9,11,12,15,22];\nexpect call1==[1,2,3,4,5,6,7,8,9,11,12,15];\nexpect call2==[22,24];\n}\n"
+    },
+    "746": {
+        "TestCase": "method{:test} check(){\nvar call0:= sector_area(4.0,45.0) ;\nvar call1:= sector_area(9.0,45.0) ;\nvar call2:= sector_area(9.0,361.0) ;\nexpect call0==6.28318531;\nexpect call1==31.80862562;\nexpect call2==None;\n}\n"
+    },
+    "747": {
+        "TestCase": "method{:test} check(){\nvar call0:= lcs_of_three(\"AGGT12\",\"12TXAYB\",\"12XBA\") ;\nvar call1:= lcs_of_three(\"Reels\",\"Reelsfor\",\"ReelsforReels\") ;\nvar call2:= lcs_of_three(\"abcd1e2\",\"bc12ea\",\"bd1ea\") ;\nexpect call0==2;\nexpect call1==5;\nexpect call2==3;\n}\n"
+    },
+    "748": {
+        "TestCase": "method{:test} check(){\nvar call0:= capital_words_spaces(\"Python\") ;\nvar call1:= capital_words_spaces(\"PythonProgrammingExamples\") ;\nvar call2:= capital_words_spaces(\"GetReadyToBeCodingFreak\") ;\nexpect call0==\"Python\";\nexpect call1==\"Python Programming Examples\";\nexpect call2==\"Get Ready To Be Coding Freak\";\n}\n"
+    },
+    "749": {
+        "TestCase": "method{:test} check(){\nvar call0:= sort_numeric_strings([\"4\",\"12\",\"45\",\"7\",\"0\",\"100\",\"200\",\"-12\",\"-500\"]) ;\nvar call1:= sort_numeric_strings([\"2\",\"3\",\"8\",\"4\",\"7\",\"9\",\"8\",\"2\",\"6\",\"5\",\"1\",\"6\",\"1\",\"2\",\"3\",\"4\",\"6\",\"9\",\"1\",\"2\"]) ;\nvar call2:= sort_numeric_strings([\"1\",\"3\",\"5\",\"7\",\"1\",\"3\",\"13\",\"15\",\"17\",\"5\",\"7 \",\"9\",\"1\",\"11\"]) ;\nexpect call0==[-500,-12,0,4,7,12,45,100,200];\nexpect call1==[1,1,1,2,2,2,2,3,3,4,4,5,6,6,6,7,8,8,9,9];\nexpect call2==[1,1,1,3,3,5,5,7,7,9,11,13,15,17];\n}\n"
+    },
+    "750": {
+        "TestCase": "method{:test} check(){\nvar call0:= add_tuple([5,6,7],(9,10)) ;\nvar call1:= add_tuple([6,7,8],(10,11)) ;\nvar call2:= add_tuple([7,8,9],(11,12)) ;\nexpect call0==[5,6,7,9,10];\nexpect call1==[6,7,8,10,11];\nexpect call2==[7,8,9,11,12];\n}\n"
+    },
+    "751": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_min_heap([1,2,3,4,5,6]) ;\nvar call1:= check_min_heap([2,3,4,5,10,15]) ;\nvar call2:= check_min_heap([2,10,4,5,3,15]) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "752": {
+        "TestCase": "method{:test} check(){\nvar call0:= jacobsthal_num(5) ;\nvar call1:= jacobsthal_num(2) ;\nvar call2:= jacobsthal_num(4) ;\nvar call3:= jacobsthal_num(13) ;\nexpect call0==11;\nexpect call1==1;\nexpect call2==5;\nexpect call3==2731;\n}\n"
+    },
+    "753": {
+        "TestCase": "method{:test} check(){\nvar call0:= min_k([(\"Manjeet\",10),(\"Akshat\",4),(\"Akash\",2),(\"Nikhil\",8)],2) ;\nvar call1:= min_k([(\"Sanjeev\",11),(\"Angat\",5),(\"Akash\",3),(\"Nepin\",9)],3) ;\nvar call2:= min_k([(\"tanmay\",14),(\"Amer\",11),(\"Ayesha\",9),(\"SKD\",16)],1) ;\nexpect call0==[(\"Akash\",2),(\"Akshat\",4)];\nexpect call1==[(\"Akash\",3),(\"Angat\",5),(\"Nepin\",9)];\nexpect call2==[(\"Ayesha\",9)];\n}\n"
+    },
+    "754": {
+        "TestCase": "method{:test} check(){\nvar call0:= extract_index_list([1,1,3,4,5,6,7],[0,1,2,3,4,5,7],[0,1,2,3,4,5,7]) ;\nvar call1:= extract_index_list([1,1,3,4,5,6,7],[0,1,2,3,4,6,5],[0,1,2,3,4,6,7]) ;\nvar call2:= extract_index_list([1,1,3,4,6,5,6],[0,1,2,3,4,5,7],[0,1,2,3,4,5,7]) ;\nvar call3:= extract_index_list([1,2,3,4,6,6,6],[0,1,2,3,4,5,7],[0,1,2,3,4,5,7]) ;\nexpect call0==[1,7];\nexpect call1==[1,6];\nexpect call2==[1,5];\nexpect call3==[];\n}\n"
+    },
+    "755": {
+        "TestCase": "method{:test} check(){\nvar call0:= second_smallest([1,2,-8,-2,0,-2]) ;\nvar call1:= second_smallest([1,1,-0.50000000,0,2,-2,-2]) ;\nvar call2:= second_smallest([2,2]) ;\nvar call3:= second_smallest([2,2,2]) ;\nexpect call0==-2;\nexpect call1==-0.50000000;\nexpect call2==None;\nexpect call3==None;\n}\n"
+    },
+    "756": {
+        "TestCase": "method{:test} check(){\nvar call0:= text_match_zero_one(\"ac\") ;\nvar call1:= text_match_zero_one(\"dc\") ;\nvar call2:= text_match_zero_one(\"abbbba\") ;\nvar call3:= text_match_zero_one(\"dsabbbba\") ;\nvar call4:= text_match_zero_one(\"asbbbba\") ;\nvar call5:= text_match_zero_one(\"abaaa\") ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\nexpect call3==true;\nexpect call4==false;\nexpect call5==true;\n}\n"
+    },
+    "757": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_reverse_pairs([\"julia\",\"best\",\"tseb\",\"for\",\"ailuj\"]) ;\nvar call1:= count_reverse_pairs([\"geeks\",\"best\",\"for\",\"skeeg\"]) ;\nvar call2:= count_reverse_pairs([\"makes\",\"best\",\"sekam\",\"for\",\"rof\"]) ;\nexpect call0==2;\nexpect call1==1;\nexpect call2==2;\n}\n"
+    },
+    "758": {
+        "TestCase": "method{:test} check(){\nvar call0:= unique_sublists([[1,3],[5,7],[1,3],[13,15,17],[5,7],[9,11]]) ;\nvar call1:= unique_sublists([[\"green\",\"orange\"],[\"black\"],[\"green\",\"orange\"],[\"white\"]]) ;\nvar call2:= unique_sublists([[10,20,30,40],[60,70,50,50],[90,100,200]]) ;\nvar call3:= unique_sublists([[\"john\"]]) ;\nexpect call0==map[(1,3):=2,(5,7):=2,(13,15,17):=1,(9,11):=1];\nexpect call1==map[(\"green\",\"orange\"):=2,(\"black\"):=1,(\"white\"):=1];\nexpect call2==map[(10,20,30,40):=1,(60,70,50,50):=1,(90,100,200):=1];\nexpect call3==map[(\"john\"):=1];\n}\n"
+    },
+    "759": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_decimal(\"123.11\") ;\nvar call1:= is_decimal(\"e666.86\") ;\nvar call2:= is_decimal(\"3.124587\") ;\nvar call3:= is_decimal(\"1.11\") ;\nvar call4:= is_decimal(\"1.1.11\") ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\nexpect call3==true;\nexpect call4==false;\n}\n"
+    },
+    "760": {
+        "TestCase": "method{:test} check(){\nvar call0:= unique_Element([1,1,1]) ;\nvar call1:= unique_Element([1,2,1,2]) ;\nvar call2:= unique_Element([1,2,3,4,5]) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "762": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_monthnumber_number(6) ;\nvar call1:= check_monthnumber_number(2) ;\nvar call2:= check_monthnumber_number(12) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==false;\n}\n"
+    },
+    "763": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_min_diff([1,5,3,19,18,25],6) ;\nvar call1:= find_min_diff([4,3,2,6],4) ;\nvar call2:= find_min_diff([30,5,20,9],4) ;\nexpect call0==1;\nexpect call1==1;\nexpect call2==4;\n}\n"
+    },
+    "764": {
+        "TestCase": "method{:test} check(){\nvar call0:= number_ctr(\"program2bedone\") ;\nvar call1:= number_ctr(\"3wonders\") ;\nvar call2:= number_ctr(\"123\") ;\nvar call3:= number_ctr(\"3wond-1ers2\") ;\nexpect call0==1;\nexpect call1==1;\nexpect call2==3;\nexpect call3==3;\n}\n"
+    },
+    "765": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_polite(7) ;\nvar call1:= is_polite(4) ;\nvar call2:= is_polite(9) ;\nexpect call0==11;\nexpect call1==7;\nexpect call2==13;\n}\n"
+    },
+    "766": {
+        "TestCase": "method{:test} check(){\nvar call0:= pair_wise([1,1,2,3,3,4,4,5]) ;\nvar call1:= pair_wise([1,5,7,9,10]) ;\nvar call2:= pair_wise([5,1,9,7,10]) ;\nvar call3:= pair_wise([1,2,3,4,5,6,7,8,9,10]) ;\nexpect call0==[(1,1),(1,2),(2,3),(3,3),(3,4),(4,4),(4,5)];\nexpect call1==[(1,5),(5,7),(7,9),(9,10)];\nexpect call2==[(5,1),(1,9),(9,7),(7,10)];\nexpect call3==[(1,2),(2,3),(3,4),(4,5),(5,6),(6,7),(7,8),(8,9),(9,10)];\n}\n"
+    },
+    "767": {
+        "TestCase": "method{:test} check(){\nvar call0:= get_pairs_count([1,1,1,1],2) ;\nvar call1:= get_pairs_count([1,5,7,-1,5],6) ;\nvar call2:= get_pairs_count([1,-2,3],1) ;\nvar call3:= get_pairs_count([-1,-2,3],-3) ;\nexpect call0==6;\nexpect call1==3;\nexpect call2==1;\nexpect call3==1;\n}\n"
+    },
+    "769": {
+        "TestCase": "method{:test} check(){\nvar call0:= Diff([10,15,20,25,30,35,40],[25,40,35]) ;\nvar call1:= Diff([1,2,3,4,5],[6,7,1]) ;\nvar call2:= Diff([1,2,3],[6,7,1]) ;\nexpect call0==[10,20,30,15];\nexpect call1==[2,3,4,5,6,7];\nexpect call2==[2,3,6,7];\n}\n"
+    },
+    "770": {
+        "TestCase": "method{:test} check(){\nvar call0:= odd_num_sum(2) ;\nvar call1:= odd_num_sum(3) ;\nvar call2:= odd_num_sum(4) ;\nexpect call0==82;\nexpect call1==707;\nexpect call2==3108;\n}\n"
+    },
+    "771": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_expression(\"{()}[{}]\") ;\nvar call1:= check_expression(\"{()}[{]\") ;\nvar call2:= check_expression(\"{()}[{}][]({})\") ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "772": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_length(\"The person is most value tet\",3) ;\nvar call1:= remove_length(\"If you told me about this ok\",4) ;\nvar call2:= remove_length(\"Forces of darkeness is come into the play\",4) ;\nexpect call0==\"person is most value\";\nexpect call1==\"If you me about ok\";\nexpect call2==\"Forces of darkeness is the\";\n}\n"
+    },
+    "773": {
+        "TestCase": "method{:test} check(){\nvar call0:= occurance_substring(\"python programming, python language\",\"python\") ;\nvar call1:= occurance_substring(\"python programming,programming language\",\"programming\") ;\nvar call2:= occurance_substring(\"python programming,programming language\",\"language\") ;\nvar call3:= occurance_substring(\"c++ programming, c++ language\",\"python\") ;\nexpect call0==(\"python\",0,6);\nexpect call1==(\"programming\",7,18);\nexpect call2==(\"language\",31,39);\nexpect call3==None;\n}\n"
+    },
+    "775": {
+        "TestCase": "method{:test} check(){\nvar call0:= odd_position([2,1,4,3,6,7,6,3]) ;\nvar call1:= odd_position([4,1,2]) ;\nvar call2:= odd_position([1,2,3]) ;\nexpect call0==true;\nexpect call1==true;\nexpect call2==false;\n}\n"
+    },
+    "776": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_vowels(\"bestinstareels\") ;\nvar call1:= count_vowels(\"partofthejourneyistheend\") ;\nvar call2:= count_vowels(\"amazonprime\") ;\nexpect call0==7;\nexpect call1==12;\nexpect call2==5;\n}\n"
+    },
+    "777": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_sum([1,2,3,1,1,4,5,6]) ;\nvar call1:= find_sum([1,10,9,4,2,10,10,45,4]) ;\nvar call2:= find_sum([12,10,9,45,2,10,10,45,10]) ;\nexpect call0==21;\nexpect call1==71;\nexpect call2==78;\n}\n"
+    },
+    "778": {
+        "TestCase": "method{:test} check(){\nvar call0:= pack_consecutive_duplicates([0,0,1,2,3,4,4,5,6,6,6,7,8,9,4,4]) ;\nvar call1:= pack_consecutive_duplicates([10,10,15,19,18,18,17,26,26,17,18,10]) ;\nvar call2:= pack_consecutive_duplicates([\"a\",\"a\",\"b\",\"c\",\"d\",\"d\"]) ;\nexpect call0==[[0,0],[1],[2],[3],[4,4],[5],[6,6,6],[7],[8],[9],[4,4]];\nexpect call1==[[10,10],[15],[19],[18,18],[17],[26,26],[17],[18],[10]];\nexpect call2==[[\"a\",\"a\"],[\"b\"],[\"c\"],[\"d\",\"d\"]];\n}\n"
+    },
+    "779": {
+        "TestCase": "method{:test} check(){\nvar call0:= unique_sublists([[1,3],[5,7],[1,3],[13,15,17],[5,7],[9,11]]) ;\nvar call1:= unique_sublists([[\"green\",\"orange\"],[\"black\"],[\"green\",\"orange\"],[\"white\"]]) ;\nvar call2:= unique_sublists([[1,2],[3,4],[4,5],[6,7]]) ;\nexpect call0==map[(1,3):=2,(5,7):=2,(13,15,17):=1,(9,11):=1];\nexpect call1==map[(\"green\",\"orange\"):=2,(\"black\"):=1,(\"white\"):=1];\nexpect call2==map[(1,2):=1,(3,4):=1,(4,5):=1,(6,7):=1];\n}\n"
+    },
+    "780": {
+        "TestCase": "method{:test} check(){\nvar call0:= find_combinations([(2,4),(6,7),(5,1),(6,10)]) ;\nvar call1:= find_combinations([(3,5),(7,8),(6,2),(7,11)]) ;\nvar call2:= find_combinations([(4,6),(8,9),(7,3),(8,12)]) ;\nexpect call0==[(8,11),(7,5),(8,14),(11,8),(12,17),(11,11)];\nexpect call1==[(10,13),(9,7),(10,16),(13,10),(14,19),(13,13)];\nexpect call2==[(12,15),(11,9),(12,18),(15,12),(16,21),(15,15)];\n}\n"
+    },
+    "781": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_divisors(10) ;\nvar call1:= count_divisors(100) ;\nvar call2:= count_divisors(125) ;\nexpect call0;\nexpect !call1;\nexpect call2;\n}\n"
+    },
+    "782": {
+        "TestCase": "method{:test} check(){\nvar call0:= odd_length_sum([1,2,4]) ;\nvar call1:= odd_length_sum([1,2,1,2]) ;\nvar call2:= odd_length_sum([1,7]) ;\nexpect call0==14;\nexpect call1==15;\nexpect call2==8;\n}\n"
+    },
+    "783": {
+        "TestCase": "method{:test} check(){\nvar call0:= rgb_to_hsv(255,255,255) ;\nvar call1:= rgb_to_hsv(0,215,0) ;\nvar call2:= rgb_to_hsv(10,215,110) ;\nexpect call0==(0,0.00000000,100.00000000);\nexpect call1==(120.00000000,100.00000000,84.31372549);\nexpect call2==(149.26829268,95.34883721,84.31372549);\n}\n"
+    },
+    "784": {
+        "TestCase": "method{:test} check(){\nvar call0:= mul_even_odd([1,3,5,7,4,1,6,8]) ;\nvar call1:= mul_even_odd([1,2,3,4,5,6,7,8,9,10]) ;\nvar call2:= mul_even_odd([1,5,7,9,10]) ;\nexpect call0==4;\nexpect call1==2;\nexpect call2==10;\n}\n"
+    },
+    "785": {
+        "TestCase": "method{:test} check(){\nvar call0:= tuple_str_int(\"(7, 8, 9)\") ;\nvar call1:= tuple_str_int(\"(1, 2, 3)\") ;\nvar call2:= tuple_str_int(\"(4, 5, 6)\") ;\nvar call3:= tuple_str_int(\"(7, 81, 19)\") ;\nexpect call0==(7,8,9);\nexpect call1==(1,2,3);\nexpect call2==(4,5,6);\nexpect call3==(7,81,19);\n}\n"
+    },
+    "786": {
+        "TestCase": "method{:test} check(){\nvar call0:= right_insertion([1,2,4,5],6) ;\nvar call1:= right_insertion([1,2,4,5],3) ;\nvar call2:= right_insertion([1,2,4,5],7) ;\nexpect call0==4;\nexpect call1==2;\nexpect call2==4;\n}\n"
+    },
+    "787": {
+        "TestCase": "method{:test} check(){\nvar call0:= text_match_three(\"ac\") ;\nvar call1:= text_match_three(\"dc\") ;\nvar call2:= text_match_three(\"abbbba\") ;\nvar call3:= text_match_three(\"caacabbbba\") ;\nexpect !call0;\nexpect !call1;\nexpect call2;\nexpect call3;\n}\n"
+    },
+    "788": {
+        "TestCase": "method{:test} check(){\nvar call0:= new_tuple([\"WEB\",\"is\"],\"best\") ;\nvar call1:= new_tuple([\"We\",\"are\"],\"Developers\") ;\nvar call2:= new_tuple([\"Part\",\"is\"],\"Wrong\") ;\nexpect call0==[\"WEB\",\"is\",\"best\"];\nexpect call1==[\"We\",\"are\",\"Developers\"];\nexpect call2==[\"Part\",\"is\",\"Wrong\"];\n}\n"
+    },
+    "790": {
+        "TestCase": "method{:test} check(){\nvar call0:= even_position([3,2,1]) ;\nvar call1:= even_position([1,2,3]) ;\nvar call2:= even_position([2,1,4]) ;\nexpect call0==false;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "791": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_nested((1,5,7,(4,6),10)) ;\nvar call1:= remove_nested((2,6,8,(5,7),11)) ;\nvar call2:= remove_nested((3,7,9,(6,8),12)) ;\nvar call3:= remove_nested((3,7,9,(6,8),(5,12),12)) ;\nexpect call0==(1,5,7,10);\nexpect call1==(2,6,8,11);\nexpect call2==(3,7,9,12);\nexpect call3==(3,7,9,12);\n}\n"
+    },
+    "792": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_list([[1,3],[5,7],[9,11],[13,15,17]]) ;\nvar call1:= count_list([[1,2],[2,3],[4,5]]) ;\nvar call2:= count_list([[1,0],[2,0]]) ;\nexpect call0==4;\nexpect call1==3;\nexpect call2==2;\n}\n"
+    },
+    "793": {
+        "TestCase": "method{:test} check(){\nvar call0:= last([1,2,3],1) ;\nvar call1:= last([1,1,1,2,3,4],1) ;\nvar call2:= last([2,3,2,3,6,8,9],3) ;\nexpect call0==0;\nexpect call1==2;\nexpect call2==3;\n}\n"
+    },
+    "794": {
+        "TestCase": "method{:test} check(){\nvar call0:= text_starta_endb(\"aabbbb\") ;\nvar call1:= text_starta_endb(\"aabAbbbc\") ;\nvar call2:= text_starta_endb(\"accddbbjjj\") ;\nexpect call0;\nexpect !call1;\nexpect !call2;\n}\n"
+    },
+    "796": {
+        "TestCase": "method{:test} check(){\nvar call0:= return_sum(map[\"a\":=100,\"b\":=200,\"c\":=300]) ;\nvar call1:= return_sum(map[\"a\":=25,\"b\":=18,\"c\":=45]) ;\nvar call2:= return_sum(map[\"a\":=36,\"b\":=39,\"c\":=49]) ;\nexpect call0==600;\nexpect call1==88;\nexpect call2==124;\n}\n"
+    },
+    "797": {
+        "TestCase": "method{:test} check(){\nvar call0:= sum_in_range(2,5) ;\nvar call1:= sum_in_range(5,7) ;\nvar call2:= sum_in_range(7,13) ;\nexpect call0==8;\nexpect call1==12;\nexpect call2==40;\n}\n"
+    },
+    "798": {
+        "TestCase": "method{:test} check(){\nvar call0:= arr_sum([1,2,3]) ;\nvar call1:= arr_sum([15,12,13,10]) ;\nvar call2:= arr_sum([0,1,2]) ;\nexpect call0==6;\nexpect call1==50;\nexpect call2==3;\n}\n"
+    },
+    "799": {
+        "TestCase": "method{:test} check(){\nvar call0:= left_rotate(16,2) ;\nvar call1:= left_rotate(10,2) ;\nvar call2:= left_rotate(99,3) ;\nvar call3:= left_rotate(99,3) ;\nvar call4:= left_rotate(1,3) ;\nvar call5:= left_rotate(5,3) ;\nvar call6:= left_rotate(29,3) ;\nexpect call0==64;\nexpect call1==40;\nexpect call2==792;\nexpect call3==792;\nexpect call4==8;\nexpect call5==40;\nexpect call6==232;\n}\n"
+    },
+    "800": {
+        "TestCase": "method{:test} check(){\nvar call0:= remove_all_spaces(\"python  program\") ;\nvar call1:= remove_all_spaces(\"python   programming    language\") ;\nvar call2:= remove_all_spaces(\"python                     program\") ;\nvar call3:= remove_all_spaces(\"   python                     program\") ;\nexpect call0==\"pythonprogram\";\nexpect call1==\"pythonprogramminglanguage\";\nexpect call2==\"pythonprogram\";\nexpect call3==\"pythonprogram\";\n}\n"
+    },
+    "801": {
+        "TestCase": "method{:test} check(){\nvar call0:= test_three_equal(1,1,1) ;\nvar call1:= test_three_equal(-1,-2,-3) ;\nvar call2:= test_three_equal(1,2,2) ;\nexpect call0==3;\nexpect call1==0;\nexpect call2==2;\n}\n"
+    },
+    "802": {
+        "TestCase": "method{:test} check(){\nvar call0:= count_rotation([3,2,1]) ;\nvar call1:= count_rotation([4,5,1,2,3]) ;\nvar call2:= count_rotation([7,8,9,1,2,3]) ;\nvar call3:= count_rotation([1,2,3]) ;\nvar call4:= count_rotation([1,3,2]) ;\nexpect call0==1;\nexpect call1==2;\nexpect call2==3;\nexpect call3==0;\nexpect call4==2;\n}\n"
+    },
+    "803": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_perfect_square(10) ;\nvar call1:= is_perfect_square(36) ;\nvar call2:= is_perfect_square(14) ;\nvar call3:= is_perfect_square(196) ;\nvar call4:= is_perfect_square(125) ;\nvar call5:= is_perfect_square(15625) ;\nexpect !call0;\nexpect call1;\nexpect !call2;\nexpect call3;\nexpect !call4;\nexpect call5;\n}\n"
+    },
+    "804": {
+        "TestCase": "method{:test} check(){\nvar call0:= is_product_even([1,2,3]) ;\nvar call1:= is_product_even([1,2,1,4]) ;\nvar call2:= is_product_even([1,1]) ;\nexpect call0;\nexpect call1;\nexpect !call2;\n}\n"
+    },
+    "805": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_sum_list([[1,2,3],[4,5,6],[10,11,12],[7,8,9]]) ;\nvar call1:= max_sum_list([[3,2,1],[6,5,4],[12,11,10]]) ;\nvar call2:= max_sum_list([[2,3,1]]) ;\nexpect call0==[10,11,12];\nexpect call1==[12,11,10];\nexpect call2==[2,3,1];\n}\n"
+    },
+    "806": {
+        "TestCase": "method{:test} check(){\nvar call0:= max_run_uppercase(\"GeMKSForGERksISBESt\") ;\nvar call1:= max_run_uppercase(\"PrECIOusMOVemENTSYT\") ;\nvar call2:= max_run_uppercase(\"GooGLEFluTTER\") ;\nexpect call0==5;\nexpect call1==6;\nexpect call2==4;\n}\n"
+    },
+    "807": {
+        "TestCase": "method{:test} check(){\nvar call0:= first_odd([1,3,5]) ;\nvar call1:= first_odd([2,4,1,3]) ;\nvar call2:= first_odd([8,9,1]) ;\nexpect call0==1;\nexpect call1==1;\nexpect call2==9;\n}\n"
+    },
+    "808": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_K([10,4,5,6,8],6) ;\nvar call1:= check_K([1,2,3,4,5,6],7) ;\nvar call2:= check_K([7,8,9,44,11,12],11) ;\nexpect call0==true;\nexpect call1==false;\nexpect call2==true;\n}\n"
+    },
+    "809": {
+        "TestCase": "method{:test} check(){\nvar call0:= check_smaller([1,2,3],[2,3,4]) ;\nvar call1:= check_smaller([4,5,6],[3,4,5]) ;\nvar call2:= check_smaller([11,12,13],[10,11,12]) ;\nexpect call0==false;\nexpect call1==true;\nexpect call2==true;\n}\n"
+    }
+}
